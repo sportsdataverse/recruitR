@@ -1,0 +1,75 @@
+VariableName,Value,ValueLabel
+State abbreviation (HD2016),AL,Alabama
+State abbreviation (HD2016),AK,Alaska
+State abbreviation (HD2016),AZ,Arizona
+State abbreviation (HD2016),AR,Arkansas
+State abbreviation (HD2016),CA,California
+State abbreviation (HD2016),CO,Colorado
+State abbreviation (HD2016),CT,Connecticut
+State abbreviation (HD2016),DE,Delaware
+State abbreviation (HD2016),DC,District of Columbia
+State abbreviation (HD2016),FL,Florida
+State abbreviation (HD2016),GA,Georgia
+State abbreviation (HD2016),HI,Hawaii
+State abbreviation (HD2016),ID,Idaho
+State abbreviation (HD2016),IL,Illinois
+State abbreviation (HD2016),IN,Indiana
+State abbreviation (HD2016),IA,Iowa
+State abbreviation (HD2016),KS,Kansas
+State abbreviation (HD2016),KY,Kentucky
+State abbreviation (HD2016),LA,Louisiana
+State abbreviation (HD2016),ME,Maine
+State abbreviation (HD2016),MD,Maryland
+State abbreviation (HD2016),MA,Massachusetts
+State abbreviation (HD2016),MI,Michigan
+State abbreviation (HD2016),MN,Minnesota
+State abbreviation (HD2016),MS,Mississippi
+State abbreviation (HD2016),MO,Missouri
+State abbreviation (HD2016),MT,Montana
+State abbreviation (HD2016),NE,Nebraska
+State abbreviation (HD2016),NV,Nevada
+State abbreviation (HD2016),NH,New Hampshire
+State abbreviation (HD2016),NJ,New Jersey
+State abbreviation (HD2016),NM,New Mexico
+State abbreviation (HD2016),NY,New York
+State abbreviation (HD2016),NC,North Carolina
+State abbreviation (HD2016),ND,North Dakota
+State abbreviation (HD2016),OH,Ohio
+State abbreviation (HD2016),OK,Oklahoma
+State abbreviation (HD2016),OR,Oregon
+State abbreviation (HD2016),PA,Pennsylvania
+State abbreviation (HD2016),RI,Rhode Island
+State abbreviation (HD2016),SC,South Carolina
+State abbreviation (HD2016),SD,South Dakota
+State abbreviation (HD2016),TN,Tennessee
+State abbreviation (HD2016),TX,Texas
+State abbreviation (HD2016),UT,Utah
+State abbreviation (HD2016),VT,Vermont
+State abbreviation (HD2016),VA,Virginia
+State abbreviation (HD2016),WA,Washington
+State abbreviation (HD2016),WV,West Virginia
+State abbreviation (HD2016),WI,Wisconsin
+State abbreviation (HD2016),WY,Wyoming
+State abbreviation (HD2016),AS,American Samoa
+State abbreviation (HD2016),FM,Federated States of Micronesia
+State abbreviation (HD2016),GU,Guam
+State abbreviation (HD2016),MH,Marshall Islands
+State abbreviation (HD2016),MP,Northern Marianas
+State abbreviation (HD2016),PW,Palau
+State abbreviation (HD2016),PR,Puerto Rico
+State abbreviation (HD2016),VI,Virgin Islands
+Bureau of Economic Analysis (BEA) regions (HD2016),0,US Service schools
+Bureau of Economic Analysis (BEA) regions (HD2016),1,New England CT ME MA NH RI VT
+Bureau of Economic Analysis (BEA) regions (HD2016),2,Mid East DE DC MD NJ NY PA
+Bureau of Economic Analysis (BEA) regions (HD2016),3,Great Lakes IL IN MI OH WI
+Bureau of Economic Analysis (BEA) regions (HD2016),4,Plains IA KS MN MO NE ND SD
+Bureau of Economic Analysis (BEA) regions (HD2016),5,Southeast AL AR FL GA KY LA MS NC SC TN VA WV
+Bureau of Economic Analysis (BEA) regions (HD2016),6,Southwest AZ NM OK TX
+Bureau of Economic Analysis (BEA) regions (HD2016),7,Rocky Mountains CO ID MT UT WY
+Bureau of Economic Analysis (BEA) regions (HD2016),8,Far West AK CA HI NV OR WA
+Bureau of Economic Analysis (BEA) regions (HD2016),9,Outlying areas AS FM GU MH MP PR PW VI
+Level of institution (HD2016),1,4-year
+Level of institution (HD2016),2,2-year
+Level of institution (HD2016),3,Less-than-2-year
+Control of institution (HD2016),1,Public
+Control of institution (HD2016),2,Private not-for-profit
