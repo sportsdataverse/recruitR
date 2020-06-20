@@ -3,7 +3,7 @@
 #' @param recruits_df Recruiting dataframe (*DF*, required)
 #'
 #' @keywords internal
-#' @importFrom tidyverse "case_when"
+#' @importFrom tidyverse
 #' @export
 #' @examples
 #'
