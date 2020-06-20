@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/index.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/index.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/bordering_states.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/reference/bordering_states.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_position_recruiting.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/reference/cfb_position_recruiting.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_recruiting.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/reference/cfb_recruiting.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_team_roster_data.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/reference/cfb_team_roster_data.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_team_talent.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/reference/cfb_team_talent.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_venues.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/reference/cfb_venues.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/college_states.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/reference/college_states.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/geocode_cities.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/reference/geocode_cities.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/articles/cfbrecruitR.html</loc>
+    <loc>http://saiemgilani.github.io/cfbrecruitR/docs/articles/cfbrecruitR.html</loc>
   </url>
 </urlset>

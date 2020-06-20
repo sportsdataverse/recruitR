@@ -131,8 +131,13 @@
 <span class="co">#&gt; x dplyr::filter() masks stats::filter()</span>
 <span class="co">#&gt; x dplyr::lag()    masks stats::lag()</span>
 <span class="co">## basic example code</span></pre></div>
-<p>Let’s say that we are interested in seeing how many offensive tackles in the 2020 recruiting cycle were: - located in Florida - located in the states bordering Florida - ranked inside the top 1000</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="no">FL_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/cfb_recruiting.html">cfb_recruiting</a></span>(<span class="fl">2020</span>, <span class="kw">recruit_type</span> <span class="kw">=</span> <span class="st">'HighSchool'</span>, <span class="kw">state</span><span class="kw">=</span><span class="st">'FL'</span>, <span class="kw">position</span> <span class="kw">=</span><span class="st">'OT'</span>)
+<p>Let’s say that we are interested in seeing how many offensive tackles in the 2020 recruiting cycle were:</p>
+<ul>
+<li>located in Florida</li>
+<li>located in the states bordering Florida</li>
+<li>ranked inside the top 1000</li>
+</ul>
+<!-- end list --><div class="sourceCode" id="cb3"><pre class="r"><span class="no">FL_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/cfb_recruiting.html">cfb_recruiting</a></span>(<span class="fl">2020</span>, <span class="kw">recruit_type</span> <span class="kw">=</span> <span class="st">'HighSchool'</span>, <span class="kw">state</span><span class="kw">=</span><span class="st">'FL'</span>, <span class="kw">position</span> <span class="kw">=</span><span class="st">'OT'</span>)
 <span class="no">GA_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/cfb_recruiting.html">cfb_recruiting</a></span>(<span class="fl">2020</span>, <span class="kw">recruit_type</span> <span class="kw">=</span> <span class="st">'HighSchool'</span>, <span class="kw">state</span><span class="kw">=</span><span class="st">'GA'</span>, <span class="kw">position</span> <span class="kw">=</span><span class="st">'OT'</span>)
 <span class="no">AL_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/cfb_recruiting.html">cfb_recruiting</a></span>(<span class="fl">2020</span>, <span class="kw">recruit_type</span> <span class="kw">=</span> <span class="st">'HighSchool'</span>, <span class="kw">state</span><span class="kw">=</span><span class="st">'AL'</span>, <span class="kw">position</span> <span class="kw">=</span><span class="st">'OT'</span>)
 <span class="no">SE_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span>(<span class="no">FL_OTs</span>, <span class="no">GA_OTs</span>, <span class="no">AL_OTs</span>)
@@ -142,7 +147,8 @@
   <span class="fu">arrange</span>(<span class="no">ranking</span>)
 
 <span class="no">SE_OTs_1k</span> <span class="kw">%&gt;%</span>
-  <span class="fu">select</span>(<span class="no">ranking</span>, <span class="no">name</span>, <span class="no">school</span>, <span class="no">committedTo</span>,<span class="no">position</span>, <span class="no">height</span>, <span class="no">weight</span>, <span class="no">stars</span>, <span class="no">rating</span>, <span class="no">city</span>, <span class="no">stateProvince</span>)
+  <span class="fu">select</span>(<span class="no">ranking</span>, <span class="no">name</span>, <span class="no">school</span>, <span class="no">committedTo</span>, <span class="no">position</span>,
+         <span class="no">height</span>, <span class="no">weight</span>, <span class="no">stars</span>, <span class="no">rating</span>, <span class="no">city</span>, <span class="no">stateProvince</span>)
 <span class="co">#&gt;    ranking              name                           school    committedTo</span>
 <span class="co">#&gt; 1       11   Broderick Jones                         Lithonia        Georgia</span>
 <span class="co">#&gt; 2       37     Tate Ratledge                Darlington School        Georgia</span>
@@ -187,8 +193,7 @@
 <span class="co">#&gt; 19       OT   76.5    304     3 0.8559     Phenix City            AL</span>
 <span class="co">#&gt; 20       OT   79.0    285     3 0.8552        Leesburg            GA</span>
 <span class="co">#&gt; 21       OT   78.0    275     3 0.8551        Ringgold            GA</span></pre></div>
-<p>You’ll still need to render <code>README.Rmd</code> regularly, to keep <code>README.md</code> up-to-date.</p>
-<p>You can also embed plots, for example:</p>
+<p>You can also create a plot:</p>
 <div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
 <span class="no">SE_OTs_1k</span>$<span class="no">stars</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">SE_OTs_1k</span>$<span class="no">stars</span>,<span class="kw">levels</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">5</span>,<span class="fl">4</span>,<span class="fl">3</span>,<span class="fl">2</span>))
 
