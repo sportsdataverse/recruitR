@@ -1,0 +1,27 @@
+---
+title: "cfbrecruitR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{cfbrecruitR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(cfbrecruitR)
+library(tidyverse)
+```
+```{r OTs}
+FL_OTs <- cfb_recruiting(2020,recruit_type = 'HighSchool',state='FL', position ='OT')
+GA_OTs <- cfb_recruiting(2020,recruit_type = 'HighSchool',state='GA', position ='OT')
+AL_OTs <- cfb_recruiting(2020,recruit_type = 'HighSchool',state='AL', position ='OT')
+SE_OTs <- rbind(FL_OTs, GA_OTs, AL_OTs)
+SE_OTs %>% filter(ranking < 1000) %>% arrange(ranking)
+```
