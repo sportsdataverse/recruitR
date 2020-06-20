@@ -1,0 +1,46 @@
+title: cfbrecruitR
+url: http://saiemgilani.github.io/cfbrecruitR
+template:
+  params:
+    bootswatch: slate
+reference:
+  - title: Exported Functions
+    desc: Functions exported by cfbscrapR
+    contents:
+      - '`cfb_position_recruiting`'
+      - '`cfb_recruiting`'
+      - '`cfb_venues`'
+      - '`cfb_team_talent`'
+      - '`cfb_team_roster_data`'
+  - title: Internals
+    desc: Internal functions and helpers
+    contents:
+      - '`college_states`'
+      - '`geocode_cities`'
+      - '`bordering_states`'
+navbar:
+  type: inverse
+  left:
+    - icon: fa-home
+      href: index.html
+    - text: "How To"
+      menu:
+      -  text: Installation
+         href: articles/installation.html
+      -  text: cfbrecruitR
+         href: articles/interactive_execution.html
+    - text: "Examples of Use"
+      href: articles/examples.html
+  right:
+      - text: "faq"
+        icon: fa-question-circle-o
+        href: articles/faq.html
+      - icon: fa-newspaper-o
+        text: "news"
+        href: news/index.html
+      - icon: fa-file-code-o
+        text: "functions"
+        href: reference/index.html
+      - icon: fa-github fa-lg
+        text: "github"
+        href: https://github.com/saiemgilani/cfbrecruitR/
