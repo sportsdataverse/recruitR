@@ -44,8 +44,13 @@ library(tidyverse)
 ```
 
 Let’s say that we are interested in seeing how many offensive tackles in
-the 2020 recruiting cycle were: - located in Florida - located in the
-states bordering Florida - ranked inside the top 1000
+the 2020 recruiting cycle were:
+
+  - located in Florida
+  - located in the states bordering Florida
+  - ranked inside the top 1000
+
+<!-- end list -->
 
 ``` r
 FL_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='FL', position ='OT')
@@ -58,7 +63,8 @@ SE_OTs_1k <- SE_OTs %>%
   arrange(ranking)
 
 SE_OTs_1k %>% 
-  select(ranking, name, school, committedTo,position, height, weight, stars, rating, city, stateProvince)
+  select(ranking, name, school, committedTo, position, 
+         height, weight, stars, rating, city, stateProvince)
 #>    ranking              name                           school    committedTo
 #> 1       11   Broderick Jones                         Lithonia        Georgia
 #> 2       37     Tate Ratledge                Darlington School        Georgia
@@ -105,10 +111,7 @@ SE_OTs_1k %>%
 #> 21       OT   78.0    275     3 0.8551        Ringgold            GA
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
+You can also create a plot:
 
 ``` r
 library(ggplot2)
