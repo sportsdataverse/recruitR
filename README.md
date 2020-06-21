@@ -31,7 +31,6 @@ devtools::install_github("saiemgilani/cfbrecruitR")
 library(cfbrecruitR)
 library(tidyverse)
 library(ggplot2)
-## basic example code
 ```
 
 Let’s say that we are interested in seeing how many offensive tackles in

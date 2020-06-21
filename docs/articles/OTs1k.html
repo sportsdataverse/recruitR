@@ -122,24 +122,15 @@
 <a href="#offensive-tackle-example" class="anchor"></a>Offensive Tackle Example</h2>
 <p>This is a basic example which shows you how to solve a common problem:</p>
 <div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">cfbrecruitR</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tidyverse</span>)</pre></body></html></div>
-<pre><code>## -- Attaching packages ------------------------------- tidyverse 1.3.0 --</code></pre>
-<pre><code>## v ggplot2 3.3.1     v purrr   0.3.4
-## v tibble  3.0.1     v dplyr   1.0.0
-## v tidyr   1.1.0     v stringr 1.4.0
-## v readr   1.3.1     v forcats 0.5.0</code></pre>
-<pre><code>## -- Conflicts ---------------------------------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
-<span class="co">## basic example code</span></pre></body></html></div>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tidyverse</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)</pre></body></html></div>
 <p>Let’s say that we are interested in seeing how many offensive tackles in the 2020 recruiting cycle were:</p>
 <ul>
 <li>located in Florida</li>
 <li>located in the states bordering Florida</li>
 <li>ranked inside the top 1000</li>
 </ul>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="no">FL_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/cfb_recruiting.html">cfb_recruiting</a></span>(<span class="fl">2020</span>, <span class="kw">recruit_type</span> <span class="kw">=</span> <span class="st">'HighSchool'</span>, <span class="kw">state</span><span class="kw">=</span><span class="st">'FL'</span>, <span class="kw">position</span> <span class="kw">=</span><span class="st">'OT'</span>)
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="no">FL_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/cfb_recruiting.html">cfb_recruiting</a></span>(<span class="fl">2020</span>, <span class="kw">recruit_type</span> <span class="kw">=</span> <span class="st">'HighSchool'</span>, <span class="kw">state</span><span class="kw">=</span><span class="st">'FL'</span>, <span class="kw">position</span> <span class="kw">=</span><span class="st">'OT'</span>)
 <span class="no">GA_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/cfb_recruiting.html">cfb_recruiting</a></span>(<span class="fl">2020</span>, <span class="kw">recruit_type</span> <span class="kw">=</span> <span class="st">'HighSchool'</span>, <span class="kw">state</span><span class="kw">=</span><span class="st">'GA'</span>, <span class="kw">position</span> <span class="kw">=</span><span class="st">'OT'</span>)
 <span class="no">AL_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/cfb_recruiting.html">cfb_recruiting</a></span>(<span class="fl">2020</span>, <span class="kw">recruit_type</span> <span class="kw">=</span> <span class="st">'HighSchool'</span>, <span class="kw">state</span><span class="kw">=</span><span class="st">'AL'</span>, <span class="kw">position</span> <span class="kw">=</span><span class="st">'OT'</span>)
 <span class="no">SE_OTs</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span>(<span class="no">FL_OTs</span>, <span class="no">GA_OTs</span>, <span class="no">AL_OTs</span>)
@@ -149,65 +140,65 @@
   <span class="fu">arrange</span>(<span class="no">ranking</span>)
 
 <span class="no">SE_OTs_1k</span> <span class="kw">%&gt;%</span>
-  <span class="fu">select</span>(<span class="no">ranking</span>, <span class="no">name</span>, <span class="no">school</span>, <span class="no">committedTo</span>, <span class="no">position</span>,
+  <span class="fu">select</span>(<span class="no">ranking</span>, <span class="no">name</span>, <span class="no">committedTo</span>, <span class="no">position</span>,
          <span class="no">height</span>, <span class="no">weight</span>, <span class="no">stars</span>, <span class="no">rating</span>, <span class="no">city</span>, <span class="no">stateProvince</span>)</pre></body></html></div>
-<pre><code>##    ranking              name                           school    committedTo
-## 1       11   Broderick Jones                         Lithonia        Georgia
-## 2       37     Tate Ratledge                Darlington School        Georgia
-## 3       72      Myles Hinton Greater Atlanta Christian School       Stanford
-## 4      108   Marcus Dumervil               St. Thomas Aquinas            LSU
-## 5      127      Jalen Rivers                          Oakleaf          Miami
-## 6      156 Issiah Walker Jr.                          Norland        Florida
-## 7      270      Joshua Braun                         Suwannee        Florida
-## 8      317 Connor McLaughlin                           Jesuit       Stanford
-## 9      331      Javion Cohen                          Central        Alabama
-## 10     381     John Williams                        Creekview        Clemson
-## 11     487      Cayden Baker                       Fort Myers North Carolina
-## 12     527     Austin Blaske                  South Effingham        Georgia
-## 13     535   Michael Rankins                          Lennard   Georgia Tech
-## 14     559   Jordan Williams                      Gainesville   Georgia Tech
-## 15     574        Brady Ward             St. Paul's Episcopal       Ole Miss
-## 16     610    Trey Zimmerman                          Roswell North Carolina
-## 17     654     Gerald Mincey                 Cardinal Gibbons        Florida
-## 18     748         Jake Wray                         Marietta       Colorado
-## 19     929      Joshua Jones                          Central       Kentucky
-## 20     948        Wing Green                       Lee County   Georgia Tech
-## 21     966   Kobe McAllister                         Heritage     Cincinnati
-##    position height weight stars rating            city stateProvince
-## 1        OT   77.0    298     5 0.9947        Lithonia            GA
-## 2        OT   78.0    322     4 0.9822            Rome            GA
-## 3        OT   78.0    308     4 0.9666        Norcross            GA
-## 4        OT   77.0    305     4 0.9519 Fort Lauderdale            FL
-## 5        OT   78.0    331     4 0.9429     Orange Park            FL
-## 6        OT   76.0    309     4 0.9311           Miami            FL
-## 7        OT   78.0    335     4 0.9049        Live Oak            FL
-## 8        OT   79.0    260     4 0.8969           Tampa            FL
-## 9        OT   77.0    295     4 0.8954     Phenix City            AL
-## 10       OT   77.0    295     3 0.8891          Canton            GA
-## 11       OT   78.0    260     3 0.8789      Fort Myers            FL
-## 12       OT   77.0    278     3 0.8759          Guyton            GA
-## 13       OT   77.0    295     3 0.8755          Ruskin            FL
-## 14       OT   78.0    310     3 0.8742     Gainesville            GA
-## 15       OT   79.0    310     3 0.8729          Mobile            AL
-## 16       OT   78.0    294     3 0.8709         Roswell            GA
-## 17       OT   77.0    320     3 0.8681 Fort Lauderdale            FL
-## 18       OT   77.0    300     3 0.8643        Marietta            GA
-## 19       OT   76.5    304     3 0.8559     Phenix City            AL
-## 20       OT   79.0    285     3 0.8552        Leesburg            GA
-## 21       OT   78.0    275     3 0.8551        Ringgold            GA</code></pre>
+<pre><code>##    ranking              name    committedTo position height weight stars rating
+## 1       11   Broderick Jones        Georgia       OT   77.0    298     5 0.9947
+## 2       37     Tate Ratledge        Georgia       OT   78.0    322     4 0.9822
+## 3       72      Myles Hinton       Stanford       OT   78.0    308     4 0.9666
+## 4      108   Marcus Dumervil            LSU       OT   77.0    305     4 0.9519
+## 5      127      Jalen Rivers          Miami       OT   78.0    331     4 0.9429
+## 6      156 Issiah Walker Jr.        Florida       OT   76.0    309     4 0.9311
+## 7      270      Joshua Braun        Florida       OT   78.0    335     4 0.9049
+## 8      317 Connor McLaughlin       Stanford       OT   79.0    260     4 0.8969
+## 9      331      Javion Cohen        Alabama       OT   77.0    295     4 0.8954
+## 10     381     John Williams        Clemson       OT   77.0    295     3 0.8891
+## 11     487      Cayden Baker North Carolina       OT   78.0    260     3 0.8789
+## 12     527     Austin Blaske        Georgia       OT   77.0    278     3 0.8759
+## 13     535   Michael Rankins   Georgia Tech       OT   77.0    295     3 0.8755
+## 14     559   Jordan Williams   Georgia Tech       OT   78.0    310     3 0.8742
+## 15     574        Brady Ward       Ole Miss       OT   79.0    310     3 0.8729
+## 16     610    Trey Zimmerman North Carolina       OT   78.0    294     3 0.8709
+## 17     654     Gerald Mincey        Florida       OT   77.0    320     3 0.8681
+## 18     748         Jake Wray       Colorado       OT   77.0    300     3 0.8643
+## 19     929      Joshua Jones       Kentucky       OT   76.5    304     3 0.8559
+## 20     948        Wing Green   Georgia Tech       OT   79.0    285     3 0.8552
+## 21     966   Kobe McAllister     Cincinnati       OT   78.0    275     3 0.8551
+##               city stateProvince
+## 1         Lithonia            GA
+## 2             Rome            GA
+## 3         Norcross            GA
+## 4  Fort Lauderdale            FL
+## 5      Orange Park            FL
+## 6            Miami            FL
+## 7         Live Oak            FL
+## 8            Tampa            FL
+## 9      Phenix City            AL
+## 10          Canton            GA
+## 11      Fort Myers            FL
+## 12          Guyton            GA
+## 13          Ruskin            FL
+## 14     Gainesville            GA
+## 15          Mobile            AL
+## 16         Roswell            GA
+## 17 Fort Lauderdale            FL
+## 18        Marietta            GA
+## 19     Phenix City            AL
+## 20        Leesburg            GA
+## 21        Ringgold            GA</code></pre>
 </div>
 <div id="plotting-the-offensive-tackles-by-state" class="section level2">
 <h2 class="hasAnchor">
 <a href="#plotting-the-offensive-tackles-by-state" class="anchor"></a>Plotting the Offensive Tackles by State</h2>
 <p>You can also create a plot:</p>
-<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="no">SE_OTs_1k</span>$<span class="no">stars</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">SE_OTs_1k</span>$<span class="no">stars</span>,<span class="kw">levels</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">5</span>,<span class="fl">4</span>,<span class="fl">3</span>,<span class="fl">2</span>))
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="no">SE_OTs_1k</span>$<span class="no">stars</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">SE_OTs_1k</span>$<span class="no">stars</span>,<span class="kw">levels</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">5</span>,<span class="fl">4</span>,<span class="fl">3</span>,<span class="fl">2</span>))
 
 <span class="no">SE_OTs_1k_grp</span> <span class="kw">&lt;-</span> <span class="no">SE_OTs_1k</span> <span class="kw">%&gt;%</span>
   <span class="fu">group_by</span>(<span class="no">stateProvince</span>, <span class="no">stars</span>) <span class="kw">%&gt;%</span>
   <span class="fu">summarize</span>(<span class="kw">players</span> <span class="kw">=</span> <span class="fu">n</span>()) <span class="kw">%&gt;%</span>
   <span class="fu">ungroup</span>()</pre></body></html></div>
 <pre><code>## `summarise()` regrouping output by 'stateProvince' (override with `.groups` argument)</code></pre>
-<div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">SE_OTs_1k_grp</span> ,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">stateProvince</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">players</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">stars</span>))) +
+<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">SE_OTs_1k_grp</span> ,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">stateProvince</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">players</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">stars</span>))) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="kw">stat</span> <span class="kw">=</span> <span class="st">"identity"</span>,<span class="kw">colour</span><span class="kw">=</span><span class="st">'black'</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"State"</span>) + <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Number of Players"</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">title</span><span class="kw">=</span><span class="st">"Top 1000 Offensive Tackles in FL, GA, and AL - Class of 2020"</span>,
@@ -242,7 +233,7 @@
         <span class="kw">panel.background</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span>(<span class="kw">fill</span> <span class="kw">=</span> <span class="st">"grey75"</span>),
         <span class="kw">plot.background</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span>(<span class="kw">fill</span> <span class="kw">=</span> <span class="st">"grey65"</span>),
         <span class="kw">plot.margin</span><span class="kw">=</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/reexports.html">unit</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="kw">top</span><span class="kw">=</span><span class="fl">0.4</span>,<span class="kw">right</span><span class="kw">=</span><span class="fl">0.4</span>,<span class="kw">bottom</span><span class="kw">=</span><span class="fl">0.4</span>,<span class="kw">left</span><span class="kw">=</span><span class="fl">0.4</span>),<span class="st">"cm"</span>))</pre></body></html></div>
-<p><img src="OTs1k_files/figure-html/plot_OTs-1.png" width="700"></p>
+<p><img src="OTs1k_files/figure-html/plot_OTs1k-1.png" width="700"></p>
 </div>
   </div>
 
