@@ -112,7 +112,6 @@ SE_OTs_1k_grp <- SE_OTs_1k %>%
   group_by(stateProvince, stars) %>%
   summarize(players = n()) %>% 
   ungroup()
-#> `summarise()` regrouping output by 'stateProvince' (override with `.groups` argument)
 
 ggplot(SE_OTs_1k_grp ,aes(x = stateProvince, y = players, fill = factor(stars))) +
   geom_bar(stat = "identity",colour='black') +
@@ -125,8 +124,8 @@ ggplot(SE_OTs_1k_grp ,aes(x = stateProvince, y = players, fill = factor(stars)))
         legend.text = element_text(size = 12, margin=margin(t=0.2,r=0,b=0.2,l=-1.2,unit=c("mm")), 
                                    family = "serif"),
         legend.background = element_rect(fill = "grey85"),
-        legend.key.width = unit(1.5,"mm"),
-        legend.key.size = unit(2.0,"mm"),
+        legend.key.width = unit(.2,"cm"),
+        legend.key.size = unit(.3,"cm"),
         legend.position = c(0.25, 0.84),
         legend.margin=margin(t = 0.4,b = 0.4,l=-1.2,r=0.4,unit=c('mm')),
         legend.direction = "horizontal",

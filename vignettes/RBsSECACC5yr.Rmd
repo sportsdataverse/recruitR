@@ -60,7 +60,7 @@ ggplot(rbs ,aes(x = team, y = commits, fill = averageStars)) +
                                    family = "serif"),
         legend.background = element_rect(fill = "grey99"),
         legend.key.width = unit(.5,"cm"),
-        legend.key.size = unit(.75,"cm"),
+        legend.key.size = unit(.5,"cm"),
         legend.position = c(0.3, 0.88),
         legend.margin=margin(t = 0.4,b = 0.4,l=0.1,r=2.7,unit=c('mm')),
         legend.direction = "horizontal",
