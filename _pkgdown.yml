@@ -22,27 +22,27 @@ navbar:
   type: inverse
   left:
     - icon: fa-home
-      href: http://saiemgilani.github.io/cfbrecruitR/docs/index.html
+      href: http://saiemgilani.github.io/cfbrecruitR/index.html
     - text: "How To"
       menu:
       -  text: Vignettes
-         href: http://saiemgilani.github.io/cfbrecruitR/docs/articles/index.html
+         href: http://saiemgilani.github.io/cfbrecruitR/articles/index.html
       -  text: 2020 OTs in FL, GA, AL
-         href: http://saiemgilani.github.io/cfbrecruitR/docs/articles/cfbrecruitR.html
+         href: http://saiemgilani.github.io/cfbrecruitR/articles/cfbrecruitR.html
       -  text: 2015-2020 Running Back Recruiting
-         href: http://saiemgilani.github.io/cfbrecruitR/docs/articles/RBs_SEC_ACC_5yr.html
+         href: http://saiemgilani.github.io/cfbrecruitR/articles/RBs_SEC_ACC_5yr.html
     - text: "Examples of Use"
-      href: http://saiemgilani.github.io/cfbrecruitR/docs/articles/OTs_1k.html
+      href: http://saiemgilani.github.io/cfbrecruitR/articles/OTs_1k.html
   right:
       - text: "faq"
         icon: fa-question-circle-o
-        href: http://saiemgilani.github.io/cfbrecruitR/docs/articles/index.html
+        href: http://saiemgilani.github.io/cfbrecruitR/articles/index.html
       - icon: fa-newspaper-o
         text: "news"
-        href: http://saiemgilani.github.io/cfbrecruitR/docs/news/index.html
+        href: http://saiemgilani.github.io/cfbrecruitR/news/index.html
       - icon: fa-file-code-o
         text: "functions"
-        href: http://saiemgilani.github.io/cfbrecruitR/docs/reference/index.html
+        href: http://saiemgilani.github.io/cfbrecruitR/reference/index.html
       - icon: fa-github fa-lg
         text: "github"
         href: https://github.com/saiemgilani/cfbrecruitR/
