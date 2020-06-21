@@ -37,6 +37,8 @@ SE_OTs_1k %>%
   select(ranking, name, school, committedTo, position, 
          height, weight, stars, rating, city, stateProvince)
 ```
+## Plotting the Offensive Tackles by State
+
 You can also create a plot:
 
 ```{r plot_OTs}
