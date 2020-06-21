@@ -30,9 +30,9 @@ navbar:
       -  text: 2020 OTs in FL, GA, AL
          href: http://saiemgilani.github.io/cfbrecruitR/articles/cfbrecruitR.html
       -  text: 2015-2020 Running Back Recruiting
-         href: http://saiemgilani.github.io/cfbrecruitR/articles/RBs-SEC-ACC-5yr.html
+         href: http://saiemgilani.github.io/cfbrecruitR/articles/RBsSECACC5yr.html
     - text: "Examples of Use"
-      href: http://saiemgilani.github.io/cfbrecruitR/articles/OTs-1k.html
+      href: http://saiemgilani.github.io/cfbrecruitR/articles/OTs1k.html
   right:
       - text: "faq"
         icon: fa-question-circle-o

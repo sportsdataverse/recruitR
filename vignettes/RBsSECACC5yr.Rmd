@@ -2,7 +2,7 @@
 title: "2015-2020 Running Back Recruiting - SEC & ACC"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{RBs-SEC-ACC-5yr}
+  %\VignetteIndexEntry{RBsSECACC5yr}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
