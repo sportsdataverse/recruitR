@@ -1,5 +1,5 @@
 ---
-title: "2020 Offensive Tackles Ranked in the Top 1000 in FL, GA, or AL"
+title: "OTs1k"
 output: rmarkdown::html_vignette
 options: rmarkdown.html_vignette.check_title = FALSE
 vignette: >
