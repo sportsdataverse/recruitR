@@ -11,11 +11,10 @@ vignette: >
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r examplerbs,  message=FALSE, warning=FALSE, results='hide'}
 library(cfbrecruitR)
 library(tidyverse)
 library(ggplot2)
-## basic example code
 ```
 Let's say that we are interested in seeing how teams in either the SEC or ACC fared in running back recruiting from 2015-2020. We could gather the information on each conference using the `cfb_position_recruiting` function, like so:
 ```{r RBs}
@@ -38,9 +37,11 @@ rbs <- rbind(sec_rbs,acc_rbs)
 print(rbs)
 
 ```
+## Plotting the Running Backs
+
 You can also create a plot:
 
-```{r plot_OTs}
+```{r plot_rbs}
 
 
 

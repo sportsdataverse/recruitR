@@ -27,19 +27,9 @@ devtools::install_github("saiemgilani/cfbrecruitR")
 
 ## Offensive Tackle Example
 
-This is a basic example which shows you how to solve a common problem:
-
 ``` r
 library(cfbrecruitR)
 library(tidyverse)
-#> -- Attaching packages ------------------------------------------ tidyverse 1.3.0 --
-#> v ggplot2 3.3.1     v purrr   0.3.4
-#> v tibble  3.0.1     v dplyr   1.0.0
-#> v tidyr   1.1.0     v stringr 1.4.0
-#> v readr   1.3.1     v forcats 0.5.0
-#> -- Conflicts --------------------------------------------- tidyverse_conflicts() --
-#> x dplyr::filter() masks stats::filter()
-#> x dplyr::lag()    masks stats::lag()
 library(ggplot2)
 ## basic example code
 ```
@@ -111,6 +101,8 @@ SE_OTs_1k %>%
 #> 20       OT   79.0    285     3 0.8552        Leesburg            GA
 #> 21       OT   78.0    275     3 0.8551        Ringgold            GA
 ```
+
+## Plotting the Offensive Tackles by State
 
 You can also create a plot:
 

@@ -12,11 +12,10 @@ vignette: >
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r exampleots,  message=FALSE, warning=FALSE, results='hide'}
 library(cfbrecruitR)
 library(tidyverse)
 library(ggplot2)
-## basic example code
 ```
 Let's say that we are interested in seeing how many offensive tackles in the 2020 recruiting cycle were:
 
@@ -24,7 +23,7 @@ Let's say that we are interested in seeing how many offensive tackles in the 202
  - located in the states bordering Florida 
  - ranked inside the top 1000
 
-```{r OTs}
+```{r OTs1k}
 FL_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='FL', position ='OT')
 GA_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='GA', position ='OT')
 AL_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='AL', position ='OT')
@@ -35,14 +34,14 @@ SE_OTs_1k <- SE_OTs %>%
   arrange(ranking)
 
 SE_OTs_1k %>% 
-  select(ranking, name, school, committedTo, position, 
+  select(ranking, name, committedTo, position, 
          height, weight, stars, rating, city, stateProvince)
 ```
 ## Plotting the Offensive Tackles by State
 
 You can also create a plot:
 
-```{r plot_OTs}
+```{r plot_OTs1k}
 SE_OTs_1k$stars <- factor(SE_OTs_1k$stars,levels = c(5,4,3,2))
 
 SE_OTs_1k_grp <- SE_OTs_1k %>%
