@@ -38,7 +38,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../index.html">
+  <a href="http://saiemgilani.github.io/cfbrecruitR/docs/index.html">
     <span class="fa fa-home"></span>
      
   </a>
@@ -51,37 +51,37 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/index.html">Vignettes</a>
+      <a href="http://saiemgilani.github.io/cfbrecruitR/docs/articles/index.html">Vignettes</a>
     </li>
     <li>
-      <a href="../articles/cfbrecruitR.html">2020 OTs in FL, GA, AL</a>
+      <a href="http://saiemgilani.github.io/cfbrecruitR/docs/articles/cfbrecruitR.html">2020 OTs in FL, GA, AL</a>
     </li>
     <li>
-      <a href="../articles/RBs_SEC_ACC_5yr.html">2015-2020 Running Back Recruiting</a>
+      <a href="http://saiemgilani.github.io/cfbrecruitR/docs/articles/RBs_SEC_ACC_5yr.html">2015-2020 Running Back Recruiting</a>
     </li>
   </ul>
 </li>
 <li>
-  <a href="../articles/OTs_1k.html">Examples of Use</a>
+  <a href="http://saiemgilani.github.io/cfbrecruitR/docs/articles/OTs_1k.html">Examples of Use</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="../articles/index.html">
+  <a href="http://saiemgilani.github.io/cfbrecruitR/docs/articles/index.html">
     <span class="fa fa-question-circle-o"></span>
      
     faq
   </a>
 </li>
 <li>
-  <a href="../news/index.html">
+  <a href="http://saiemgilani.github.io/cfbrecruitR/docs/news/index.html">
     <span class="fa fa-newspaper-o"></span>
      
     news
   </a>
 </li>
 <li>
-  <a href="../reference/index.html">
+  <a href="http://saiemgilani.github.io/cfbrecruitR/docs/reference/index.html">
     <span class="fa fa-file-code-o"></span>
      
     functions
@@ -195,6 +195,10 @@
 <span class="co">#&gt; 19       OT   76.5    304     3 0.8559     Phenix City            AL</span>
 <span class="co">#&gt; 20       OT   79.0    285     3 0.8552        Leesburg            GA</span>
 <span class="co">#&gt; 21       OT   78.0    275     3 0.8551        Ringgold            GA</span></pre></body></html></div>
+</div>
+<div id="plotting-the-offensive-tackles-by-state" class="section level2">
+<h2 class="hasAnchor">
+<a href="#plotting-the-offensive-tackles-by-state" class="anchor"></a>Plotting the Offensive Tackles by State</h2>
 <p>You can also create a plot:</p>
 <div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">SE_OTs_1k</span>$<span class="no">stars</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">SE_OTs_1k</span>$<span class="no">stars</span>,<span class="kw">levels</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">5</span>,<span class="fl">4</span>,<span class="fl">3</span>,<span class="fl">2</span>))
 
@@ -207,7 +211,7 @@
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">SE_OTs_1k_grp</span> ,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">stateProvince</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">players</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">stars</span>))) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="kw">stat</span> <span class="kw">=</span> <span class="st">"identity"</span>,<span class="kw">colour</span><span class="kw">=</span><span class="st">'black'</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"State"</span>) + <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Number of Players"</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">title</span><span class="kw">=</span><span class="st">"Top-1000 Offensive Tackles in FL, GA, and AL - Class of 2020"</span>,
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">title</span><span class="kw">=</span><span class="st">"Top 1000 Offensive Tackles in FL, GA, and AL - Class of 2020"</span>,
        <span class="kw">subtitle</span><span class="kw">=</span><span class="st">"Figure: @SaiemGilani | Data: @CFB_data with #cfbrecruitR"</span>)+
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">label</span> <span class="kw">=</span> <span class="no">players</span>),<span class="kw">size</span> <span class="kw">=</span> <span class="fl">4</span>, <span class="kw">position</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_stack.html">position_stack</a></span>(<span class="kw">vjust</span> <span class="kw">=</span> <span class="fl">0.5</span>))+
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span>(<span class="kw">values</span><span class="kw">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"dodgerblue2"</span>,<span class="st">"lightskyblue"</span>,<span class="st">"red3"</span>,<span class="st">"ghostwhite"</span>))+
