@@ -13,11 +13,14 @@ Imports:
     ggrepel,
     tidyr,
     stringr,
+    ggmap,
     nnet,
     mgcv,
     assertthat,
     jsonlite,
-    purrr
+    purrr,
+    knitr,
+    rmarkdown
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 URL: https://github.com/saiemgilani/cfbrecruitR

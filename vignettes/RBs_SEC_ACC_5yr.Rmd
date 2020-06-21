@@ -1,0 +1,86 @@
+---
+title: "2015-2020 Running Back Recruiting - SEC & ACC"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{RBs_SEC_ACC_5yr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Running Backs Recruiting 2015-2020: SEC & ACC
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(cfbrecruitR)
+library(tidyverse)
+library(ggplot2)
+## basic example code
+```
+Let's say that we are interested in seeing how teams in either the SEC or ACC fared in running back recruiting from 2015-2020. We could gather the information on each conference using the `cfb_position_recruiting` function, like so:
+```{r RBs}
+sec_positions <- cfb_position_recruiting(start_year=2015,
+                                         end_year = 2020, 
+                                         conference = 'SEC')
+
+acc_positions <- cfb_position_recruiting(start_year=2015,
+                                         end_year = 2020, 
+                                         conference = 'ACC')
+
+sec_rbs <- sec_positions %>% 
+  filter(positionGroup == "Running Back") %>% 
+  arrange(desc(averageStars))
+acc_rbs <- acc_positions %>% 
+  filter(positionGroup == "Running Back") %>% 
+  arrange(desc(averageStars))
+
+rbs <- rbind(sec_rbs,acc_rbs)
+print(rbs)
+
+```
+You can also create a plot:
+
+```{r plot_OTs}
+
+
+
+ggplot(rbs ,aes(x = team, y = commits, fill = averageStars)) +
+  geom_bar(stat = "identity",colour='black') +
+  xlab("Team") + ylab("Number of Players") +
+  labs(title="2015-2020 Running Back Recruiting - SEC & ACC",
+       subtitle="Figure: @SaiemGilani | Data: @CFB_data with #cfbrecruitR")+
+  geom_text(aes(label = round(averageStars,2)),color="grey85",
+            size = 2.3, position = position_stack(vjust = 0.5))+
+  scale_color_gradient2(low = "red",midpoint = 3,mid = "blue",
+                        high = "green",space="Lab")+
+  facet_wrap(~conference,ncol=2,scales='free')+
+  theme(legend.title = element_blank(),
+        legend.text = element_text(size = 7, margin=margin(t=0.2,r=3,b=0.2,l=3,unit=c("mm")), 
+                                   family = "serif"),
+        legend.background = element_rect(fill = "grey99"),
+        legend.key.width = unit(.5,"cm"),
+        legend.key.size = unit(.75,"cm"),
+        legend.position = c(0.3, 0.88),
+        legend.margin=margin(t = 0.4,b = 0.4,l=0.1,r=2.7,unit=c('mm')),
+        legend.direction = "horizontal",
+        legend.box.background = element_rect(colour = "#500f1b"),
+        axis.title.x = element_text(size = 12, margin = margin(0,0,1,0,unit=c("mm")), 
+                                    family = "serif",face="bold"),
+        axis.text.x = element_text(size = 9, margin=margin(0,0,1,0,unit=c("mm")),
+                                   face="bold",family = "serif", angle = 45, hjust = 1),
+        axis.title.y = element_text(size = 12, margin = margin(0,0,0,0,unit=c("mm")), 
+                                    family = "serif",face="bold"),
+        axis.text.y = element_text(size = 12, margin = margin(1,1,1,1,unit=c("mm")), 
+                                    family = "serif"),
+        plot.title = element_text(size = 14, margin = margin(t=0,r=0,b=1.5,l=0,unit=c("mm")),
+        lineheight=-0.5, family = "serif",face="bold"),
+        plot.subtitle = element_text(size = 12, margin = margin(t=0,r=0,b=2,l=0,unit=c("mm")), 
+                                     lineheight=-0.5, family = "serif"),
+        plot.caption = element_text(size = 12, margin=margin(t=0,r=0,b=0,l=0,unit=c("mm")),
+                                    lineheight=-0.5, family = "serif"),
+        strip.text = element_text(size = 10, family = "serif",face="bold"),
+        panel.background = element_rect(fill = "grey75"),
+        plot.background = element_rect(fill = "grey65"),
+        plot.margin=unit(c(top=0.4,right=0.4,bottom=0.4,left=0.4),"cm"))
+
+```

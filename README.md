@@ -32,14 +32,15 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(cfbrecruitR)
 library(tidyverse)
-#> -- Attaching packages --------------------------------------------- tidyverse 1.3.0 --
+#> -- Attaching packages ------------------------------------------ tidyverse 1.3.0 --
 #> v ggplot2 3.3.1     v purrr   0.3.4
 #> v tibble  3.0.1     v dplyr   1.0.0
 #> v tidyr   1.1.0     v stringr 1.4.0
 #> v readr   1.3.1     v forcats 0.5.0
-#> -- Conflicts ------------------------------------------------ tidyverse_conflicts() --
+#> -- Conflicts --------------------------------------------- tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
+library(ggplot2)
 ## basic example code
 ```
 
@@ -114,7 +115,6 @@ SE_OTs_1k %>%
 You can also create a plot:
 
 ``` r
-library(ggplot2)
 SE_OTs_1k$stars <- factor(SE_OTs_1k$stars,levels = c(5,4,3,2))
 
 SE_OTs_1k_grp <- SE_OTs_1k %>%
@@ -126,7 +126,7 @@ SE_OTs_1k_grp <- SE_OTs_1k %>%
 ggplot(SE_OTs_1k_grp ,aes(x = stateProvince, y = players, fill = factor(stars))) +
   geom_bar(stat = "identity",colour='black') +
   xlab("State") + ylab("Number of Players") +
-  labs(title="Top 1000 Offensive Tackles in FL, GA, and AL - Class of 2020",
+  labs(title="Top-1000 Offensive Tackles in FL, GA, and AL - Class of 2020",
        subtitle="Figure: @SaiemGilani | Data: @CFB_data with #cfbrecruitR")+
   geom_text(aes(label = players),size = 4, position = position_stack(vjust = 0.5))+
   scale_fill_manual(values=c("dodgerblue2","lightskyblue","red3","ghostwhite"))+
@@ -142,12 +142,14 @@ ggplot(SE_OTs_1k_grp ,aes(x = stateProvince, y = players, fill = factor(stars)))
         legend.box.background = element_rect(colour = "#500f1b"),
         axis.title.x = element_text(size = 12, margin = margin(0,0,1,0,unit=c("mm")), 
                                     family = "serif",face="bold"),
-        axis.text.x = element_text(size = 10,margin=margin(0,0,1,0,unit=c("mm")), family = "serif"),
+        axis.text.x = element_text(size = 10, margin=margin(0,0,1,0,unit=c("mm")),
+                                   family = "serif"),
         axis.title.y = element_text(size = 12, margin = margin(0,0,0,0,unit=c("mm")), 
                                     family = "serif",face="bold"),
-        axis.text.y = element_text(size = 12, margin = margin(1,1,1,1,unit=c("mm")), family = "serif"),
-        plot.title = element_text(size = 14, margin = margin(t=0,r=0,b=1.5,l=0,unit=c("mm")),lineheight=-0.5, 
-                                  family = "serif",face="bold"),
+        axis.text.y = element_text(size = 12, margin = margin(1,1,1,1,unit=c("mm")), 
+                                    family = "serif"),
+        plot.title = element_text(size = 14, margin = margin(t=0,r=0,b=1.5,l=0,unit=c("mm")),
+        lineheight=-0.5, family = "serif",face="bold"),
         plot.subtitle = element_text(size = 12, margin = margin(t=0,r=0,b=2,l=0,unit=c("mm")), 
                                      lineheight=-0.5, family = "serif"),
         plot.caption = element_text(size = 12, margin=margin(t=0,r=0,b=0,l=0,unit=c("mm")),
