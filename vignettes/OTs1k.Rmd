@@ -1,7 +1,6 @@
 ---
 title: "OTs1k"
 output: rmarkdown::html_vignette
-options: rmarkdown.html_vignette.check_title = FALSE
 vignette: >
   %\VignetteIndexEntry{OTs1k}
   %\VignetteEngine{knitr::rmarkdown}
