@@ -18,11 +18,10 @@ knitr::opts_chunk$set(
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r example, message=FALSE, warning=FALSE, results='hide'}
 library(cfbrecruitR)
 library(tidyverse)
 library(ggplot2)
-## basic example code
 ```
 Let's say that we are interested in seeing how many offensive tackles in the 2020 recruiting cycle were:
 
