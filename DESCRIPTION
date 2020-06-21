@@ -1,6 +1,6 @@
 Package: cfbrecruitR
 Title: College Football Recruiting package
-Version: 0.1
+Version: 0.0.1
 Authors@R: c(person("Saiem", "Gilani", email = "saiem.gilani@gmail.com", role = c("aut", "cre")))
 Description: College Football Recruiting package
 Depends: R (>= 3.5.3)
