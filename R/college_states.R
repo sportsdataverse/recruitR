@@ -3,10 +3,11 @@
 #' @param recruits_df Recruiting dataframe (*DF*, required)
 #'
 #' @keywords internal
+#' @import stringr
+#' @import dplyr
+#' @import tidyr
 #' @export
-#' @examples
 #'
-#' college_states(recruits_df)
 #'
 
 

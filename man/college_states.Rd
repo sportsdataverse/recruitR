@@ -12,9 +12,4 @@ college_states(recruits_df)
 \description{
 Adds college state information
 }
-\examples{
-
-college_states(recruits_df)
-
-}
 \keyword{internal}

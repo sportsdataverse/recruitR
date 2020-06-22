@@ -4,7 +4,6 @@
 #' If you would like to get cfb recruiting information based on position groups during a
 #' time period for all FBS teams, please see cfb_position_recruiting function.
 #'
-#'
 #' @param year Year (*Integer*, 4 digits YYYY, required)
 #' @param team Team information (*String* optional)
 #' @param recruit_type default API return is 'HighSchool', other options include 'JUCO'
@@ -17,6 +16,7 @@
 #'
 #' @keywords internal
 #' @importFrom jsonlite "fromJSON"
+#' @importFrom assertthat "assert_that"
 #' @export
 #' @examples
 #'

@@ -2,8 +2,7 @@
 % Please edit documentation in R/bordering_states.R
 \name{bordering_states}
 \alias{bordering_states}
-\title{Determines whether the recruit was an in-state recruit,
-from a bordering state, or from out of the region for the college}
+\title{Determines whether the recruit was an in-state recruit, from a bordering state, or from out of the region for the college}
 \usage{
 bordering_states(recruits_df)
 }
@@ -11,12 +10,6 @@ bordering_states(recruits_df)
 \item{recruits_df}{Recruiting dataframe (\emph{DF}, required)}
 }
 \description{
-Determines whether the recruit was an in-state recruit,
-from a bordering state, or from out of the region for the college
-}
-\examples{
-
-bordering_states(recruits_df)
-
+Determines whether the recruit was an in-state recruit, from a bordering state, or from out of the region for the college
 }
 \keyword{internal}

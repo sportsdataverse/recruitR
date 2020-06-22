@@ -17,6 +17,7 @@
 #'
 #' @keywords internal
 #' @importFrom jsonlite "fromJSON"
+#' @importFrom utils "URLencode"
 #' @export
 #' @examples
 #'

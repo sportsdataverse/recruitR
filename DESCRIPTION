@@ -1,10 +1,10 @@
 Package: cfbrecruitR
-Title: College Football Recruiting package
+Title: A College Football Recruiting package
 Version: 0.0.1
 Authors@R: c(person("Saiem", "Gilani", email = "saiem.gilani@gmail.com", role = c("aut", "cre")))
-Description: College Football Recruiting package
-Depends: R (>= 3.5.3)
-License: GPL-3
+Description: As a college football recruiting package, cfbrecruitR provides users with the access to 247 Composite rankings and recruit information from the CollegeFootballData API.
+Depends: R (>= 3.5)
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
@@ -14,8 +14,7 @@ Imports:
     tidyr,
     stringr,
     ggmap,
-    nnet,
-    mgcv,
+    tidyverse,
     assertthat,
     jsonlite,
     purrr,
@@ -25,7 +24,4 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 URL: https://github.com/saiemgilani/cfbrecruitR
 BugReports: https://github.com/saiemgilani/cfbrecruitR/issues
-Suggests: 
-    knitr,
-    rmarkdown
 VignetteBuilder: knitr

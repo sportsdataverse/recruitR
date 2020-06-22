@@ -1,13 +1,13 @@
-#' Determines whether the recruit was an in-state recruit,
-#' from a bordering state, or from out of the region for the college
+#' Determines whether the recruit was an in-state recruit, from a bordering state, or from out of the region for the college
 #'
 #' @param recruits_df Recruiting dataframe (*DF*, required)
 #'
 #' @keywords internal
+#' @import stringr
+#' @import dplyr
+#' @import tidyr
 #' @export
-#' @examples
 #'
-#' bordering_states(recruits_df)
 #'
 
 
