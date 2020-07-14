@@ -24,9 +24,9 @@ Let's say that we are interested in seeing how many offensive tackles in the 202
  - ranked inside the top 1000
 
 ```{r OTs1k}
-FL_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='FL', position ='OT')
-GA_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='GA', position ='OT')
-AL_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='AL', position ='OT')
+FL_OTs <- cfb_recruiting_player(2020, recruit_type = 'HighSchool', state='FL', position ='OT')
+GA_OTs <- cfb_recruiting_player(2020, recruit_type = 'HighSchool', state='GA', position ='OT')
+AL_OTs <- cfb_recruiting_player(2020, recruit_type = 'HighSchool', state='AL', position ='OT')
 SE_OTs <- rbind(FL_OTs, GA_OTs, AL_OTs)
 
 SE_OTs_1k <- SE_OTs %>% 
