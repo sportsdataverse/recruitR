@@ -16,13 +16,13 @@ library(cfbrecruitR)
 library(tidyverse)
 library(ggplot2)
 ```
-Let's say that we are interested in seeing how teams in either the SEC or ACC fared in running back recruiting from 2015-2020. We could gather the information on each conference using the `cfb_position_recruiting` function, like so:
+Let's say that we are interested in seeing how teams in either the SEC or ACC fared in running back recruiting from 2015-2020. We could gather the information on each conference using the `cfb_recruiting_position` function, like so:
 ```{r RBs}
-sec_positions <- cfb_position_recruiting(start_year=2015,
+sec_positions <- cfb_recruiting_position(start_year=2015,
                                          end_year = 2020, 
                                          conference = 'SEC')
 
-acc_positions <- cfb_position_recruiting(start_year=2015,
+acc_positions <- cfb_recruiting_position(start_year=2015,
                                          end_year = 2020, 
                                          conference = 'ACC')
 
