@@ -2,24 +2,28 @@ title: cfbrecruitR
 url: http://saiemgilani.github.io/cfbrecruitR
 template:
   params:
-    bootswatch: slate
+    bootswatch: cosmo
 reference:
   - title: Exported Functions
     desc: Functions exported by cfbrecruitR
     contents:
-      - '`cfb_position_recruiting`'
-      - '`cfb_recruiting`'
+      - '`cfb_recruiting_position`'
+      - '`cfb_recruiting_player`'
+      - '`cfb_recruiting_team`'
       - '`cfb_venues`'
       - '`cfb_team_talent`'
       - '`cfb_team_roster_data`'
+      - '`cfb_conf_types_df`'
+      - '`cfb_play_type_df`'
   - title: Internals
     desc: Internal functions and helpers
     contents:
       - '`college_states`'
       - '`geocode_cities`'
       - '`bordering_states`'
+      - '`check_internet`'
+      - '`check_status`'
 navbar:
-  type: inverse
   left:
     - icon: fa-home
       href: index.html

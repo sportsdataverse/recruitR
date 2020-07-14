@@ -12,7 +12,7 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/slate/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
@@ -60,7 +60,7 @@
   <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-index">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
@@ -173,17 +173,23 @@
       <tr>
         
         <td>
-          <p><code><a href="cfb_position_recruiting.html">cfb_position_recruiting()</a></code> </p>
+          <p><code><a href="cfb_recruiting_position.html">cfb_recruiting_position()</a></code> </p>
         </td>
-        <td><p>If only start_year is provided, function will get cfb recruiting information based
-on position groups during that year for all FBS teams.</p></td>
+        <td><p>CFB Recruiting Information - Position Groups</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="cfb_recruiting.html">cfb_recruiting()</a></code> </p>
+          <p><code><a href="cfb_recruiting_player.html">cfb_recruiting_player()</a></code> </p>
         </td>
-        <td><p>Gets CFB recruiting information for a single year with filters available for team,
+        <td><p>CFB Recruiting
+Gets CFB recruiting information for a single year with filters available for team,
 recruit type, state and position.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="cfb_recruiting_team.html">cfb_recruiting_team()</a></code> </p>
+        </td>
+        <td><p>CFB Recruiting Information - Team Rankings</p></td>
       </tr><tr>
         
         <td>
@@ -204,6 +210,18 @@ all rankings from 2015 - 2018</p></td>
           <p><code><a href="cfb_team_roster_data.html">cfb_team_roster_data()</a></code> </p>
         </td>
         <td><p>Get a teams full roster</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="cfb_conf_types_df.html">cfb_conf_types_df</a></code> </p>
+        </td>
+        <td><p>College Football Conference</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="cfb_play_type_df.html">cfb_play_type_df</a></code> </p>
+        </td>
+        <td><p>College Football Mapping for Play Types</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -235,8 +253,19 @@ recruit type, state and position.</p></td>
         <td>
           <p><code><a href="bordering_states.html">bordering_states()</a></code> </p>
         </td>
-        <td><p>Determines whether the recruit was an in-state recruit,
-from a bordering state, or from out of the region for the college</p></td>
+        <td><p>Determines whether the recruit was an in-state recruit, from a bordering state, or from out of the region for the college</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="check_internet.html">check_internet()</a></code> </p>
+        </td>
+        <td><p>Utilities and Helpers for package</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="check_status.html">check_status()</a></code> </p>
+        </td>
+        <td><p>Check Status Function</p></td>
       </tr>
     </tbody>
     </table>
@@ -252,7 +281,7 @@ from a bordering state, or from out of the region for the college</p></td>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Saiem Gilani.</p>
+  <p>Developed by Saiem Gilani, Ryan Mann.</p>
 </div>
 
 <div class="pkgdown">
