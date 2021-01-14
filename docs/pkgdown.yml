@@ -1,8 +1,11 @@
 pandoc: 2.9.2.1
-pkgdown: 1.5.1
+pkgdown: 1.6.1
 pkgdown_sha: ~
-articles: []
-last_built: 2020-07-14T06:32Z
+articles:
+  cfbrecruitR: cfbrecruitR.html
+  OTs1k: OTs1k.html
+  RBsSECACC5yr: RBsSECACC5yr.html
+last_built: 2021-01-14T02:53Z
 urls:
   reference: http://saiemgilani.github.io/cfbrecruitR/reference
   article: http://saiemgilani.github.io/cfbrecruitR/articles

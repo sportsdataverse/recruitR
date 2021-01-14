@@ -1,5 +1,5 @@
 Package: cfbrecruitR
-Title: A College Football Recruiting package
+Title: A College Football Recruiting Package
 Version: 0.0.1
 Authors@R: c(person("Saiem", "Gilani", email = "saiem.gilani@gmail.com", role = c("aut", "cre")),
              person("Ryan", "Mann", email = "mannrcfe@gmail.com", role = c("aut")))
@@ -14,7 +14,6 @@ Imports:
     ggrepel,
     tidyr,
     stringr,
-    ggmap,
     tidyverse,
     assertthat,
     jsonlite,
@@ -28,4 +27,3 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 URL: https://github.com/saiemgilani/cfbrecruitR
 BugReports: https://github.com/saiemgilani/cfbrecruitR/issues
-VignetteBuilder: knitr

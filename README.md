@@ -1,10 +1,18 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# cfbrecruitR
+# cfbrecruitR <a href='http://saiemgilani.github.io/cfbrecruitR'><img src='man/figures/logo.png' align="right" height="97" /></a>
 
-A college football recruiting package <!-- badges: start -->
+<!-- badges: start -->
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R-CMD-check](https://github.com/saiemgilani/cfbrecruitR/workflows/R-CMD-check/badge.svg)](https://github.com/saiemgilani/cfbrecruitR/actions)
+[![Twitter
+Follow](https://img.shields.io/twitter/follow/saiemgilani?style=social)](https://twitter.com/saiemgilani)
 <!-- badges: end -->
+
+A college football recruiting package
 
 `cfbrecruitR` is an R package for working with CFB recruiting data. It
 is an R API wrapper around
@@ -43,9 +51,9 @@ the 2020 recruiting cycle were:
 <!-- end list -->
 
 ``` r
-FL_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='FL', position ='OT')
-GA_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='GA', position ='OT')
-AL_OTs <- cfb_recruiting(2020, recruit_type = 'HighSchool', state='AL', position ='OT')
+FL_OTs <- cfb_recruiting_player(2020, recruit_type = 'HighSchool', state='FL', position ='OT')
+GA_OTs <- cfb_recruiting_player(2020, recruit_type = 'HighSchool', state='GA', position ='OT')
+AL_OTs <- cfb_recruiting_player(2020, recruit_type = 'HighSchool', state='AL', position ='OT')
 SE_OTs <- rbind(FL_OTs, GA_OTs, AL_OTs)
 
 SE_OTs_1k <- SE_OTs %>% 
