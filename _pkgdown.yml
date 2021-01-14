@@ -3,7 +3,7 @@ template:
     bootswatch: cosmo
   opengraph:
     image:
-      src: https://raw.githubusercontent.com/saiemgilani/cfbrecruitR/master/man/figures/favicon.ico
+      src: https://raw.githubusercontent.com/saiemgilani/cfbrecruitR/master/man/figures/cfbrecruitR.ico
     twitter:
       site: "@saiemgilani"
       card: summary_large_image
