@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# cfbrecruitR <a href='http://saiemgilani.github.io/cfbrecruitR'><img src='man/figures/logo.png' align="right" height="97" /></a>
+# cfbrecruitR <a href='http://saiemgilani.github.io/cfbrecruitR'><img src='man/figures/logo.png' align="right" height="105" /></a>
 
 <!-- badges: start -->
 
