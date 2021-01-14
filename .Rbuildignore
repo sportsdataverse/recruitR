@@ -7,4 +7,4 @@
 ^\.github$
 ^vignettes
 ^data-raw$
-^logo
+^logo\.png$
