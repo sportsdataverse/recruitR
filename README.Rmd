@@ -4,6 +4,14 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# cfbrecruitR <a href='http://saiemgilani.github.io/cfbrecruitR'><img src='man/figures/logo.png' align="right" height="105" /></a>
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R-CMD-check](https://github.com/saiemgilani/cfbrecruitR/workflows/R-CMD-check/badge.svg)](https://github.com/saiemgilani/cfbrecruitR/actions)
+[![Twitter Follow](https://img.shields.io/twitter/follow/saiemgilani?style=social)](https://twitter.com/saiemgilani)
+<!-- badges: end -->
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -12,14 +20,6 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-
-# cfbrecruitR <a href='http://saiemgilani.github.io/cfbrecruitR'><img src='man/figures/logo.png' align="right" height="97" /></a>
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![R-CMD-check](https://github.com/saiemgilani/cfbrecruitR/workflows/R-CMD-check/badge.svg)](https://github.com/saiemgilani/cfbrecruitR/actions)
-[![Twitter Follow](https://img.shields.io/twitter/follow/saiemgilani?style=social)](https://twitter.com/saiemgilani)
-<!-- badges: end -->
-
 A college football recruiting package
 
 
