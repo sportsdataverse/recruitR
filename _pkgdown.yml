@@ -3,6 +3,12 @@ url: http://saiemgilani.github.io/cfbrecruitR
 template:
   params:
     bootswatch: cosmo
+  opengraph:
+    image:
+      src: https://raw.githubusercontent.com/saiemgilani/cfbrecruitR/master/man/figures/cfbrecruitR.ico
+    twitter:
+      site: "@saiemgilani"
+      card: summary_large_image
 reference:
   - title: Exported Functions
     desc: Functions exported by cfbrecruitR
@@ -27,7 +33,8 @@ navbar:
   left:
     - icon: fa-home
       href: index.html
-    - text: "How To"
+    - icon: fa-question-circle-o
+      text: Tutorials
       menu:
       -  text: Vignettes
          href: articles/index.html
@@ -35,18 +42,17 @@ navbar:
          href: articles/cfbrecruitR.html
       -  text: 2015-2020 Running Back Recruiting
          href: articles/RBsSECACC5yr.html
-    - text: "Examples of Use"
-      href: articles/OTs1k.html
+      -  text: Examples of Use
+         href: articles/OTs1k.html
+    - icon: fa-file-code-o
+      text: "Functions"
+      href: reference/index.html   
+    - icon: fa-newspaper-o
+      text: News
+      href: news/index.html
   right:
-      - text: "faq"
-        icon: fa-question-circle-o
-        href: articles/index.html
-      - icon: fa-newspaper-o
-        text: "news"
-        href: news/index.html
-      - icon: fa-file-code-o
-        text: "functions"
-        href: reference/index.html
+      - icon: fab fa-twitter fa-lg
+        href: https://twitter.com/saiemgilani
       - icon: fa-github fa-lg
-        text: "github"
+        text: "GitHub"
         href: https://github.com/saiemgilani/cfbrecruitR/
