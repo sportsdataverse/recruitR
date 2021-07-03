@@ -59,7 +59,7 @@ ggplot(rbs ,aes(x = team, y = commits, fill = avg_stars)) +
   geom_bar(stat = "identity",colour='black') +
   xlab("Team") + ylab("Number of Players") +
   labs(title="2015-2020 Running Back Recruiting - SEC & ACC",
-       subtitle="Figure: @SaiemGilani | Data: @CFB_data with #cfbrecruitR")+
+       subtitle="Figure: @SaiemGilani | Data: @CFB_data with #recruitR")+
   geom_text(aes(label = round(avg_stars,2)),color="grey85",
             size = 2.3, position = position_stack(vjust = 0.5))+
   scale_color_gradient2(low = "red",midpoint = 3,mid = "blue",
