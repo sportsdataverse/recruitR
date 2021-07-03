@@ -1,3 +1,5 @@
+url: https://saiemgilani.github.io/recruitR
+
 template:
   params:
     bootswatch: cosmo
@@ -8,7 +10,6 @@ template:
       site: "@saiemgilani"
       card: summary_large_image
       
-url: http://saiemgilani.github.io/recruitR
 
 toc:
   depth: 3
