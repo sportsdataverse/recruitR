@@ -139,7 +139,7 @@ ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))
   geom_bar(stat = "identity",colour='black') +
   xlab("State") + ylab("Number of Players") +
   labs(title="Top-1000 Offensive Tackles in FL, GA, and AL - Class of 2020",
-       subtitle="Figure: @SaiemGilani | Data: @CFB_data with #cfbrecruitR")+
+       subtitle="Figure: @SaiemGilani | Data: @CFB_data with #recruitR")+
   geom_text(aes(label = players),size = 4, position = position_stack(vjust = 0.5))+
   scale_fill_manual(values=c("dodgerblue2","lightskyblue","red3","ghostwhite"))+
   theme(legend.title = element_blank(),
