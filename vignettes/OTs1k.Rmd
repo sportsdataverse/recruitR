@@ -1,5 +1,12 @@
 ---
 title: "OTs1k"
+author: "Saiem Gilani <br><a href='https://twitter.com/saiemgilani' target='blank'><img src='https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=twitter&amp;style=for-the-badge' alt='@saiemgilani'/></a> <a href='https://github.com/saiemgilani' target='blank'><img src='https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge' alt='@saiemgilani'/></a>"
+opengraph:
+  image: 
+    src: "https://github.com/saiemgilani/recruitR/blob/master/logo.png?raw=true"
+  twitter:
+    card: summary_large_image
+    creator: "@saiemgilani"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{OTs1k}
@@ -8,14 +15,18 @@ vignette: >
 
 ---
 
+
 ## Offensive Tackle Example
 
 This is a basic example which shows you how to solve a common problem:
 
 ```{r exampleots,  message=FALSE, warning=FALSE, results='hide'}
-library(cfbrecruitR)
-library(tidyverse)
-library(ggplot2)
+if (!requireNamespace('pacman', quietly = TRUE)){
+  install.packages('pacman')
+}
+pacman::p_load_current_gh("saiemgilani/recruitR")
+
+pacman::p_load(tidyverse)
 ```
 Let's say that we are interested in seeing how many offensive tackles in the 2020 recruiting cycle were:
 
@@ -24,18 +35,18 @@ Let's say that we are interested in seeing how many offensive tackles in the 202
  - ranked inside the top 1000
 
 ```{r OTs1k}
-FL_OTs <- cfb_recruiting_player(2020, recruit_type = 'HighSchool', state='FL', position ='OT')
-GA_OTs <- cfb_recruiting_player(2020, recruit_type = 'HighSchool', state='GA', position ='OT')
-AL_OTs <- cfb_recruiting_player(2020, recruit_type = 'HighSchool', state='AL', position ='OT')
-SE_OTs <- rbind(FL_OTs, GA_OTs, AL_OTs)
+FL_OTs <- cfbd_recruiting_player(2020, recruit_type = 'HighSchool', state='FL', position ='OT')
+GA_OTs <- cfbd_recruiting_player(2020, recruit_type = 'HighSchool', state='GA', position ='OT')
+AL_OTs <- cfbd_recruiting_player(2020, recruit_type = 'HighSchool', state='AL', position ='OT')
+SE_OTs <- dplyr::bind_rows(FL_OTs, GA_OTs, AL_OTs)
 
 SE_OTs_1k <- SE_OTs %>% 
-  filter(ranking < 1000) %>% 
-  arrange(ranking)
+  dplyr::filter(ranking < 1000) %>% 
+  dplyr::arrange(ranking)
 
 SE_OTs_1k %>% 
-  select(ranking, name, committedTo, position, 
-         height, weight, stars, rating, city, stateProvince)
+  dplyr::select(ranking, name, committed_to, position, 
+         height, weight, stars, rating, city, state_province)
 ```
 ## Plotting the Offensive Tackles by State
 
@@ -45,11 +56,11 @@ You can also create a plot:
 SE_OTs_1k$stars <- factor(SE_OTs_1k$stars,levels = c(5,4,3,2))
 
 SE_OTs_1k_grp <- SE_OTs_1k %>%
-  group_by(stateProvince, stars) %>%
-  summarize(players = n()) %>% 
-  ungroup()
+  dplyr::group_by(state_province, stars) %>%
+  dplyr::summarize(players = dplyr::n()) %>% 
+  dplyr::ungroup()
 
-ggplot(SE_OTs_1k_grp ,aes(x = stateProvince, y = players, fill = factor(stars))) +
+ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))) +
   geom_bar(stat = "identity",colour='black') +
   xlab("State") + ylab("Number of Players") +
   labs(title="Top 1000 Offensive Tackles in FL, GA, and AL - Class of 2020",

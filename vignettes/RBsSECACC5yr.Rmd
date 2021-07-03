@@ -1,5 +1,12 @@
 ---
 title: "RBsSECACC5yr"
+author: "Saiem Gilani <br><a href='https://twitter.com/saiemgilani' target='blank'><img src='https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=twitter&amp;style=for-the-badge' alt='@saiemgilani'/></a> <a href='https://github.com/saiemgilani' target='blank'><img src='https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge' alt='@saiemgilani'/></a>"
+opengraph:
+  image: 
+    src: "https://github.com/saiemgilani/recruitR/blob/master/logo.png?raw=true"
+  twitter:
+    card: summary_large_image
+    creator: "@saiemgilani"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{RBsSECACC5yr}
@@ -12,28 +19,31 @@ vignette: >
 This is a basic example which shows you how to solve a common problem:
 
 ```{r examplerbs,  message=FALSE, warning=FALSE, results='hide'}
-library(cfbrecruitR)
-library(tidyverse)
-library(ggplot2)
+if (!requireNamespace('pacman', quietly = TRUE)){
+  install.packages('pacman')
+}
+pacman::p_load_current_gh("saiemgilani/recruitR")
+
+pacman::p_load(tidyverse)
 ```
 Let's say that we are interested in seeing how teams in either the SEC or ACC fared in running back recruiting from 2015-2020. We could gather the information on each conference using the `cfb_recruiting_position` function, like so:
 ```{r RBs}
-sec_positions <- cfb_recruiting_position(start_year=2015,
+sec_positions <- cfbd_recruiting_position(start_year=2015,
                                          end_year = 2020, 
                                          conference = 'SEC')
 
-acc_positions <- cfb_recruiting_position(start_year=2015,
+acc_positions <- cfbd_recruiting_position(start_year=2015,
                                          end_year = 2020, 
                                          conference = 'ACC')
 
 sec_rbs <- sec_positions %>% 
-  filter(positionGroup == "Running Back") %>% 
-  arrange(desc(averageStars))
+  dplyr::filter(position_group == "Running Back") %>% 
+  dplyr::arrange(desc(avg_stars))
 acc_rbs <- acc_positions %>% 
-  filter(positionGroup == "Running Back") %>% 
-  arrange(desc(averageStars))
+  dplyr::filter(position_group == "Running Back") %>% 
+  dplyr::arrange(desc(avg_stars))
 
-rbs <- rbind(sec_rbs,acc_rbs)
+rbs <- dplyr::bind_rows(sec_rbs,acc_rbs)
 print(rbs)
 
 ```
@@ -45,12 +55,12 @@ You can also create a plot:
 
 
 
-ggplot(rbs ,aes(x = team, y = commits, fill = averageStars)) +
+ggplot(rbs ,aes(x = team, y = commits, fill = avg_stars)) +
   geom_bar(stat = "identity",colour='black') +
   xlab("Team") + ylab("Number of Players") +
   labs(title="2015-2020 Running Back Recruiting - SEC & ACC",
        subtitle="Figure: @SaiemGilani | Data: @CFB_data with #cfbrecruitR")+
-  geom_text(aes(label = round(averageStars,2)),color="grey85",
+  geom_text(aes(label = round(avg_stars,2)),color="grey85",
             size = 2.3, position = position_stack(vjust = 0.5))+
   scale_color_gradient2(low = "red",midpoint = 3,mid = "blue",
                         high = "green",space="Lab")+

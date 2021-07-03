@@ -1,54 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/index.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/index.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/bordering_states.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/bordering_states.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_conf_types_df.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/cfbd_recruiting_player.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_play_type_df.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/cfbd_recruiting_position.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_recruiting_player.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/cfbd_recruiting_team.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_recruiting_position.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/cfbd_team_roster.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_recruiting_team.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/cfbd_team_talent.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_team_roster_data.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/cfbd_venues.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_team_talent.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/cfb_conf_types_df.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/cfb_venues.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/college_states.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/check_internet.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/reference/register_cfbd.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/check_status.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/articles/OTs1k.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/college_states.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/articles/RBsSECACC5yr.html</loc>
   </url>
   <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/reference/geocode_cities.html</loc>
-  </url>
-  <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/articles/cfbrecruitR.html</loc>
-  </url>
-  <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/articles/OTs1k.html</loc>
-  </url>
-  <url>
-    <loc>http://saiemgilani.github.io/cfbrecruitR/articles/RBsSECACC5yr.html</loc>
+    <loc>http://saiemgilani.github.io/recruitR/articles/recruitR.html</loc>
   </url>
 </urlset>

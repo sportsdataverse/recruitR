@@ -3,12 +3,15 @@ template:
     bootswatch: cosmo
   opengraph:
     image:
-      src: https://raw.githubusercontent.com/saiemgilani/cfbrecruitR/master/man/figures/cfbrecruitR.ico
+      src: https://raw.githubusercontent.com/saiemgilani/recruitR/master/man/figures/cfbrecruitR.ico
     twitter:
       site: "@saiemgilani"
       card: summary_large_image
-title: cfbrecruitR
-url: http://saiemgilani.github.io/cfbrecruitR
+      
+url: http://saiemgilani.github.io/recruitR
+
+toc:
+  depth: 3
 
 authors:
   Saiem Gilani:
@@ -17,49 +20,94 @@ authors:
    href: https://twitter.com/OGSORT14
    
 home:
+  title: recruitR
+  description: Functions to Access College Sports Recruiting Data
+  icon: fa-home
+  href: index.html
+  links:
+  - text: recruitR beginner's guide
+    href: articles/recruitR.html
 navbar:
-  left:
-    - icon: fa-home
-      href: index.html
-    - icon: fa-question-circle-o
-      text: Tutorials
+  structure:
+    left:  [home, reference, articles, news, games, network, data, repo]
+    right: [twitter, github]
+  icon: https://raw.githubusercontent.com/saiemgilani/recruitR/master/man/figures/cfbrecruitR.ico
+  title: "recruitR"
+  components:
+    reference:
+      icon: "fas fa-code"
+      text: " Funcs"
+      menu:
+      - text: "Function Index"
+        href: reference/index.html
+    articles:
+      icon: "fas fa-book-reader"
+      text: " Articles"
       menu:
       -  text: Vignettes
          href: articles/index.html
-      -  text: 2020 OTs in FL, GA, AL
+      -  text: "2020 OTs in FL, GA, AL"
          href: articles/cfbrecruitR.html
-      -  text: 2015-2020 Running Back Recruiting
+      -  text: "2015-2020 Running Back Recruiting"
          href: articles/RBsSECACC5yr.html
-      -  text: Examples of Use
+      -  text: "Examples of Use"
          href: articles/OTs1k.html
-    - icon: fa-file-code-o
-      text: "Functions"
-      href: reference/index.html   
-    - icon: fa-newspaper-o
-      text: News
+    news:
+      icon: "fas fa-newspaper"
+      text: " News"
       href: news/index.html
-  right:
-    - icon: fab fa-twitter fa-lg
-      href: https://twitter.com/saiemgilani
-    - icon: fab fa-github fa-lg
-      href: https://github.com/saiemgilani/cfbrecruitR/
+    network:
+      icon: "fas fa-project-diagram"
+      text: " SDV"
+      menu:
+      - text: SportsDataverse
+        href: https://sportsdataverse.org/
+      - text: --------------------------------
+      - text: R Packages
+      - text: cfbfastR
+        href: https://saiemgilani.github.io/cfbfastR/
+      - text: wehoop
+        href: https://saiemgilani.github.io/wehoop/
+      - text: hoopR
+        href: https://saiemgilani.github.io/hoopR/
+      - text: puntr
+        href: https://puntalytics.github.io/puntr
+      - text: gamezoneR
+        href: https://jacklich10.github.io/gamezoneR/
+      # - text: baseballr
+      #   href: https://saiemgilani.github.io/baseballr/
+      - text: --------------------------------
+      - text: Python Packages
+      - text: cfbfastR-py
+        href: https://cfbfastR-py.sportsdataverse.org/
+      - text: hoopR-py
+        href: https://hoopR-py.sportsdataverse.org/
+      - text: wehoop-py
+        href: https://wehoop-py.sportsdataverse.org/
+      - text: --------------------------------
+      - text: Node.js Packages
+      - text: sportsdataverse.js
+        href: https://saiemgilani.github.io/sportsdataverse/
+    twitter:
+      icon: "fab fa-twitter fa-lg"
+      href: http://twitter.com/saiemgilani
+    github:
+      icon: "fab fa-github fa-lg"
+      href: https://github.com/saiemgilani/recruitR/
 reference:
   - title: Exported Functions
-    desc: Functions exported by cfbrecruitR
+    desc: Functions exported by recruitR
     contents:
-      - '`cfb_recruiting_position`'
-      - '`cfb_recruiting_player`'
-      - '`cfb_recruiting_team`'
-      - '`cfb_venues`'
-      - '`cfb_team_talent`'
-      - '`cfb_team_roster_data`'
+      - '`cfbd_recruiting_position`'
+      - '`cfbd_recruiting_player`'
+      - '`cfbd_recruiting_team`'
+      - '`cfbd_venues`'
+      - '`cfbd_team_talent`'
+      - '`cfbd_team_roster`'
       - '`cfb_conf_types_df`'
-      - '`cfb_play_type_df`'
   - title: Internals
     desc: Internal functions and helpers
     contents:
+      - '`register_cfbd`'
       - '`college_states`'
-      - '`geocode_cities`'
-      - '`bordering_states`'
-      - '`check_internet`'
-      - '`check_status`'      
+      - '`bordering_states`'  

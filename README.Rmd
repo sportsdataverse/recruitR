@@ -4,11 +4,12 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# cfbrecruitR <a href='http://saiemgilani.github.io/cfbrecruitR'><img src='man/figures/logo.png' align="right" height="105" /></a>
+# recruitR <a href='http://saiemgilani.github.io/recruitR'><img src='man/figures/logo.png' align="right" height="105" /></a>
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![R-CMD-check](https://github.com/saiemgilani/cfbrecruitR/workflows/R-CMD-check/badge.svg)](https://github.com/saiemgilani/cfbrecruitR/actions)
+[![Version-Number](https://img.shields.io/github/r-package/v/saiemgilani/recruitR?label=recruitR&logo=R&logoColor=white&style=for-the-badge)](https://github.com/saiemgilani/recruitR) [![R-CMD-check](https://img.shields.io/github/workflow/status/saiemgilani/recruitR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/saiemgilani/recruitR/actions/workflows/R-CMD-check.yaml)
+![Contributors](https://img.shields.io/github/contributors/saiemgilani/recruitR?style=for-the-badge)
 [![Twitter Follow](https://img.shields.io/twitter/follow/saiemgilani?style=social)](https://twitter.com/saiemgilani)
 <!-- badges: end -->
 
@@ -23,21 +24,35 @@ knitr::opts_chunk$set(
 A college football recruiting package
 
 
-`cfbrecruitR` is an R package for working with CFB recruiting data. It is an R API wrapper around [collegefootballdata's](https://collegefootballdata.com/) recruiting and roster endpoints. 
+`recruitR` is an R package for working with college sports recruiting data. It is an R API wrapper around [collegefootballdata's](https://collegefootballdata.com/) recruiting and roster endpoints. 
 
 __Note:__ For details on the data sources, please go the website linked above. Sometimes there are inconsistencies in the underlying data itself. Please report issues here or to [https://collegefootballdata.com/](https://collegefootballdata.com/). 
 
 ## Installation
-You can install `cfbrecruitR` from GitHub with:
+
+You can install the released version of [**`recruitR`**](https://github.com/saiemgilani/recruitR/) from [GitHub](https://github.com/saiemgilani/recruitR) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("saiemgilani/cfbrecruitR")
+# You can install using the pacman package using the following code:
+if (!requireNamespace('pacman', quietly = TRUE)){
+  install.packages('pacman')
+}
+pacman::p_load_current_gh("saiemgilani/recruitR")
 ```
+
+``` r
+# if you would prefer devtools installation
+if (!requireNamespace('devtools', quietly = TRUE)){
+  install.packages('devtools')
+}
+# Alternatively, using the devtools package:
+devtools::install_github(repo = "saiemgilani/recruitR")
+```
+
 
 ## Offensive Tackle Example
 ```{r examplerdm, message=FALSE, warning=FALSE, results='hide'}
-library(cfbrecruitR)
+library(recruitR)
 library(tidyverse)
 library(ggplot2)
 ```

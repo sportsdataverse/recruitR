@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>cfbrecruitR • cfbrecruitR</title>
+<title>cfbrecruitR • recruitR</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -19,8 +19,8 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
 <meta property="og:title" content="cfbrecruitR">
-<meta property="og:description" content="cfbrecruitR">
-<meta property="og:image" content="https://raw.githubusercontent.com/saiemgilani/cfbrecruitR/master/man/figures/cfbrecruitR.ico">
+<meta property="og:description" content="recruitR">
+<meta property="og:image" content="https://raw.githubusercontent.com/saiemgilani/recruitR/master/man/figures/cfbrecruitR.ico">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@saiemgilani">
 <meta name="twitter:site" content="@saiemgilani">
@@ -41,8 +41,8 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">cfbrecruitR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
+        <a class="navbar-link" href="../index.html">recruitR</a>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
       </span>
     </div>
 
@@ -50,15 +50,29 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa-home"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-question-circle-o"></span>
+    <span class="fas fa-code"></span>
      
-    Tutorials
+     Funcs
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="../reference/index.html">Function Index</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-book-reader"></span>
+     
+     Articles
      
     <span class="caret"></span>
   </a>
@@ -78,29 +92,69 @@
   </ul>
 </li>
 <li>
-  <a href="../reference/index.html">
-    <span class="fas fa-file-code-o"></span>
+  <a href="../news/index.html">
+    <span class="fas fa-newspaper"></span>
      
-    Functions
+     News
   </a>
 </li>
-<li>
-  <a href="../news/index.html">
-    <span class="fas fa-newspaper-o"></span>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-project-diagram"></span>
      
-    News
+     SDV
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="https://sportsdataverse.org/">SportsDataverse</a>
+    </li>
+    <li class="divider">
+    <li class="dropdown-header">R Packages</li>
+    <li>
+      <a href="https://saiemgilani.github.io/cfbfastR/">cfbfastR</a>
+    </li>
+    <li>
+      <a href="https://saiemgilani.github.io/wehoop/">wehoop</a>
+    </li>
+    <li>
+      <a href="https://saiemgilani.github.io/hoopR/">hoopR</a>
+    </li>
+    <li>
+      <a href="https://puntalytics.github.io/puntr">puntr</a>
+    </li>
+    <li>
+      <a href="https://jacklich10.github.io/gamezoneR/">gamezoneR</a>
+    </li>
+    <li class="divider">
+    <li class="dropdown-header">Python Packages</li>
+    <li>
+      <a href="https://cfbfastR-py.sportsdataverse.org/">cfbfastR-py</a>
+    </li>
+    <li>
+      <a href="https://hoopR-py.sportsdataverse.org/">hoopR-py</a>
+    </li>
+    <li>
+      <a href="https://wehoop-py.sportsdataverse.org/">wehoop-py</a>
+    </li>
+    <li class="divider">
+    <li class="dropdown-header">Node.js Packages</li>
+    <li>
+      <a href="https://saiemgilani.github.io/sportsdataverse/">sportsdataverse.js</a>
+    </li>
+  </ul>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://twitter.com/saiemgilani">
+  <a href="http://twitter.com/saiemgilani">
     <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="https://github.com/saiemgilani/cfbrecruitR/">
+  <a href="https://github.com/saiemgilani/recruitR/">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -115,13 +169,13 @@
 
       
 
-      </header><script src="cfbrecruitR_files/header-attrs-2.6/header-attrs.js"></script><script src="cfbrecruitR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="cfbrecruitR_files/header-attrs-2.9/header-attrs.js"></script><script src="cfbrecruitR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>cfbrecruitR</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/saiemgilani/cfbrecruitR/blob/master/vignettes/cfbrecruitR.Rmd"><code>vignettes/cfbrecruitR.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/saiemgilani/recruitR/blob/master/vignettes/cfbrecruitR.Rmd"><code>vignettes/cfbrecruitR.Rmd</code></a></small>
       <div class="hidden name"><code>cfbrecruitR.Rmd</code></div>
 
     </div>
@@ -132,9 +186,12 @@
 <h2 class="hasAnchor">
 <a href="#offensive-tackle-example" class="anchor"></a>Offensive Tackle Example</h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/saiemgilani/cfbrecruitR">cfbrecruitR</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span><span class="op">(</span><span class="st">'pacman'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
+  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'pacman'</span><span class="op">)</span>
+<span class="op">}</span>
+<span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_load_current_gh.html">p_load_current_gh</a></span><span class="op">(</span><span class="st">"saiemgilani/recruitR"</span><span class="op">)</span>
+
+<span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_load.html">p_load</a></span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span></code></pre></div>
 <p>Let’s say that we are interested in seeing how many offensive tackles in the 2020 recruiting cycle were:</p>
 <ul>
 <li>located in Florida</li>
@@ -142,62 +199,60 @@
 <li>ranked inside the top 1000</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">FL_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cfb_recruiting_player.html">cfb_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">'HighSchool'</span>, state<span class="op">=</span><span class="st">'FL'</span>, position <span class="op">=</span><span class="st">'OT'</span><span class="op">)</span>
-<span class="va">GA_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cfb_recruiting_player.html">cfb_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">'HighSchool'</span>, state<span class="op">=</span><span class="st">'GA'</span>, position <span class="op">=</span><span class="st">'OT'</span><span class="op">)</span>
-<span class="va">AL_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cfb_recruiting_player.html">cfb_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">'HighSchool'</span>, state<span class="op">=</span><span class="st">'AL'</span>, position <span class="op">=</span><span class="st">'OT'</span><span class="op">)</span>
-<span class="va">SE_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="va">FL_OTs</span>, <span class="va">GA_OTs</span>, <span class="va">AL_OTs</span><span class="op">)</span>
+<code class="sourceCode R"><span class="va">FL_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cfbd_recruiting_player.html">cfbd_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">'HighSchool'</span>, state<span class="op">=</span><span class="st">'FL'</span>, position <span class="op">=</span><span class="st">'OT'</span><span class="op">)</span>
+<span class="va">GA_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cfbd_recruiting_player.html">cfbd_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">'HighSchool'</span>, state<span class="op">=</span><span class="st">'GA'</span>, position <span class="op">=</span><span class="st">'OT'</span><span class="op">)</span>
+<span class="va">AL_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cfbd_recruiting_player.html">cfbd_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">'HighSchool'</span>, state<span class="op">=</span><span class="st">'AL'</span>, position <span class="op">=</span><span class="st">'OT'</span><span class="op">)</span>
+<span class="va">SE_OTs</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span><span class="op">(</span><span class="va">FL_OTs</span>, <span class="va">GA_OTs</span>, <span class="va">AL_OTs</span><span class="op">)</span>
 
 <span class="va">SE_OTs_1k</span> <span class="op">&lt;-</span> <span class="va">SE_OTs</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">ranking</span> <span class="op">&lt;</span> <span class="fl">1000</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu">arrange</span><span class="op">(</span><span class="va">ranking</span><span class="op">)</span>
+  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">ranking</span> <span class="op">&lt;</span> <span class="fl">1000</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">ranking</span><span class="op">)</span>
 
 <span class="va">SE_OTs_1k</span> <span class="op">%&gt;%</span> 
-  <span class="fu">select</span><span class="op">(</span><span class="va">ranking</span>, <span class="va">name</span>, <span class="va">school</span>, <span class="va">committedTo</span>, <span class="va">position</span>, 
-         <span class="va">height</span>, <span class="va">weight</span>, <span class="va">stars</span>, <span class="va">rating</span>, <span class="va">city</span>, <span class="va">stateProvince</span><span class="op">)</span>
-<span class="co">#&gt;    ranking              name                           school    committedTo</span>
+  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">ranking</span>, <span class="va">name</span>, <span class="va">school</span>, <span class="va">committed_to</span>, <span class="va">position</span>, 
+         <span class="va">height</span>, <span class="va">weight</span>, <span class="va">stars</span>, <span class="va">rating</span>, <span class="va">city</span>, <span class="va">state_province</span><span class="op">)</span>
+<span class="co">#&gt;    ranking              name                           school   committed_to</span>
 <span class="co">#&gt; 1       11   Broderick Jones                         Lithonia        Georgia</span>
-<span class="co">#&gt; 2       37     Tate Ratledge                Darlington School        Georgia</span>
-<span class="co">#&gt; 3       72      Myles Hinton Greater Atlanta Christian School       Stanford</span>
-<span class="co">#&gt; 4      108   Marcus Dumervil               St. Thomas Aquinas            LSU</span>
-<span class="co">#&gt; 5      127      Jalen Rivers                          Oakleaf          Miami</span>
-<span class="co">#&gt; 6      156 Issiah Walker Jr.                          Norland        Florida</span>
-<span class="co">#&gt; 7      270      Joshua Braun                         Suwannee        Florida</span>
-<span class="co">#&gt; 8      317 Connor McLaughlin                           Jesuit       Stanford</span>
-<span class="co">#&gt; 9      331      Javion Cohen                          Central        Alabama</span>
-<span class="co">#&gt; 10     381     John Williams                        Creekview        Clemson</span>
-<span class="co">#&gt; 11     487      Cayden Baker                       Fort Myers North Carolina</span>
-<span class="co">#&gt; 12     527     Austin Blaske                  South Effingham        Georgia</span>
-<span class="co">#&gt; 13     535   Michael Rankins                          Lennard   Georgia Tech</span>
-<span class="co">#&gt; 14     559   Jordan Williams                      Gainesville   Georgia Tech</span>
-<span class="co">#&gt; 15     574        Brady Ward             St. Paul's Episcopal       Ole Miss</span>
-<span class="co">#&gt; 16     610    Trey Zimmerman                          Roswell North Carolina</span>
-<span class="co">#&gt; 17     654     Gerald Mincey                 Cardinal Gibbons        Florida</span>
-<span class="co">#&gt; 18     748         Jake Wray                         Marietta       Colorado</span>
-<span class="co">#&gt; 19     929      Joshua Jones                          Central       Kentucky</span>
-<span class="co">#&gt; 20     948        Wing Green                       Lee County   Georgia Tech</span>
-<span class="co">#&gt; 21     966   Kobe McAllister                         Heritage     Cincinnati</span>
-<span class="co">#&gt;    position height weight stars rating            city stateProvince</span>
-<span class="co">#&gt; 1        OT   77.0    298     5 0.9947        Lithonia            GA</span>
-<span class="co">#&gt; 2        OT   78.0    322     4 0.9822            Rome            GA</span>
-<span class="co">#&gt; 3        OT   78.0    308     4 0.9666        Norcross            GA</span>
-<span class="co">#&gt; 4        OT   77.0    305     4 0.9519 Fort Lauderdale            FL</span>
-<span class="co">#&gt; 5        OT   78.0    331     4 0.9429     Orange Park            FL</span>
-<span class="co">#&gt; 6        OT   76.0    309     4 0.9311           Miami            FL</span>
-<span class="co">#&gt; 7        OT   78.0    335     4 0.9049        Live Oak            FL</span>
-<span class="co">#&gt; 8        OT   79.0    260     4 0.8969           Tampa            FL</span>
-<span class="co">#&gt; 9        OT   77.0    295     4 0.8954     Phenix City            AL</span>
-<span class="co">#&gt; 10       OT   77.0    295     3 0.8891          Canton            GA</span>
-<span class="co">#&gt; 11       OT   78.0    260     3 0.8789      Fort Myers            FL</span>
-<span class="co">#&gt; 12       OT   77.0    278     3 0.8759          Guyton            GA</span>
-<span class="co">#&gt; 13       OT   77.0    295     3 0.8755          Ruskin            FL</span>
-<span class="co">#&gt; 14       OT   78.0    310     3 0.8742     Gainesville            GA</span>
-<span class="co">#&gt; 15       OT   79.0    310     3 0.8729          Mobile            AL</span>
-<span class="co">#&gt; 16       OT   78.0    294     3 0.8709         Roswell            GA</span>
-<span class="co">#&gt; 17       OT   77.0    320     3 0.8681 Fort Lauderdale            FL</span>
-<span class="co">#&gt; 18       OT   77.0    300     3 0.8643        Marietta            GA</span>
-<span class="co">#&gt; 19       OT   76.5    304     3 0.8559     Phenix City            AL</span>
-<span class="co">#&gt; 20       OT   79.0    285     3 0.8552        Leesburg            GA</span>
-<span class="co">#&gt; 21       OT   78.0    275     3 0.8551        Ringgold            GA</span></code></pre></div>
+<span class="co">#&gt; 2       38     Tate Ratledge                Darlington School        Georgia</span>
+<span class="co">#&gt; 3       74      Myles Hinton Greater Atlanta Christian School       Stanford</span>
+<span class="co">#&gt; 4      110   Marcus Dumervil               St. Thomas Aquinas            LSU</span>
+<span class="co">#&gt; 5      128      Jalen Rivers                          Oakleaf          Miami</span>
+<span class="co">#&gt; 6      157 Issiah Walker Jr.                          Norland        Florida</span>
+<span class="co">#&gt; 7      271      Joshua Braun                         Suwannee        Florida</span>
+<span class="co">#&gt; 8      318 Connor McLaughlin                           Jesuit       Stanford</span>
+<span class="co">#&gt; 9      333      Javion Cohen                          Central        Alabama</span>
+<span class="co">#&gt; 10     491      Cayden Baker                       Fort Myers North Carolina</span>
+<span class="co">#&gt; 11     530     Austin Blaske                  South Effingham        Georgia</span>
+<span class="co">#&gt; 12     538   Michael Rankins                          Lennard   Georgia Tech</span>
+<span class="co">#&gt; 13     562   Jordan Williams                      Gainesville   Georgia Tech</span>
+<span class="co">#&gt; 14     577        Brady Ward             St. Paul's Episcopal       Ole Miss</span>
+<span class="co">#&gt; 15     614    Trey Zimmerman                          Roswell North Carolina</span>
+<span class="co">#&gt; 16     658     Gerald Mincey                 Cardinal Gibbons        Florida</span>
+<span class="co">#&gt; 17     752         Jake Wray                         Marietta       Colorado</span>
+<span class="co">#&gt; 18     934      Joshua Jones                          Central       Kentucky</span>
+<span class="co">#&gt; 19     953        Wing Green                       Lee County   Georgia Tech</span>
+<span class="co">#&gt; 20     971   Kobe McAllister                         Heritage     Cincinnati</span>
+<span class="co">#&gt;    position height weight stars rating            city state_province</span>
+<span class="co">#&gt; 1        OT   77.0    298     5 0.9947        Lithonia             GA</span>
+<span class="co">#&gt; 2        OT   78.0    322     4 0.9821            Rome             GA</span>
+<span class="co">#&gt; 3        OT   78.0    308     4 0.9662        Norcross             GA</span>
+<span class="co">#&gt; 4        OT   77.0    305     4 0.9515 Fort Lauderdale             FL</span>
+<span class="co">#&gt; 5        OT   78.0    331     4 0.9425     Orange Park             FL</span>
+<span class="co">#&gt; 6        OT   76.0    309     4 0.9308           Miami             FL</span>
+<span class="co">#&gt; 7        OT   78.0    335     4 0.9049        Live Oak             FL</span>
+<span class="co">#&gt; 8        OT   79.0    260     4 0.8968           Tampa             FL</span>
+<span class="co">#&gt; 9        OT   77.0    295     4 0.8951     Phenix City             AL</span>
+<span class="co">#&gt; 10       OT   78.0    260     3 0.8789      Fort Myers             FL</span>
+<span class="co">#&gt; 11       OT   77.0    278     3 0.8759          Guyton             GA</span>
+<span class="co">#&gt; 12       OT   77.0    295     3 0.8755          Ruskin             FL</span>
+<span class="co">#&gt; 13       OT   78.0    310     3 0.8742     Gainesville             GA</span>
+<span class="co">#&gt; 14       OT   79.0    310     3 0.8729          Mobile             AL</span>
+<span class="co">#&gt; 15       OT   78.0    294     3 0.8709         Roswell             GA</span>
+<span class="co">#&gt; 16       OT   77.0    320     3 0.8681 Fort Lauderdale             FL</span>
+<span class="co">#&gt; 17       OT   77.0    300     3 0.8643        Marietta             GA</span>
+<span class="co">#&gt; 18       OT   76.5    304     3 0.8559     Phenix City             AL</span>
+<span class="co">#&gt; 19       OT   79.0    285     3 0.8552        Leesburg             GA</span>
+<span class="co">#&gt; 20       OT   78.0    275     3 0.8551        Ringgold             GA</span></code></pre></div>
 </div>
 <div id="plotting-the-offensive-tackles-by-state" class="section level2">
 <h2 class="hasAnchor">
@@ -207,11 +262,11 @@
 <code class="sourceCode R"><span class="va">SE_OTs_1k</span><span class="op">$</span><span class="va">stars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">SE_OTs_1k</span><span class="op">$</span><span class="va">stars</span>,levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">4</span>,<span class="fl">3</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span>
 
 <span class="va">SE_OTs_1k_grp</span> <span class="op">&lt;-</span> <span class="va">SE_OTs_1k</span> <span class="op">%&gt;%</span>
-  <span class="fu">group_by</span><span class="op">(</span><span class="va">stateProvince</span>, <span class="va">stars</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">summarize</span><span class="op">(</span>players <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu">ungroup</span><span class="op">(</span><span class="op">)</span>
+  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state_province</span>, <span class="va">stars</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>players <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span>
 
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">SE_OTs_1k_grp</span> ,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">stateProvince</span>, y <span class="op">=</span> <span class="va">players</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">stars</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">SE_OTs_1k_grp</span> ,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">state_province</span>, y <span class="op">=</span> <span class="va">players</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">stars</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>,colour<span class="op">=</span><span class="st">'black'</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"State"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Number of Players"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Top-1000 Offensive Tackles in FL, GA, and AL - Class of 2020"</span>,
