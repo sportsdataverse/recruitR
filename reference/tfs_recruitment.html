@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • recruitR</title>
+<title>Get 247 Recruitment — tfs_recruitment • recruitR</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -48,7 +48,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Get 247 Recruitment — tfs_recruitment" />
+<meta property="og:description" content="Get 247 Recruitment" />
 <meta property="og:image" content="https://raw.githubusercontent.com/saiemgilani/recruitR/master/man/figures/cfbrecruitR.ico" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@saiemgilani" />
@@ -71,7 +72,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -235,32 +236,83 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/saiemgilani/recruitR/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1><strong>Get 247 Recruitment</strong></h1>
+    <small class="dont-index">Source: <a href='https://github.com/saiemgilani/recruitR/blob/master/R/tfs_recruitment.R'><code>R/tfs_recruitment.R</code></a></small>
+    <div class="hidden name"><code>tfs_recruitment.Rd</code></div>
     </div>
 
-    <div id="recruitr-002" class="section level1">
-<h1 class="page-header" data-toc-text="0.0.2">
-<a href="#recruitr-002" class="anchor"></a>recruitR 0.0.2</h1>
-<ul>
-<li>Updated to include CFBD API key methods</li>
-</ul>
-</div>
-    <div id="recruitr-001" class="section level1">
-<h1 class="page-header" data-toc-text="0.0.1">
-<a href="#recruitr-001" class="anchor"></a>recruitR 0.0.1</h1>
-<ul>
-<li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p><strong>Get 247 Recruitment</strong></p>
+    </div>
 
+    <pre class="usage"><span class='fu'>tfs_recruitment</span><span class='op'>(</span><span class='va'>recruitment_id</span><span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>recruitment_id</th>
+      <td><p>(<em>Integer</em>)</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p><code>tfs_recruitment()</code></p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
+   <span class='fu'>tfs_recruitment</span><span class='op'>(</span>recruitment_id <span class='op'>=</span> <span class='fl'>130361</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      key player_key player_hometown_state player_hometown_city
+#&gt; 1 130361   46084728               Georgia              Suwanee
+#&gt;   player_first_name player_last_name player_full_name player_height
+#&gt; 1            Travis           Hunter    Travis Hunter           6-1
+#&gt;   player_weight
+#&gt; 1           165
+#&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                player_bio
+#&gt; 1 Also plays basketball.\r\n\r\n2020: Named the MaxPreps Junior of the Year; MaxPreps Preseason Junior All-American. Best player on a Collins Hill team that went 12-3 and made AAAAAAA state final. Got snaps at both cornerback and wide receiver. Caught 137 passes for 1,731 yards and 24 touchdowns.\r\n\r\n2019: All-county selection by the Gwinnett Daily Post and the Touchdown Club of Gwinnett. Helped Collins Hill to a 6-5 record and Georgia AAAAAAA first-round playoff appearance as a sophomore. Two-way player that also totaled 919 receiving yards and 12 touchdowns.
+#&gt;   player_modified_user  player_modified_date player_cbs_key
+#&gt; 1          Chad Carson 10/20/2021 9:10:52 AM              0
+#&gt;                                             player_url
+#&gt; 1 https://247sports.com/Player/Travis-Hunter-46084728/
+#&gt;   player_player_high_school_name player_last_recruitment_player_institution
+#&gt; 1                   Collins Hill                                     236028
+#&gt;   player_current_player_institution player_twitter_contact
+#&gt; 1                            236028                  47823
+#&gt;   player_primary_player_sport player_primary_player_position_abbreviation
+#&gt; 1                      246045                                          CB
+#&gt;   player_primary_recruitment player_default_name player_default_asset
+#&gt; 1                     130361       Travis Hunter             10550233
+#&gt;                                            player_default_asset_url
+#&gt; 1 https://s3media.247sports.com/Uploads/Assets/233/550/10550233.jpg
+#&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     player_bio_or_default
+#&gt; 1 Also plays basketball.\r\n\r\n2020: Named the MaxPreps Junior of the Year; MaxPreps Preseason Junior All-American. Best player on a Collins Hill team that went 12-3 and made AAAAAAA state final. Got snaps at both cornerback and wide receiver. Caught 137 passes for 1,731 yards and 24 touchdowns.\r\n\r\n2019: All-county selection by the Gwinnett Daily Post and the Touchdown Club of Gwinnett. Helped Collins Hill to a 6-5 record and Georgia AAAAAAA first-round playoff appearance as a sophomore. Two-way player that also totaled 919 receiving yards and 12 touchdowns.
+#&gt;   player_composite_rating player_composite_star_rating player_national_rank
+#&gt; 1        99.9913922777129                            5                    1
+#&gt;   player_position_rank player_state_rank player_institution year position
+#&gt; 1                    1                 1             236028 2022       24
+#&gt;   institution state player_sport highest_recruit_interest_event_type
+#&gt; 1        9675     3       246045                          HardCommit
+#&gt;   highest_recruit_interest_event committed_recruit_interest
+#&gt; 1                         323069                     647122
+#&gt;   committed_institution highest_recruit_interest primary_player_position
+#&gt; 1                 24010                   647122                  273218
+#&gt;   primary_position  default_name
+#&gt; 1               24 Travis Hunter
+#&gt;                                    commited_institution_team_image
+#&gt; 1 https://s3media.247sports.com/Uploads/Assets/414/682/4682414.png
+#&gt;   recruit_interest_count
+#&gt; 1                     16
+#&gt;                                                      recruit_interests_url
+#&gt; 1 https://247sports.com/Recruitment/Travis-Hunter-130361/RecruitInterests/</div><div class='input'><span class='co'># }</span>
+
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 
