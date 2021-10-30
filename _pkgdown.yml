@@ -67,28 +67,38 @@ navbar:
       - text: R Packages
       - text: cfbfastR
         href: https://saiemgilani.github.io/cfbfastR/
-      - text: wehoop
-        href: https://saiemgilani.github.io/wehoop/
       - text: hoopR
-        href: https://saiemgilani.github.io/hoopR/
+        href: https://hoopR.sportsdataverse.org/
+      - text: wehoop
+        href: https://wehoop.sportsdataverse.org/
       - text: puntr
-        href: https://puntalytics.github.io/puntr
+        href: https://puntalytics.github.io/puntr/
       - text: gamezoneR
         href: https://jacklich10.github.io/gamezoneR/
-      # - text: baseballr
-      #   href: https://saiemgilani.github.io/baseballr/
+      - text: cfbplotR
+        href: https://kazink36.github.io/cfbplotR/
+      - text: cfb4th
+        href: https://kazink36.github.io/cfb4th/
+      - text: worldfootballR
+        href: https://jaseziv.github.io/worldfootballR/
+      - text: baseballr
+        href: https://BillPetti.github.io/baseballr/
+      - text: hockeyR
+        href: https://hockeyr.netlify.app/
+      - text: whockeyR
+        href: https://BenHowell71.github.io/whockeyR/
+      - text: powerplay
+        href: https://saiemgilani.github.io/powerplay/
       - text: --------------------------------
       - text: Python Packages
-      - text: cfbfastR-py
-        href: https://cfbfastR-py.sportsdataverse.org/
-      - text: hoopR-py
-        href: https://hoopR-py.sportsdataverse.org/
-      - text: wehoop-py
-        href: https://wehoop-py.sportsdataverse.org/
+      - text: sportsdataverse-py
+        href: https://py.sportsdataverse.org/
       - text: --------------------------------
       - text: Node.js Packages
       - text: sportsdataverse.js
         href: https://saiemgilani.github.io/sportsdataverse/
+      - text: nfl-nerd
+        href: https://github.com/nntrn/nfl-nerd/
     twitter:
       icon: "fab fa-twitter fa-lg"
       href: http://twitter.com/saiemgilani
@@ -106,6 +116,7 @@ reference:
       - '`cfbd_team_talent`'
       - '`cfbd_team_roster`'
       - '`cfb_conf_types_df`'
+      - starts_with("tfs_")
   - title: Internals
     desc: Internal functions and helpers
     contents:
