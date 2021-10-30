@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# recruitR <a href='http://saiemgilani.github.io/recruitR'><img src='man/figures/logo.png' align="right" height="105" /></a>
+# recruitR <a href='http://saiemgilani.github.io/recruitR/'><img src='man/figures/logo.png' align="right" height="105" /></a>
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge)](https://www.tidyverse.org/lifecycle/#experimental)
@@ -30,9 +30,9 @@ __Note:__ For details on the data sources, please go the website linked above. S
 
 ## Installation
 
-You can install the released version of [**`recruitR`**](https://github.com/saiemgilani/recruitR/) from [GitHub](https://github.com/saiemgilani/recruitR) with:
+You can install the released version of [**`recruitR`**](https://github.com/saiemgilani/recruitR) from [GitHub](https://github.com/saiemgilani/recruitR) with:
 
-``` r
+```r
 # You can install using the pacman package using the following code:
 if (!requireNamespace('pacman', quietly = TRUE)){
   install.packages('pacman')
@@ -40,7 +40,7 @@ if (!requireNamespace('pacman', quietly = TRUE)){
 pacman::p_load_current_gh("saiemgilani/recruitR")
 ```
 
-``` r
+```r
 # if you would prefer devtools installation
 if (!requireNamespace('devtools', quietly = TRUE)){
   install.packages('devtools')
@@ -98,7 +98,7 @@ ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))
   theme(legend.title = element_blank(),
         legend.text = element_text(size = 12, margin=margin(t=0.2,r=0,b=0.2,l=-1.2,unit=c("mm")), 
                                    family = "serif"),
-        legend.background = element_rect(fill = "grey85"),
+        legend.background = element_rect(fill = "grey99"),
         legend.key.width = unit(.2,"cm"),
         legend.key.size = unit(.3,"cm"),
         legend.position = c(0.25, 0.84),
@@ -120,8 +120,8 @@ ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))
         plot.caption = element_text(size = 12, margin=margin(t=0,r=0,b=0,l=0,unit=c("mm")),
                                     lineheight=-0.5, family = "serif"),
         strip.text = element_text(size = 10, family = "serif",face="bold"),
-        panel.background = element_rect(fill = "grey75"),
-        plot.background = element_rect(fill = "grey65"),
+        panel.background = element_rect(fill = "grey95"),
+        plot.background = element_rect(fill = "grey85"),
         plot.margin=unit(c(top=0.4,right=0.4,bottom=0.4,left=0.4),"cm"))
 
 ```

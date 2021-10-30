@@ -27,5 +27,5 @@ Imports:
     curl
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-URL: https://saiemgilani.github.io/recruitR, https://github.com/saiemgilani/recruitR
+URL: https://saiemgilani.github.io/recruitR/, https://github.com/saiemgilani/recruitR
 BugReports: https://github.com/saiemgilani/recruitR/issues

@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# recruitR <a href='http://saiemgilani.github.io/recruitR'><img src='man/figures/logo.png' align="right" height="105" /></a>
+# recruitR <a href='http://saiemgilani.github.io/recruitR/'><img src='man/figures/logo.png' align="right" height="105" /></a>
 
 <!-- badges: start -->
 
@@ -18,8 +18,8 @@ A college football recruiting package
 
 `recruitR` is an R package for working with college sports recruiting
 data. It is an R API wrapper around
-[collegefootballdata’s](https://collegefootballdata.com/) recruiting
-and roster endpoints.
+[collegefootballdata’s](https://collegefootballdata.com/) recruiting and
+roster endpoints.
 
 **Note:** For details on the data sources, please go the website linked
 above. Sometimes there are inconsistencies in the underlying data
@@ -29,7 +29,7 @@ itself. Please report issues here or to
 ## Installation
 
 You can install the released version of
-[**`recruitR`**](https://github.com/saiemgilani/recruitR/) from
+[**`recruitR`**](https://github.com/saiemgilani/recruitR) from
 [GitHub](https://github.com/saiemgilani/recruitR) with:
 
 ``` r
@@ -60,11 +60,9 @@ library(ggplot2)
 Let’s say that we are interested in seeing how many offensive tackles in
 the 2020 recruiting cycle were:
 
-  - located in Florida
-  - located in the states bordering Florida
-  - ranked inside the top 1000
-
-<!-- end list -->
+-   located in Florida
+-   located in the states bordering Florida
+-   ranked inside the top 1000
 
 ``` r
 FL_OTs <- cfbd_recruiting_player(2020, recruit_type = 'HighSchool', state='FL', position ='OT')
@@ -145,7 +143,7 @@ ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))
   theme(legend.title = element_blank(),
         legend.text = element_text(size = 12, margin=margin(t=0.2,r=0,b=0.2,l=-1.2,unit=c("mm")), 
                                    family = "serif"),
-        legend.background = element_rect(fill = "grey85"),
+        legend.background = element_rect(fill = "grey99"),
         legend.key.width = unit(.2,"cm"),
         legend.key.size = unit(.3,"cm"),
         legend.position = c(0.25, 0.84),
@@ -167,8 +165,8 @@ ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))
         plot.caption = element_text(size = 12, margin=margin(t=0,r=0,b=0,l=0,unit=c("mm")),
                                     lineheight=-0.5, family = "serif"),
         strip.text = element_text(size = 10, family = "serif",face="bold"),
-        panel.background = element_rect(fill = "grey75"),
-        plot.background = element_rect(fill = "grey65"),
+        panel.background = element_rect(fill = "grey95"),
+        plot.background = element_rect(fill = "grey85"),
         plot.margin=unit(c(top=0.4,right=0.4,bottom=0.4,left=0.4),"cm"))
 ```
 
