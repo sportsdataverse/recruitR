@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://saiemgilani.github.io/recruitR/404.html</loc>
+  </url>
+  <url>
+    <loc>https://saiemgilani.github.io/recruitR/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://saiemgilani.github.io/recruitR/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://saiemgilani.github.io/recruitR/articles/OTs1k.html</loc>
+  </url>
+  <url>
+    <loc>https://saiemgilani.github.io/recruitR/articles/RBsSECACC5yr.html</loc>
+  </url>
+  <url>
+    <loc>https://saiemgilani.github.io/recruitR/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://saiemgilani.github.io/recruitR/articles/recruitR.html</loc>
+  </url>
+  <url>
+    <loc>https://saiemgilani.github.io/recruitR/authors.html</loc>
+  </url>
+  <url>
     <loc>https://saiemgilani.github.io/recruitR/index.html</loc>
+  </url>
+  <url>
+    <loc>https://saiemgilani.github.io/recruitR/news/index.html</loc>
   </url>
   <url>
     <loc>https://saiemgilani.github.io/recruitR/reference/bordering_states.html</loc>
@@ -31,6 +58,9 @@
     <loc>https://saiemgilani.github.io/recruitR/reference/college_states.html</loc>
   </url>
   <url>
+    <loc>https://saiemgilani.github.io/recruitR/reference/index.html</loc>
+  </url>
+  <url>
     <loc>https://saiemgilani.github.io/recruitR/reference/register_cfbd.html</loc>
   </url>
   <url>
@@ -38,14 +68,5 @@
   </url>
   <url>
     <loc>https://saiemgilani.github.io/recruitR/reference/tfs_recruitment.html</loc>
-  </url>
-  <url>
-    <loc>https://saiemgilani.github.io/recruitR/articles/OTs1k.html</loc>
-  </url>
-  <url>
-    <loc>https://saiemgilani.github.io/recruitR/articles/RBsSECACC5yr.html</loc>
-  </url>
-  <url>
-    <loc>https://saiemgilani.github.io/recruitR/articles/recruitR.html</loc>
   </url>
 </urlset>
