@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# recruitR <a href='https://recruitR.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/saiemgilani/recruitR/main/logo.png' align="right" height="105" /></a>
+# recruitR <a href='https://recruitR.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/saiemgilani/recruitR/master/logo.png' align="right" height="105" /></a>
 
 <!-- badges: start -->
 
