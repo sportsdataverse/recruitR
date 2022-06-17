@@ -6,7 +6,6 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom httr GET
 #' @importFrom utils URLencode
-#' @importFrom assertthat assert_that
 #' @importFrom glue glue
 #' @importFrom janitor clean_names
 #' @export

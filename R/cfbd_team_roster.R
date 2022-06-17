@@ -1,11 +1,11 @@
-#' @title 
+
+#' @title
 #' **Get team rosters**
 #' @description
 #' Get a teams full roster by year. If team is not selected, API returns rosters for every team from the selected year.
 #'
-#' @param year (\emph{Integer} required): Year,  4 digit format (\emph{YYYY})
-#' @param team (\emph{String} optional): Team, select a valid team in D-I football
-#' @param verbose Logical parameter (TRUE/FALSE, default: FALSE) to return warnings and messages from function
+#' @param year (*Integer* required): Year,  4 digit format (*YYYY*)
+#' @param team (*String* optional): Team, select a valid team in D-I football
 #'
 #' @return [cfbd_team_roster()] - A data frame with 12 variables:
 #' \describe{
@@ -26,28 +26,25 @@
 #'   \item{`home_county_fips`: integer.}{Hometown FIPS code.}
 #'   \item{`headshot_url`: character}{Player ESPN headshot url.}
 #' }
-#' @source \url{https://api.collegefootballdata.com/roster}
 #' @keywords Team Roster
 #' @importFrom dplyr rename mutate
 #' @importFrom jsonlite fromJSON
 #' @importFrom httr GET
 #' @importFrom utils URLencode
-#' @importFrom assertthat assert_that
+#' @importFrom cli cli_abort
 #' @importFrom glue glue
 #' @export
 #' @examples
 #' \donttest{
-#' cfbd_team_roster(year = 2013, team = "Florida State")
+#'   try(cfbd_team_roster(year = 2013, team = "Florida State"))
 #' }
 #'
-cfbd_team_roster <- function(year, team = NULL,
-                             verbose = FALSE) {
+cfbd_team_roster <- function(year, team = NULL) {
   team2 <- team
   
-  # check if year is numeric
-  assert_that(is.numeric(year) & nchar(year) == 4,
-              msg = "Enter valid year as a number (YYYY)"
-  )
+  if(!is.numeric(year) && nchar(year) != 4){
+    cli::cli_abort("Enter valid year as a number (YYYY)")
+  }
   
   
   if (!is.null(team)) {
@@ -75,29 +72,30 @@ cfbd_team_roster <- function(year, team = NULL,
   # Check for CFBD API key
   if (!has_cfbd_key()) stop("CollegeFootballData.com now requires an API key.", "\n       See ?register_cfbd for details.", call. = FALSE)
   
-  # Create the GET request and set response as res
-  res <- httr::RETRY(
-    "GET", full_url,
-    httr::add_headers(Authorization = paste("Bearer", cfbd_key()))
-  )
-  
-  # Check the result
-  check_status(res)
-  
   df <- data.frame()
   tryCatch(
     expr = {
+      
+      # Create the GET request and set response as res
+      res <- httr::RETRY(
+        "GET", full_url,
+        httr::add_headers(Authorization = paste("Bearer", cfbd_key()))
+      )
+      
+      # Check the result
+      check_status(res)
+      
       # Get the content and return it as data.frame
       df <- res %>%
         httr::content(as = "text", encoding = "UTF-8") %>%
         jsonlite::fromJSON() %>%
         dplyr::rename(athlete_id = .data$id) %>%
-        dplyr::mutate(headshot_url = paste0("https://a.espncdn.com/i/headshots/college-football/players/full/",.data$athlete_id,".png")) %>% 
+        dplyr::mutate(headshot_url = paste0("https://a.espncdn.com/i/headshots/college-football/players/full/",.data$athlete_id,".png")) %>%
         as.data.frame()
       
-      if(verbose){ 
-        message(glue::glue("{Sys.time()}: Scraping team roster..."))
-      }
+      
+      df <- df %>%
+        make_recruitR_data("Team roster data from CollegeFootballData.com",Sys.time())
     },
     error = function(e) {
       message(glue::glue("{Sys.time()}:Invalid arguments or no team roster data available!"))

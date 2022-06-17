@@ -3,18 +3,13 @@
 \name{cfbd_recruiting_team}
 \alias{cfbd_recruiting_team}
 \title{\strong{Get college football recruiting team rankings information.}}
-\source{
-\url{https://api.collegefootballdata.com/recruiting/teams}
-}
 \usage{
-cfbd_recruiting_team(year = NULL, team = NULL, verbose = FALSE)
+cfbd_recruiting_team(year = NULL, team = NULL)
 }
 \arguments{
 \item{year}{(\emph{Integer} optional): Recruiting Class Year, 4 digit format (\emph{YYYY}). \emph{Note: 2000 is the minimum value}}
 
 \item{team}{(\emph{String} optional): Team - Select a valid team, D1 football}
-
-\item{verbose}{Logical parameter (TRUE/FALSE, default: FALSE) to return warnings and messages from function}
 }
 \value{
 \code{\link[=cfbd_recruiting_team]{cfbd_recruiting_team()}} - A data frame with 4 variables:
@@ -30,13 +25,13 @@ cfbd_recruiting_team(year = NULL, team = NULL, verbose = FALSE)
 }
 \examples{
 \donttest{
-cfbd_recruiting_team(2018, team = "Texas")
+  try(cfbd_recruiting_team(2018, team = "Texas"))
 
-cfbd_recruiting_team(2016, team = "Virginia")
+  try(cfbd_recruiting_team(2016, team = "Virginia"))
 
-cfbd_recruiting_team(2016, team = "Texas A&M")
+  try(cfbd_recruiting_team(2016, team = "Texas A&M"))
 
-cfbd_recruiting_team(2011)
+  try(cfbd_recruiting_team(2011))
 }
 
 }

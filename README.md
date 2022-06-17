@@ -6,9 +6,9 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Version-Number](https://img.shields.io/github/r-package/v/saiemgilani/recruitR?label=recruitR&logo=R&logoColor=white&style=for-the-badge)](https://github.com/saiemgilani/recruitR)
-[![R-CMD-check](https://img.shields.io/github/workflow/status/saiemgilani/recruitR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/saiemgilani/recruitR/actions/workflows/R-CMD-check.yaml)
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Version-Number](https://img.shields.io/github/r-package/v/saiemgilani/recruitR?label=recruitR&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR)
+[![R-CMD-check](https://img.shields.io/github/workflow/status/saiemgilani/recruitR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml)
 ![Contributors](https://img.shields.io/github/contributors/saiemgilani/recruitR?style=for-the-badge)
 [![Twitter
 Follow](https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge)](https://twitter.com/saiemgilani)
@@ -29,8 +29,8 @@ itself. Please report issues here or to
 ## Installation
 
 You can install the released version of
-[**`recruitR`**](https://github.com/saiemgilani/recruitR) from
-[GitHub](https://github.com/saiemgilani/recruitR) with:
+[**`recruitR`**](https://github.com/sportsdataverse/recruitR) from
+[GitHub](https://github.com/sportsdataverse/recruitR) with:
 
 ``` r
 # You can install using the pacman package using the following code:

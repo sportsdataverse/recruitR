@@ -1,31 +1,50 @@
 Package: recruitR
 Title: A College Sports Recruiting Package
-Version: 0.0.2
-Authors@R: c(person("Saiem", "Gilani", email = "saiem.gilani@gmail.com", role = c("aut", "cre")),
-             person("Ryan", "Mann", email = "mannrcfe@gmail.com", role = c("aut")))
-Description: As a college sports recruiting package, recruitR provides users with the access to 247 Composite rankings and recruit information from the CollegeFootballData API.
-Depends: R (>= 3.5)
+Version: 0.0.3
+Authors@R: c(
+    person("Saiem", "Gilani", , "saiem.gilani@gmail.com", role = c("aut", "cre")),
+    person("Ryan", "Mann", , "mannrcfe@gmail.com", role = "aut")
+  )
+Description: As a college sports recruiting package, recruitR provides
+    users with the access to 247 Composite rankings and recruit
+    information from the CollegeFootballData API.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
+URL: https://recruitR.sportsdataverse.org/,
+    https://github.com/sportsdataverse/recruitR
+BugReports: https://github.com/sportsdataverse/recruitR/issues
+Depends: 
+    R (>= 4.0)
 Imports:
+    cli (>= 3.0.0),
+    data.table (>= 1.14.0),
     dplyr,
+    glue,
+    httr,
+    janitor,
+    jsonlite,
+    magrittr,
+    purrr (>= 0.3.0),
+    Rcpp (>= 1.0.7),
+    RcppParallel (>= 5.1.4),
+    rlang,
+    stringr (>= 1.3.0),
+    tidyr (>= 1.0.0)
+Suggests:
+    crayon (>= 1.3.4),
+    curl,
+    DBI,
     ggplot2,
     ggrepel,
-    glue,
-    janitor,
-    tidyr,
-    stringr,
-    tidyverse,
-    assertthat,
-    jsonlite,
-    purrr,
-    knitr,
+    progressr (>= 0.6.0),
+    qs (>= 0.25.1),
     rmarkdown,
-    httr,
-    attempt,
-    curl
+    RSQLite,
+    stats,
+    stringi,
+    testthat,
+    tibble (>= 3.0),
+    usethis (>= 1.6.0)
+Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
-URL: https://saiemgilani.github.io/recruitR/, https://github.com/saiemgilani/recruitR
-BugReports: https://github.com/saiemgilani/recruitR/issues
+RoxygenNote: 7.2.0

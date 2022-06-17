@@ -3,17 +3,13 @@
 \name{cfbd_recruiting_player}
 \alias{cfbd_recruiting_player}
 \title{\strong{Get player recruiting rankings}}
-\source{
-\url{https://api.collegefootballdata.com/recruiting/players}
-}
 \usage{
 cfbd_recruiting_player(
   year = NULL,
   team = NULL,
   recruit_type = "HighSchool",
   state = NULL,
-  position = NULL,
-  verbose = FALSE
+  position = NULL
 )
 }
 \arguments{
@@ -26,14 +22,12 @@ or 'PrepSchool'  - For position group information}
 
 \item{state}{(\emph{String} optional): Two letter State abbreviation}
 
-\item{position}{(\emph{String} optional): Position Group  - options include:\cr
+\item{position}{(\emph{String} optional): Position Group  - options include:
 \itemize{
-\item Offense: 'PRO', 'DUAL', 'RB', 'FB', 'TE',  'OT', 'OG', 'OC', 'WR'\cr
-\item Defense: 'CB', 'S', 'OLB', 'ILB', 'WDE', 'SDE', 'DT'\cr
+\item Offense: 'PRO', 'DUAL', 'RB', 'FB', 'TE',  'OT', 'OG', 'OC', 'WR'
+\item Defense: 'CB', 'S', 'OLB', 'ILB', 'WDE', 'SDE', 'DT'
 \item Special Teams: 'K', 'P'
 }}
-
-\item{verbose}{Logical parameter (TRUE/FALSE, default: FALSE) to return warnings and messages from function}
 }
 \value{
 \code{\link[=cfbd_recruiting_player]{cfbd_recruiting_player()}} - A data frame with 14 variables:
@@ -64,11 +58,11 @@ or 'PrepSchool'  - For position group information}
 }
 \examples{
 \donttest{
-   cfbd_recruiting_player(2018, team = "Texas")
+  try(cfbd_recruiting_player(2018, team = "Texas"))
 
-   cfbd_recruiting_player(2016, recruit_type = "JUCO")
+  try(cfbd_recruiting_player(2016, recruit_type = "JUCO"))
 
-   cfbd_recruiting_player(2020, recruit_type = "HighSchool", position = "OT", state = "FL")
+  try(cfbd_recruiting_player(2020, recruit_type = "HighSchool", position = "OT", state = "FL"))
 }
 
 }

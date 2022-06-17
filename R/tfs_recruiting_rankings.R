@@ -10,15 +10,12 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom httr GET
 #' @importFrom utils URLencode
-#' @importFrom assertthat assert_that
 #' @importFrom glue glue
 #' @importFrom janitor clean_names
 #' @export
 #' @examples
 #' \donttest{
-#'    tfs_recruiting_rankings(2022)
-#'
-#'    tfs_recruiting_rankings(2021)
+#'    try(tfs_recruiting_rankings(2022))
 #' }
 #'
 tfs_recruiting_rankings <- function(year,
@@ -26,38 +23,15 @@ tfs_recruiting_rankings <- function(year,
                                    pages=5) {
   
  
-  # if (!is.null(year)) {
-  #   ## check if year is numeric
-  #   assertthat::assert_that(is.numeric(year) & nchar(year) == 4,
-  #                           msg = "Enter valid year as a number (YYYY) - Min: 2000, Max: 2020"
-  #   )
-  # }
-  # if (!is.null(team)) {
-  #   if (team == "San Jose State") {
-  #     team <- utils::URLencode(paste0("San Jos", "\u00e9", " State"), reserved = TRUE)
-  #   } else {
-  #     # Encode team parameter for URL if not NULL
-  #     team <- utils::URLencode(team, reserved = TRUE)
-  #   }
-  # }
-  # if (recruit_type != "HighSchool") {
-  #   # Check if recruit_type is appropriate, if not HighSchool
-  #   assertthat::assert_that(recruit_type %in% c("PrepSchool", "JUCO"),
-  #                           msg = "Enter valid recruit_type (String): HighSchool, PrepSchool, or JUCO"
-  #   )
-  # }
-  # if (!is.null(state)) {
-  #   ## check if state is length 2
-  #   assertthat::assert_that(nchar(state) == 2,
-  #                           msg = "Enter valid 2-letter State abbreviation"
-  #   )
-  # }
-  # if (!is.null(position)) {
-  #   ## check if position in position group set
-  #   assertthat::assert_that(position %in% pos_groups,
-  #                           msg = "Enter valid position group \nOffense: PRO, DUAL, RB, FB, TE, OT, OG, OC, WR\nDefense: CB, S, OLB, ILB, WDE, SDE, DT\nSpecial Teams: K, P"
-  #   )
-  # }
+  
+  if(!is.numeric(year) && nchar(year) != 4){
+    cli::cli_abort("Enter valid year as a number (YYYY)")
+  }
+  if (!(recruit_type %in% c("HighSchool","PrepSchool", "JUCO"))) {
+    # Check if recruit_type is appropriate, if not HighSchool
+    cli::cli_abort("Enter valid recruit_type (String): HighSchool, PrepSchool, or JUCO")
+  }
+  
   
   base_url <- "https://247sports.com/Season/"
   
@@ -87,7 +61,8 @@ tfs_recruiting_rankings <- function(year,
           janitor::clean_names() %>% 
           as.data.frame()
         return(df)
-      })
+      }) %>%
+        make_recruitR_data("Player recruiting rankings from 247Sports.com",Sys.time())
     },
     error = function(e) {
       message(glue::glue("{Sys.time()}: Invalid arguments or no 247 recruiting rankings data available!"))

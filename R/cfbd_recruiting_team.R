@@ -1,8 +1,7 @@
-#' @title 
+#' @title
 #' **Get college football recruiting team rankings information.**
-#' @param year (\emph{Integer} optional): Recruiting Class Year, 4 digit format (\emph{YYYY}). \emph{Note: 2000 is the minimum value}
-#' @param team (\emph{String} optional): Team - Select a valid team, D1 football
-#' @param verbose Logical parameter (TRUE/FALSE, default: FALSE) to return warnings and messages from function
+#' @param year (*Integer* optional): Recruiting Class Year, 4 digit format (*YYYY*). *Note: 2000 is the minimum value*
+#' @param team (*String* optional): Team - Select a valid team, D1 football
 #'
 #' @return [cfbd_recruiting_team()] - A data frame with 4 variables:
 #' \describe{
@@ -11,34 +10,30 @@
 #'   \item{`team`: character.}{Recruiting Team.}
 #'   \item{`points`: character.}{Team talent points.}
 #' }
-#' @source \url{https://api.collegefootballdata.com/recruiting/teams}
 #' @keywords Recruiting
 #' @importFrom jsonlite fromJSON
 #' @importFrom httr GET
 #' @importFrom utils URLencode
-#' @importFrom assertthat assert_that
+#' @importFrom cli cli_abort
 #' @importFrom glue glue
 #' @export
 #' @examples
 #' \donttest{
-#' cfbd_recruiting_team(2018, team = "Texas")
+#'   try(cfbd_recruiting_team(2018, team = "Texas"))
 #'
-#' cfbd_recruiting_team(2016, team = "Virginia")
+#'   try(cfbd_recruiting_team(2016, team = "Virginia"))
 #'
-#' cfbd_recruiting_team(2016, team = "Texas A&M")
+#'   try(cfbd_recruiting_team(2016, team = "Texas A&M"))
 #'
-#' cfbd_recruiting_team(2011)
+#'   try(cfbd_recruiting_team(2011))
 #' }
 #'
 cfbd_recruiting_team <- function(year = NULL,
-                                 team = NULL,
-                                 verbose = FALSE) {
+                                 team = NULL) {
   
-  if (!is.null(year)) {
-    ## check if year is numeric
-    assertthat::assert_that(is.numeric(year) & nchar(year) == 4,
-                            msg = "Enter valid year as integer in 4 digit format (YYYY)\n Min: 2000, Max: 2020"
-    )
+  # Check if year is numeric
+  if(!is.numeric(year) && nchar(year) != 4){
+    cli::cli_abort("Enter valid year as a number (YYYY)")
   }
   if (!is.null(team)) {
     if (team == "San Jose State") {
@@ -79,9 +74,9 @@ cfbd_recruiting_team <- function(year = NULL,
         jsonlite::fromJSON() %>%
         as.data.frame()
       
-      if(verbose){ 
-        message(glue::glue("{Sys.time()}: Scraping team recruiting data..."))
-      }
+      
+      df <- df %>%
+        make_recruitR_data("Recruiting team rankings from CollegeFootballData.com",Sys.time())
     },
     error = function(e) {
       message(glue::glue("{Sys.time()}: Invalid arguments or no team recruiting data available!"))

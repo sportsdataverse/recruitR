@@ -22,9 +22,7 @@ or 'PrepSchool'  - For position group information}
 }
 \examples{
 \donttest{
-   tfs_recruiting_rankings(2022)
-
-   tfs_recruiting_rankings(2021)
+   try(tfs_recruiting_rankings(2022))
 }
 
 }

@@ -3,16 +3,12 @@
 \name{cfbd_recruiting_position}
 \alias{cfbd_recruiting_position}
 \title{\strong{Get college football position group recruiting information.}}
-\source{
-\url{https://api.collegefootballdata.com/recruiting/groups}
-}
 \usage{
 cfbd_recruiting_position(
   start_year = NULL,
   end_year = NULL,
   team = NULL,
-  conference = NULL,
-  verbose = FALSE
+  conference = NULL
 )
 }
 \arguments{
@@ -22,11 +18,9 @@ cfbd_recruiting_position(
 
 \item{team}{(\emph{String} optional): Team - Select a valid team, D-I football}
 
-\item{conference}{(\emph{String} optional): Conference abbreviation - Select a valid FBS conference\cr
-Conference abbreviations P5: ACC, B12, B1G, SEC, PAC\cr
+\item{conference}{(\emph{String} optional): Conference abbreviation - Select a valid FBS conference
+Conference abbreviations P5: ACC, B12, B1G, SEC, PAC
 Conference abbreviations G5 and FBS Independents: CUSA, MAC, MWC, Ind, SBC, AAC}
-
-\item{verbose}{Logical parameter (TRUE/FALSE, default: FALSE) to return warnings and messages from function}
 }
 \value{
 \code{\link[=cfbd_recruiting_position]{cfbd_recruiting_position()}} - A data frame with 7 variables:
@@ -45,11 +39,11 @@ Conference abbreviations G5 and FBS Independents: CUSA, MAC, MWC, Ind, SBC, AAC}
 }
 \examples{
 \donttest{
-   cfbd_recruiting_position(2018, team = "Texas")
+  try(cfbd_recruiting_position(2018, team = "Texas"))
 
-   cfbd_recruiting_position(2016, 2020, team = "Virginia")
+  try(cfbd_recruiting_position(2016, 2020, team = "Virginia"))
 
-   cfbd_recruiting_position(2015, 2020, conference = "SEC")
+  try(cfbd_recruiting_position(2015, 2020, conference = "SEC"))
 }
 
 }

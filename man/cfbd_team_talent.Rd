@@ -2,17 +2,12 @@
 % Please edit documentation in R/cfbd_team_talent.R
 \name{cfbd_team_talent}
 \alias{cfbd_team_talent}
-\title{\strong{Get composite team talent rankings for all teams in a given year}\cr}
-\source{
-\url{https://api.collegefootballdata.com/talent}
-}
+\title{\strong{Get composite team talent rankings for all teams in a given year}}
 \usage{
-cfbd_team_talent(year = NULL, verbose = FALSE)
+cfbd_team_talent(year = NULL)
 }
 \arguments{
 \item{year}{(\emph{Integer} optional): Year 4 digit format (\emph{YYYY})}
-
-\item{verbose}{Logical parameter (TRUE/FALSE, default: FALSE) to return warnings and messages from function}
 }
 \value{
 \code{\link[=cfbd_team_talent]{cfbd_team_talent()}} - A data frame with 3 variables:
@@ -27,9 +22,9 @@ Extracts team talent composite as sourced from 247 rankings
 }
 \examples{
 \donttest{
-cfbd_team_talent()
+  try(cfbd_team_talent())
 
-cfbd_team_talent(year = 2018)
+  try(cfbd_team_talent(year = 2018))
 }
 
 }
