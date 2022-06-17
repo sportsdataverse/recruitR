@@ -1,15 +1,15 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# recruitR <a href='https://recruitR.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/saiemgilani/recruitR/master/logo.png'  align="right" width="30%" min-width="100px" /></a>
+# recruitR <a href='https://recruitR.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/sportsdataverse/recruitR/main/logo.png'  align="right" width="30%" min-width="100px" /></a>
 
 <!-- badges: start -->
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![Version-Number](https://img.shields.io/github/r-package/v/saiemgilani/recruitR?label=recruitR&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR)
-[![R-CMD-check](https://img.shields.io/github/workflow/status/saiemgilani/recruitR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml)
-![Contributors](https://img.shields.io/github/contributors/saiemgilani/recruitR?style=for-the-badge)
+[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/recruitR?label=recruitR&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR)
+[![R-CMD-check](https://img.shields.io/github/workflow/status/sportsdataverse/recruitR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml)
+![Contributors](https://img.shields.io/github/contributors/sportsdataverse/recruitR?style=for-the-badge)
 [![Twitter
 Follow](https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge)](https://twitter.com/saiemgilani)
 <!-- badges: end -->
@@ -37,7 +37,7 @@ You can install the released version of
 if (!requireNamespace('pacman', quietly = TRUE)){
   install.packages('pacman')
 }
-pacman::p_load_current_gh("saiemgilani/recruitR")
+pacman::p_load_current_gh("sportsdataverse/recruitR")
 ```
 
 ``` r
@@ -46,14 +46,14 @@ if (!requireNamespace('devtools', quietly = TRUE)){
   install.packages('devtools')
 }
 # Alternatively, using the devtools package:
-devtools::install_github(repo = "saiemgilani/recruitR")
+devtools::install_github(repo = "sportsdataverse/recruitR")
 ```
 
 ## Offensive Tackle Example
 
 ``` r
 library(recruitR)
-library(tidyverse)
+library(dplyr)
 library(ggplot2)
 ```
 
@@ -77,48 +77,30 @@ SE_OTs_1k <- SE_OTs %>%
 SE_OTs_1k %>% 
   dplyr::select(ranking, name, school, committed_to, position, 
          height, weight, stars, rating, city, state_province)
-#>    ranking              name                           school   committed_to
-#> 1       11   Broderick Jones                         Lithonia        Georgia
-#> 2       38     Tate Ratledge                Darlington School        Georgia
-#> 3       74      Myles Hinton Greater Atlanta Christian School       Stanford
-#> 4      110   Marcus Dumervil               St. Thomas Aquinas            LSU
-#> 5      128      Jalen Rivers                          Oakleaf          Miami
-#> 6      157 Issiah Walker Jr.                          Norland        Florida
-#> 7      271      Joshua Braun                         Suwannee        Florida
-#> 8      318 Connor McLaughlin                           Jesuit       Stanford
-#> 9      333      Javion Cohen                          Central        Alabama
-#> 10     491      Cayden Baker                       Fort Myers North Carolina
-#> 11     530     Austin Blaske                  South Effingham        Georgia
-#> 12     538   Michael Rankins                          Lennard   Georgia Tech
-#> 13     562   Jordan Williams                      Gainesville   Georgia Tech
-#> 14     577        Brady Ward             St. Paul's Episcopal       Ole Miss
-#> 15     614    Trey Zimmerman                          Roswell North Carolina
-#> 16     658     Gerald Mincey                 Cardinal Gibbons        Florida
-#> 17     752         Jake Wray                         Marietta       Colorado
-#> 18     934      Joshua Jones                          Central       Kentucky
-#> 19     953        Wing Green                       Lee County   Georgia Tech
-#> 20     971   Kobe McAllister                         Heritage     Cincinnati
-#>    position height weight stars rating            city state_province
-#> 1        OT   77.0    298     5 0.9947        Lithonia             GA
-#> 2        OT   78.0    322     4 0.9821            Rome             GA
-#> 3        OT   78.0    308     4 0.9662        Norcross             GA
-#> 4        OT   77.0    305     4 0.9515 Fort Lauderdale             FL
-#> 5        OT   78.0    331     4 0.9425     Orange Park             FL
-#> 6        OT   76.0    309     4 0.9308           Miami             FL
-#> 7        OT   78.0    335     4 0.9049        Live Oak             FL
-#> 8        OT   79.0    260     4 0.8968           Tampa             FL
-#> 9        OT   77.0    295     4 0.8951     Phenix City             AL
-#> 10       OT   78.0    260     3 0.8789      Fort Myers             FL
-#> 11       OT   77.0    278     3 0.8759          Guyton             GA
-#> 12       OT   77.0    295     3 0.8755          Ruskin             FL
-#> 13       OT   78.0    310     3 0.8742     Gainesville             GA
-#> 14       OT   79.0    310     3 0.8729          Mobile             AL
-#> 15       OT   78.0    294     3 0.8709         Roswell             GA
-#> 16       OT   77.0    320     3 0.8681 Fort Lauderdale             FL
-#> 17       OT   77.0    300     3 0.8643        Marietta             GA
-#> 18       OT   76.5    304     3 0.8559     Phenix City             AL
-#> 19       OT   79.0    285     3 0.8552        Leesburg             GA
-#> 20       OT   78.0    275     3 0.8551        Ringgold             GA
+#> # A tibble: 20 × 11
+#>    ranking name    school committed_to position height weight stars rating city 
+#>      <int> <chr>   <chr>  <chr>        <chr>     <dbl>  <int> <int>  <dbl> <chr>
+#>  1      11 Broder… Litho… Georgia      OT         77      298     5  0.995 Lith…
+#>  2      38 Tate R… Darli… Georgia      OT         78      322     4  0.982 Rome 
+#>  3      74 Myles … Great… Stanford     OT         78      308     4  0.966 Norc…
+#>  4     110 Marcus… St. T… LSU          OT         77      305     4  0.952 Fort…
+#>  5     128 Jalen … Oakle… Miami        OT         78      331     4  0.942 Oran…
+#>  6     157 Issiah… Norla… Florida      OT         76      309     4  0.931 Miami
+#>  7     271 Joshua… Suwan… Florida      OT         78      335     4  0.905 Live…
+#>  8     318 Connor… Jesuit Stanford     OT         79      260     4  0.897 Tampa
+#>  9     333 Javion… Centr… Alabama      OT         77      295     4  0.895 Phen…
+#> 10     491 Cayden… Fort … North Carol… OT         78      260     3  0.879 Fort…
+#> 11     530 Austin… South… Georgia      OT         77      278     3  0.876 Guyt…
+#> 12     538 Michae… Lenna… Georgia Tech OT         77      295     3  0.876 Rusk…
+#> 13     562 Jordan… Gaine… Georgia Tech OT         78      310     3  0.874 Gain…
+#> 14     577 Brady … St. P… Ole Miss     OT         79      310     3  0.873 Mobi…
+#> 15     614 Trey Z… Roswe… North Carol… OT         78      294     3  0.871 Rosw…
+#> 16     658 Gerald… Cardi… Florida      OT         77      320     3  0.868 Fort…
+#> 17     752 Jake W… Marie… Colorado     OT         77      300     3  0.864 Mari…
+#> 18     934 Joshua… Centr… Kentucky     OT         76.5    304     3  0.856 Phen…
+#> 19     953 Wing G… Lee C… Georgia Tech OT         79      285     3  0.855 Lees…
+#> 20     971 Kobe M… Herit… Cincinnati   OT         78      275     3  0.855 Ring…
+#> # … with 1 more variable: state_province <chr>
 ```
 
 ## Plotting the Offensive Tackles by State
@@ -171,3 +153,44 @@ ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))
 ```
 
 <img src="man/figures/README-plot_OTs-1.png" width="100%" />
+
+## **Documentation**
+
+For more information on the package and function reference, please see
+the [**`recruitR`** documentation
+website](https://recruitR.sportsdataverse.org).
+
+## **Breaking Changes**
+
+[**Full News on
+Releases**](https://recruitR.sportsdataverse.org/news/index.html)
+
+## Follow the [SportsDataverse](https://twitter.com/SportsDataverse) on Twitter and star this repo
+
+[![Twitter
+Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%40SportsDataverse&logo=twitter&style=for-the-badge)](https://twitter.com/SportsDataverse)
+
+[![GitHub
+stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&logo=github&style=for-the-badge&label=Star%20recruitR&maxAge=2592000)](https://github.com/sportsdataverse/recruitR/stargazers/)
+
+## **Our Authors**
+
+-   [Saiem Gilani](https://twitter.com/saiemgilani)  
+    <a href="https://twitter.com/saiemgilani" target="blank"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge" alt="@saiemgilani" /></a>
+    <a href="https://github.com/saiemgilani" target="blank"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge" alt="@saiemgilani" /></a>
+
+## **Citations**
+
+To cite the [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/) R
+package in publications, use:
+
+BibTex Citation
+
+``` bibtex
+@misc{gilani_2021_recruitr,
+  author = {Gilani, Saiem},
+  title = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data.},
+  url = {https://recruitR.sportsdataverse.org/},
+  year = {2021}
+}
+```

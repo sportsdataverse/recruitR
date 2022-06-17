@@ -4,12 +4,12 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# recruitR <a href='https://recruitR.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/saiemgilani/recruitR/master/logo.png'  align="right" width="30%" min-width="100px" /></a>
+# recruitR <a href='https://recruitR.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/sportsdataverse/recruitR/main/logo.png'  align="right" width="30%" min-width="100px" /></a>
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![Version-Number](https://img.shields.io/github/r-package/v/saiemgilani/recruitR?label=recruitR&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR) [![R-CMD-check](https://img.shields.io/github/workflow/status/saiemgilani/recruitR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml)
-![Contributors](https://img.shields.io/github/contributors/saiemgilani/recruitR?style=for-the-badge)
+[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/recruitR?label=recruitR&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR) [![R-CMD-check](https://img.shields.io/github/workflow/status/sportsdataverse/recruitR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml)
+![Contributors](https://img.shields.io/github/contributors/sportsdataverse/recruitR?style=for-the-badge)
 [![Twitter Follow](https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge)](https://twitter.com/saiemgilani)
 <!-- badges: end -->
 
@@ -37,7 +37,7 @@ You can install the released version of [**`recruitR`**](https://github.com/spor
 if (!requireNamespace('pacman', quietly = TRUE)){
   install.packages('pacman')
 }
-pacman::p_load_current_gh("saiemgilani/recruitR")
+pacman::p_load_current_gh("sportsdataverse/recruitR")
 ```
 
 ```r
@@ -46,14 +46,14 @@ if (!requireNamespace('devtools', quietly = TRUE)){
   install.packages('devtools')
 }
 # Alternatively, using the devtools package:
-devtools::install_github(repo = "saiemgilani/recruitR")
+devtools::install_github(repo = "sportsdataverse/recruitR")
 ```
 
 
 ## Offensive Tackle Example
 ```{r examplerdm, message=FALSE, warning=FALSE, results='hide'}
 library(recruitR)
-library(tidyverse)
+library(dplyr)
 library(ggplot2)
 ```
 Let's say that we are interested in seeing how many offensive tackles in the 2020 recruiting cycle were:
@@ -126,3 +126,44 @@ ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))
 
 ```
 
+## **Documentation**
+
+For more information on the package and function reference, please see
+the [**`recruitR`** documentation
+website](https://recruitR.sportsdataverse.org).
+
+## **Breaking Changes**
+
+[**Full News on
+Releases**](https://recruitR.sportsdataverse.org/news/index.html)
+
+## Follow the [SportsDataverse](https://twitter.com/SportsDataverse) on Twitter and star this repo
+
+[![Twitter
+Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%40SportsDataverse&logo=twitter&style=for-the-badge)](https://twitter.com/SportsDataverse)
+
+[![GitHub
+stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&logo=github&style=for-the-badge&label=Star%20recruitR&maxAge=2592000)](https://github.com/sportsdataverse/recruitR/stargazers/)
+
+## **Our Authors**
+
+-   [Saiem Gilani](https://twitter.com/saiemgilani)  
+    <a href="https://twitter.com/saiemgilani" target="blank"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge" alt="@saiemgilani" /></a>
+    <a href="https://github.com/saiemgilani" target="blank"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge" alt="@saiemgilani" /></a>
+
+
+## **Citations**
+
+To cite the [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/) R
+package in publications, use:
+
+BibTex Citation
+
+``` bibtex
+@misc{gilani_2021_recruitr,
+  author = {Gilani, Saiem},
+  title = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data.},
+  url = {https://recruitR.sportsdataverse.org/},
+  year = {2021}
+}
+```

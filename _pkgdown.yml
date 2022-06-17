@@ -1,14 +1,36 @@
 url: https://recruitR.sportsdataverse.org/
-
 template:
-  params:
-    bootswatch: cosmo
+  bootstrap: 5
+  bootswatch: flatly
+  ganalytics: G-SE5ZJL93W6
+  bslib:
+    primary: "#222222"
+    secondary: "#B7B9BB"
+    success: "#EAEBEC"
+    link-color: "#024992"
+    link-hover-color: "#23B7EE"
+    nav-link-color: "#FFFFF"
+    nav-link-hover-color: "#EAEBEC"
+    nav-link-focus-color: "#EAEBEC"
+    nav-link-dropdown-toggle-hover-color: "#EAEBEC"
+    navbar-hover-color: "#EAEBEC"
+    navbar-brand-hover-color: "#EAEBEC"
+    nav-tabs-link-active-bg	: "#EAEBEC"
+    nav-pills-link-active-color: "#EAEBEC"
+    btn-link-color: "#EAEBEC"
+    btn-link-hover-color: "#EAEBEC"
+    dropdown-link-color: "#EAEBEC"
+    input-btn-focus-color: "#EAEBEC"
+    dropdown-dark-link-hover-bg: "#EAEBEC"
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
   opengraph:
     image:
-      src: https://raw.githubusercontent.com/saiemgilani/recruitR/master/man/figures/cfbrecruitR.ico
+      src: "https://raw.githubusercontent.com/saiemgilani/recruitR/main/man/figures/recruitR.ico"
     twitter:
-      site: "@saiemgilani"
-      card: summary_large_image
+      creator: "@saiemgilani"
+      site: "@cfbfastR"
+      card: summary
       
 
 toc:
@@ -32,12 +54,12 @@ navbar:
   structure:
     left:  [home, reference, articles, news, games, network, data, repo]
     right: [twitter, github]
-  icon: https://raw.githubusercontent.com/saiemgilani/recruitR/master/man/figures/cfbrecruitR.ico
+  icon: https://raw.githubusercontent.com/saiemgilani/recruitR/main/man/figures/recruitR.ico
   title: "recruitR"
   components:
     home:
       title: recruitR
-      description: Functions to Access College Sports Recruiting Data
+      description: Access College Sports Recruiting Data
       icon: fa-home
       href: index.html
       links:
@@ -46,9 +68,6 @@ navbar:
     reference:
       icon: "fas fa-code"
       text: " Funcs"
-      menu:
-      - text: "Function Index"
-        href: reference/index.html
     articles:
       icon: "fas fa-book-reader"
       text: " Articles"
@@ -56,7 +75,7 @@ navbar:
       -  text: Vignettes
          href: articles/index.html
       -  text: "2020 OTs in FL, GA, AL"
-         href: articles/cfbrecruitR.html
+         href: articles/recruitR.html
       -  text: "2015-2020 Running Back Recruiting"
          href: articles/RBsSECACC5yr.html
       -  text: "Examples of Use"
@@ -81,18 +100,26 @@ navbar:
         href: https://hoopR.sportsdataverse.org/
       - text: wehoop
         href: https://wehoop.sportsdataverse.org/
+      - text: toRvik
+        href: https://torvik.dev/
       - text: fastRhockey
         href: https://fastRhockey.sportsdataverse.org/
-      - text: worldfootballR
-        href: https://jaseziv.github.io/worldfootballR/
       - text: baseballr
         href: https://BillPetti.github.io/baseballr/
+      - text: worldfootballR
+        href: https://jaseziv.github.io/worldfootballR/
+      - text: chessR
+        href: https://jaseziv.github.io/chessR/
+      - text: sportyR
+        href: https://sportyR.sportsdataverse.org/
       - text: cfbplotR
         href: https://kazink36.github.io/cfbplotR/
       - text: cfb4th
         href: https://kazink36.github.io/cfb4th/
+      - text: mlbplotR
+        href: https://github.com/camdenk/mlbplotR
       - text: recruitR
-        href: https://recruitR.sportsdataverse.org/
+        href: https://recruitr.sportsdataverse.org/
       - text: gamezoneR
         href: https://jacklich10.github.io/gamezoneR/
       - text: puntr
@@ -107,6 +134,16 @@ navbar:
         href: https://js.sportsdataverse.org/
       - text: nfl-nerd
         href: https://github.com/nntrn/nfl-nerd/
+    data:
+      icon: "fas fa-database"
+      text: " Data"
+      menu:
+      - text: "CFBData.com"
+        href: https://collegefootballdata.com
+      - text: "Data Repository"
+        href: https://github.com/sportsdataverse/cfbfastR-data
+      - text: "Raw Data Repository"
+        href: https://github.com/sportsdataverse/cfbfastR-raw
     twitter:
       icon: "fab fa-twitter fa-lg"
       href: http://twitter.com/saiemgilani

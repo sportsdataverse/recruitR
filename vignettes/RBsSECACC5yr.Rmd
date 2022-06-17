@@ -3,7 +3,7 @@ title: "RBsSECACC5yr"
 author: "Saiem Gilani <br><a href='https://twitter.com/saiemgilani' target='blank'><img src='https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=twitter&amp;style=for-the-badge' alt='@saiemgilani'/></a> <a href='https://github.com/saiemgilani' target='blank'><img src='https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge' alt='@saiemgilani'/></a>"
 opengraph:
   image: 
-    src: "https://github.com/saiemgilani/recruitR/blob/master/logo.png?raw=true"
+    src: "https://github.com/saiemgilani/recruitR/blob/main/logo.png?raw=true"
   twitter:
     card: summary_large_image
     creator: "@saiemgilani"
@@ -22,9 +22,9 @@ This is a basic example which shows you how to solve a common problem:
 if (!requireNamespace('pacman', quietly = TRUE)){
   install.packages('pacman')
 }
-pacman::p_load_current_gh("saiemgilani/recruitR")
+pacman::p_load_current_gh("sportsdataverse/recruitR")
 
-pacman::p_load(tidyverse)
+pacman::p_load(dplyr, ggplot2)
 ```
 Let's say that we are interested in seeing how teams in either the SEC or ACC fared in running back recruiting from 2015-2020. We could gather the information on each conference using the `cfb_recruiting_position` function, like so:
 ```{r RBs}
