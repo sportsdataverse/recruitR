@@ -46,6 +46,9 @@
     <loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_team.html</loc>
   </url>
   <url>
+    <loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_transfer_portal.html</loc>
+  </url>
+  <url>
     <loc>https://recruitR.sportsdataverse.org/reference/cfbd_team_roster.html</loc>
   </url>
   <url>
@@ -58,7 +61,16 @@
     <loc>https://recruitR.sportsdataverse.org/reference/college_states.html</loc>
   </url>
   <url>
+    <loc>https://recruitR.sportsdataverse.org/reference/csv_from_url.html</loc>
+  </url>
+  <url>
     <loc>https://recruitR.sportsdataverse.org/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://recruitR.sportsdataverse.org/reference/rds_from_url.html</loc>
+  </url>
+  <url>
+    <loc>https://recruitR.sportsdataverse.org/reference/recruitR-package.html</loc>
   </url>
   <url>
     <loc>https://recruitR.sportsdataverse.org/reference/register_cfbd.html</loc>
