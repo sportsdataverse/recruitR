@@ -1,4 +1,4 @@
-# recruitR 0.0.2
+# recruitR 0.0.3
 
 * Updated to include CFBD API key methods
 

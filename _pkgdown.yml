@@ -26,7 +26,7 @@ template:
     btn-border-radius: 0.25rem
   opengraph:
     image:
-      src: "https://raw.githubusercontent.com/saiemgilani/recruitR/main/man/figures/recruitR.ico"
+      src: "https://raw.githubusercontent.com/sportsdataverse/recruitR/main/man/figures/recruitR.ico"
     twitter:
       creator: "@saiemgilani"
       site: "@cfbfastR"
@@ -54,7 +54,7 @@ navbar:
   structure:
     left:  [home, reference, articles, news, games, network, data, repo]
     right: [twitter, github]
-  icon: https://raw.githubusercontent.com/saiemgilani/recruitR/main/man/figures/recruitR.ico
+  icon: https://raw.githubusercontent.com/sportsdataverse/recruitR/main/man/figures/recruitR.ico
   title: "recruitR"
   components:
     home:
@@ -149,7 +149,7 @@ navbar:
       href: http://twitter.com/saiemgilani
     github:
       icon: "fab fa-github fa-lg"
-      href: https://github.com/saiemgilani/recruitR/
+      href: https://github.com/sportsdataverse/recruitR/
 reference:
   - title: Exported Functions
     desc: Functions exported by recruitR
@@ -157,6 +157,7 @@ reference:
       - '`cfbd_recruiting_position`'
       - '`cfbd_recruiting_player`'
       - '`cfbd_recruiting_team`'
+      - '`cfbd_recruiting_transfer_portal`'
       - '`cfbd_venues`'
       - '`cfbd_team_talent`'
       - '`cfbd_team_roster`'
@@ -167,4 +168,6 @@ reference:
     contents:
       - '`register_cfbd`'
       - '`college_states`'
-      - '`bordering_states`'  
+      - '`bordering_states`' 
+      - '`csv_from_url`'
+      - '`rds_from_url`'
