@@ -34,6 +34,7 @@ jobs:
             any::ggimage
             any::hoopR
             any::knitr
+            any::oddsapiR
             any::pacman
             any::pak
             any::ragg
