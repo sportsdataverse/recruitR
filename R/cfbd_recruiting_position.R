@@ -92,10 +92,10 @@ cfbd_recruiting_position <- function(start_year = NULL, end_year = NULL,
         httr::content(as = "text", encoding = "UTF-8") %>%
         jsonlite::fromJSON() %>%
         dplyr::rename(
-          position_group = .data$positionGroup,
-          avg_rating = .data$averageRating,
-          total_rating = .data$totalRating,
-          avg_stars = .data$averageStars
+          "position_group" = "positionGroup",
+          "avg_rating" = "averageRating",
+          "total_rating" = "totalRating",
+          "avg_stars" = "averageStars"
         )
       
       
