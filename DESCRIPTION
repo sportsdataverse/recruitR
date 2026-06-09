@@ -36,7 +36,6 @@ Suggests:
     ggplot2,
     ggrepel,
     progressr (>= 0.6.0),
-    qs (>= 0.25.1),
     rmarkdown,
     RSQLite,
     stats,
