@@ -37,12 +37,12 @@ cfbd_team_talent(year = NULL)
   try(cfbd_team_talent())
 #> Request failed [400]. Retrying in 1.2 seconds...
 #> Request failed [400]. Retrying in 1 seconds...
-#> 2026-06-09 23:39:50.358355:Invalid arguments or no team talent data available!
+#> 2026-06-09 23:46:46.271114:Invalid arguments or no team talent data available!
 #> data frame with 0 columns and 0 rows
 
   try(cfbd_team_talent(year = 2018))
 #> ── 247sports team talent ratings from CollegeFootballData.com ──────────────────
-#> ℹ Data updated: 2026-06-09 23:39:50 UTC
+#> ℹ Data updated: 2026-06-09 23:46:46 UTC
 #> # A tibble: 237 × 3
 #>     year team          talent
 #>    <int> <chr>          <dbl>
