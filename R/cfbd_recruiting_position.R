@@ -96,9 +96,18 @@ cfbd_recruiting_position <- function(start_year = NULL, end_year = NULL,
           "avg_rating" = "averageRating",
           "total_rating" = "totalRating",
           "avg_stars" = "averageStars"
-        )
-      
-      
+        ) %>%
+        # CollegeFootballData now returns the rating/stars/commit fields as
+        # strings; coerce the documented-numeric columns back to double so
+        # downstream arithmetic (e.g. round(avg_stars)) works. any_of() keeps
+        # this resilient if the API drops a column.
+        dplyr::mutate(dplyr::across(
+          dplyr::any_of(c("avg_rating", "total_rating", "avg_stars",
+                          "commits", "points")),
+          as.numeric
+        ))
+
+
       df <- df %>%
         make_recruitR_data("Recruiting position group info from CollegeFootballData.com",Sys.time())
     },
