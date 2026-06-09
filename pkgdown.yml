@@ -1,12 +1,11 @@
-pandoc: 2.19.2
-pkgdown: 2.0.6
+pandoc: 3.8.3
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   OTs1k: OTs1k.html
   RBsSECACC5yr: RBsSECACC5yr.html
   recruitR: recruitR.html
-last_built: 2022-12-13T04:01Z
+last_built: 2026-06-09T23:39Z
 urls:
   reference: https://recruitR.sportsdataverse.org/reference
   article: https://recruitR.sportsdataverse.org/articles
-

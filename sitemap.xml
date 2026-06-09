@@ -1,84 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/404.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/articles/OTs1k.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/articles/RBsSECACC5yr.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/articles/recruitR.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/index.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/bordering_states.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/cfb_conf_types_df.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_player.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_position.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_team.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_transfer_portal.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/cfbd_team_roster.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/cfbd_team_talent.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/cfbd_venues.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/college_states.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/csv_from_url.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/rds_from_url.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/recruitR-package.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/register_cfbd.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/tfs_recruiting_rankings.html</loc>
-  </url>
-  <url>
-    <loc>https://recruitR.sportsdataverse.org/reference/tfs_recruitment.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://recruitR.sportsdataverse.org/404.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/LICENSE-text.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/LICENSE.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/articles/OTs1k.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/articles/RBsSECACC5yr.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/articles/index.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/articles/recruitR.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/authors.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/index.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/news/index.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/bordering_states.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/cfb_conf_types_df.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_player.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_position.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_team.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/cfbd_recruiting_transfer_portal.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/cfbd_team_roster.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/cfbd_team_talent.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/cfbd_venues.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/college_states.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/csv_from_url.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/index.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/rds_from_url.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/recruitR-package.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/register_cfbd.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/tfs_recruiting_rankings.html</loc></url>
+<url><loc>https://recruitR.sportsdataverse.org/reference/tfs_recruitment.html</loc></url>
 </urlset>
+
