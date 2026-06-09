@@ -27,23 +27,12 @@ jobs:
           cache-version: 1
           extra-packages: |
             any::pkgdown
-            any::animation
-            any::baseballr
-            any::cfbfastR
-            any::fastRhockey
-            any::ggimage
-            any::hoopR
             any::knitr
-            any::oddsapiR
+            any::rmarkdown
             any::pacman
-            any::pak
+            any::dplyr
             any::ragg
             any::remotes
-            any::rsconnect
-            any::sportyR
-            any::tictoc
-            any::wehoop
-            any::zoo
             local::.
           needs: website
       - name: Install system dependencies
