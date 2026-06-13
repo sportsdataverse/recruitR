@@ -34,7 +34,7 @@ SE_OTs_1k %>%
   dplyr::select(ranking, name, school, committed_to, position, 
          height, weight, stars, rating, city, state_province)
 #> ── Player recruiting info from CollegeFootballData.com ─────── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-06-09 23:50:06 UTC
+#> ℹ Data updated: 2026-06-13 03:16:32 UTC
 #> # A tibble: 20 × 11
 #>    ranking name    school committed_to position height weight stars rating city 
 #>      <int> <chr>   <chr>  <chr>        <chr>     <dbl>  <int> <int>  <dbl> <chr>

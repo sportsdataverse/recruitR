@@ -34,7 +34,7 @@ tfs_recruiting_rankings(year, recruit_type = "HighSchool", pages = 5)
 # \donttest{
    try(tfs_recruiting_rankings(2022))
 #> ── Player recruiting rankings from 247Sports.com ───────────── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-06-09 23:49:25 UTC
+#> ℹ Data updated: 2026-06-13 03:16:14 UTC
 #> # A tibble: 1,500 × 59
 #>       key player_institution  year announcement_date signed_institution position
 #>     <int>              <int> <int> <chr>                          <int>    <int>

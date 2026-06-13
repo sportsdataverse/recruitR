@@ -75,12 +75,12 @@ cfbd_recruiting_position(
   try(cfbd_recruiting_position(2018, team = "Texas"))
 #> Request failed [400]. Retrying in 1 seconds...
 #> Request failed [400]. Retrying in 3.3 seconds...
-#> 2026-06-09 23:46:40.221663: Invalid arguments or no position group recruiting data available!
+#> 2026-06-13 03:12:21.295913: Invalid arguments or no position group recruiting data available!
 #> data frame with 0 columns and 0 rows
 
   try(cfbd_recruiting_position(2016, 2020, team = "Virginia"))
 #> ── Recruiting position group info from CollegeFootballData.com ─────────────────
-#> ℹ Data updated: 2026-06-09 23:46:40 UTC
+#> ℹ Data updated: 2026-06-13 03:12:21 UTC
 #> # A tibble: 16 × 7
 #>    team     conference position_group avg_rating total_rating commits avg_stars
 #>    <chr>    <chr>      <chr>               <dbl>        <dbl>   <dbl>     <dbl>
@@ -103,7 +103,7 @@ cfbd_recruiting_position(
 
   try(cfbd_recruiting_position(2015, 2020, conference = "SEC"))
 #> ── Recruiting position group info from CollegeFootballData.com ─────────────────
-#> ℹ Data updated: 2026-06-09 23:46:40 UTC
+#> ℹ Data updated: 2026-06-13 03:12:21 UTC
 #> # A tibble: 224 × 7
 #>    team     conference position_group avg_rating total_rating commits avg_stars
 #>    <chr>    <chr>      <chr>               <dbl>        <dbl>   <dbl>     <dbl>
