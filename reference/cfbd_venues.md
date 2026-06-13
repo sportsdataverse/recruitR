@@ -79,7 +79,7 @@ CFB Venue Information
 # \donttest{
   try(cfbd_venues())
 #> ── Venue data from CollegeFootballData.com ─────────────────── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-06-13 04:20:15 UTC
+#> ℹ Data updated: 2026-06-13 04:34:27 UTC
 #> # A tibble: 840 × 14
 #>    venue_id name     capacity grass dome  city  state zip   countryCode timezone
 #>       <int> <chr>       <int> <lgl> <lgl> <chr> <chr> <chr> <chr>       <chr>   
