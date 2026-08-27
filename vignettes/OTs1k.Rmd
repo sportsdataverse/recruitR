@@ -1,6 +1,6 @@
 ---
 title: "OTs1k"
-author: "Saiem Gilani <br><a href='https://twitter.com/saiemgilani' target='blank'><img src='https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=twitter&amp;style=for-the-badge' alt='@saiemgilani'/></a> <a href='https://github.com/saiemgilani' target='blank'><img src='https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge' alt='@saiemgilani'/></a>"
+author: "Saiem Gilani, Ryan Mann <br><a href='https://x.com/saiemgilani' target='blank'><img src='https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=x&amp;style=for-the-badge' alt='@saiemgilani'/></a> <a href='https://github.com/saiemgilani' target='blank'><img src='https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge' alt='@saiemgilani'/></a> <a href='https://x.com/_ryanmann' target='blank'><img src='https://img.shields.io/twitter/follow/_ryanmann?color=blue&amp;label=%40_ryanmann&amp;logo=x&amp;style=for-the-badge' alt='@_ryanmann'/></a>"
 opengraph:
   image: 
     src: "https://github.com/saiemgilani/recruitR/blob/main/logo.png?raw=true"
@@ -13,6 +13,7 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 
+description: "Worked example: finding every offensive tackle in the 2020 recruiting cycle from Florida and its bordering states, and ranking them by composite rating."
 ---
 
 
@@ -21,12 +22,14 @@ vignette: >
 This is a basic example which shows you how to solve a common problem:
 
 ```{r exampleots,  message=FALSE, warning=FALSE, results='hide'}
-if (!requireNamespace('pacman', quietly = TRUE)){
-  install.packages('pacman')
+if (!requireNamespace('pak', quietly = TRUE)){
+  install.packages('pak')
 }
-pacman::p_load_current_gh("sportsdataverse/recruitR")
+pak::pak("sportsdataverse/recruitR")
 
-pacman::p_load(dplyr, ggplot2)
+pak::pak(c("dplyr", "ggplot2"))
+library(dplyr)
+library(ggplot2)
 ```
 Let's say that we are interested in seeing how many offensive tackles in the 2020 recruiting cycle were:
 
@@ -97,3 +100,37 @@ ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))
         plot.margin=unit(c(top=0.4,right=0.4,bottom=0.4,left=0.4),"cm"))
 
 ```
+
+# **Our Authors**
+-   [Saiem Gilani](https://x.com/saiemgilani)
+<a href='https://x.com/saiemgilani' target='blank'><img src='https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=x&amp;style=for-the-badge' alt='@saiemgilani'/></a>
+<a href='https://github.com/saiemgilani' target='blank'><img src='https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge' alt='@saiemgilani'/></a>
+-   [Ryan Mann](https://x.com/_ryanmann)
+<a href='https://x.com/_ryanmann' target='blank'><img src='https://img.shields.io/twitter/follow/_ryanmann?color=blue&amp;label=%40_ryanmann&amp;logo=x&amp;style=for-the-badge' alt='@_ryanmann'/></a>
+
+## **Citation**
+
+To cite the [**`recruitR`**](https://github.com/sportsdataverse/recruitR) R package in publications, use:
+
+BibTeX Citation
+
+```bibtex
+@misc{recruitr,
+  author = {Saiem Gilani and Ryan Mann},
+  title = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data},
+  url = {https://github.com/sportsdataverse/recruitR},
+  year = {2026}
+}
+```
+
+## **Related SportsDataverse packages**
+
+-   [**cfbfastR**](https://cfbfastR.sportsdataverse.org/) - college football
+-   [**hoopR**](https://hoopR.sportsdataverse.org/) - men's basketball
+-   [**wehoop**](https://wehoop.sportsdataverse.org/) - women's basketball
+-   [**baseballr**](https://baseballr.sportsdataverse.org/) - baseball
+-   [**fastRhockey**](https://fastRhockey.sportsdataverse.org/) - hockey
+-   [**oddsapiR**](https://oddsapiR.sportsdataverse.org/) - betting odds
+-   [**sportyR**](https://sportyR.sportsdataverse.org/) - playing surfaces
+-   [**sportsdataverse-py**](https://py.sportsdataverse.org/) - the Python package
+-   [**sportsdataverse-R**](https://r.sportsdataverse.org/) - the R meta-package
