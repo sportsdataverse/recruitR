@@ -1,6 +1,6 @@
 ---
 title: "RBsSECACC5yr"
-author: "Saiem Gilani <br><a href='https://twitter.com/saiemgilani' target='blank'><img src='https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=twitter&amp;style=for-the-badge' alt='@saiemgilani'/></a> <a href='https://github.com/saiemgilani' target='blank'><img src='https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge' alt='@saiemgilani'/></a>"
+author: "Saiem Gilani, Ryan Mann <br><a href='https://x.com/saiemgilani' target='blank'><img src='https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=x&amp;style=for-the-badge' alt='@saiemgilani'/></a> <a href='https://github.com/saiemgilani' target='blank'><img src='https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge' alt='@saiemgilani'/></a> <a href='https://x.com/_ryanmann' target='blank'><img src='https://img.shields.io/twitter/follow/_ryanmann?color=blue&amp;label=%40_ryanmann&amp;logo=x&amp;style=for-the-badge' alt='@_ryanmann'/></a>"
 opengraph:
   image: 
     src: "https://github.com/saiemgilani/recruitR/blob/main/logo.png?raw=true"
@@ -103,17 +103,18 @@ ggplot(rbs ,aes(x = team, y = commits, fill = avg_stars)) +
 -   [Saiem Gilani](https://x.com/saiemgilani)
 <a href='https://x.com/saiemgilani' target='blank'><img src='https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=x&amp;style=for-the-badge' alt='@saiemgilani'/></a>
 <a href='https://github.com/saiemgilani' target='blank'><img src='https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge' alt='@saiemgilani'/></a>
--   Ryan Mann
+-   [Ryan Mann](https://x.com/_ryanmann)
+<a href='https://x.com/_ryanmann' target='blank'><img src='https://img.shields.io/twitter/follow/_ryanmann?color=blue&amp;label=%40_ryanmann&amp;logo=x&amp;style=for-the-badge' alt='@_ryanmann'/></a>
 
 ## **Citation**
 
 To cite the [**`recruitR`**](https://github.com/sportsdataverse/recruitR) R package in publications, use:
 
-BibTex Citation
+BibTeX Citation
 
 ```bibtex
 @misc{recruitr,
-  author = {Saiem Gilani, Ryan Mann},
+  author = {Saiem Gilani and Ryan Mann},
   title = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data},
   url = {https://github.com/sportsdataverse/recruitR},
   year = {2026}
