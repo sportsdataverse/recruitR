@@ -58,17 +58,20 @@ cfbd_recruiting_position <- function(start_year = NULL, end_year = NULL,
   
   base_url <- "https://api.collegefootballdata.com/recruiting/groups?"
   
-  # Create full url using base and input arguments
+  # Create full url using base and input arguments. Build it from only the
+  # arguments that were supplied: CollegeFootballData rejects an empty
+  # `endYear=` outright ("Validation Failed"), and paste0() drops a NULL
+  # silently, so the documented `end_year = NULL` call used to send
+  # `&endYear=` and come back HTTP 400.
+  params <- c(
+    startYear = start_year,
+    endYear = end_year,
+    team = team,
+    conference = conference
+  )
   full_url <- paste0(
     base_url,
-    "startYear=",
-    start_year,
-    "&endYear=",
-    end_year,
-    "&team=",
-    team,
-    "&conference=",
-    conference
+    paste0(names(params), "=", params, collapse = "&")
   )
   
   # Check for CFBD API key

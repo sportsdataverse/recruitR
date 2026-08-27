@@ -72,7 +72,10 @@ cfbd_recruiting_team <- function(year = NULL,
       df <- res %>%
         httr::content(as = "text", encoding = "UTF-8") %>%
         jsonlite::fromJSON() %>%
-        as.data.frame()
+        as.data.frame() %>%
+        # CollegeFootballData reordered the payload (year, team, rank,
+        # points); pin the documented order so colnames() stays stable.
+        dplyr::relocate(dplyr::any_of(c("year", "rank", "team", "points")))
       
       
       df <- df %>%
