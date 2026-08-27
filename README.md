@@ -33,11 +33,11 @@ You can install the released version of
 [GitHub](https://github.com/sportsdataverse/recruitR) with:
 
 ``` r
-# You can install using the pacman package using the following code:
-if (!requireNamespace('pacman', quietly = TRUE)){
-  install.packages('pacman')
+# You can install using the pak package using the following code:
+if (!requireNamespace('pak', quietly = TRUE)){
+  install.packages('pak')
 }
-pacman::p_load_current_gh("sportsdataverse/recruitR")
+pak::pak("sportsdataverse/recruitR")
 ```
 
 ``` r
