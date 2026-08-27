@@ -89,6 +89,10 @@ cfbd_team_roster <- function(year, team = NULL) {
       df <- res %>%
         httr::content(as = "text", encoding = "UTF-8") %>%
         jsonlite::fromJSON() %>%
+        # CollegeFootballData now returns camelCase field names
+        # (firstName, homeState, homeCountyFIPS, ...). Snake-case them to
+        # the documented schema before the id rename.
+        janitor::clean_names() %>%
         dplyr::rename("athlete_id" = "id") %>%
         dplyr::mutate(headshot_url = paste0("https://a.espncdn.com/i/headshots/college-football/players/full/",.data$athlete_id,".png")) %>%
         as.data.frame()

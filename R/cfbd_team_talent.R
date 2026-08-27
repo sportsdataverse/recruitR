@@ -59,6 +59,10 @@ cfbd_team_talent <- function(year = NULL) {
         httr::content(as = "text", encoding = "UTF-8") %>%
         jsonlite::fromJSON() %>%
         as.data.frame() %>%
+        # CollegeFootballData renamed this field from `school` to `team`.
+        # any_of() keeps the rename a no-op on older/cached payloads that
+        # still ship `school`.
+        dplyr::rename(dplyr::any_of(c("school" = "team"))) %>%
         mutate(talent = as.numeric(.data$talent))
       
       
