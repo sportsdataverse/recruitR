@@ -21,10 +21,35 @@ import pathlib
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-SRC = pathlib.Path("C:/Users/saiem/Documents/GitHub-Data/sdv-dev/recruitR-dev/recruitR")
-OUT = pathlib.Path(__file__).parent
-CHIVO = "C:/Users/saiem/AppData/Local/Microsoft/Windows/Fonts/Chivo-VariableFont_wght.ttf"
-INTER = "C:/Windows/Fonts/Inter-SemiBold.ttf"
+import os
+
+# Everything resolves from this file, so the script runs in any checkout.
+REPO = pathlib.Path(__file__).resolve().parents[1]
+SRC = REPO
+OUT = REPO / "man" / "figures"
+
+# The wordmark needs a heavy grotesque. Chivo is used for the shipped asset;
+# override with RECRUITR_HEX_FONT to build with whatever is installed locally.
+FONT_CANDIDATES = [
+    os.environ.get("RECRUITR_HEX_FONT"),
+    "C:/Users/%s/AppData/Local/Microsoft/Windows/Fonts/Chivo-VariableFont_wght.ttf"
+    % os.environ.get("USERNAME", ""),
+    "/usr/share/fonts/truetype/chivo/Chivo-VariableFont_wght.ttf",
+    "C:/Windows/Fonts/arialbd.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+]
+
+
+def _font_path():
+    for c in FONT_CANDIDATES:
+        if c and pathlib.Path(c).exists():
+            return c
+    raise SystemExit(
+        "No usable font found. Set RECRUITR_HEX_FONT to a bold sans TTF."
+    )
+
+
+CHIVO = _font_path()
 
 SS = 3  # supersample, then downsample
 W, H = 1036, 1200
@@ -83,7 +108,10 @@ def build(scale):
     # --- wordmark -----------------------------------------------------------
     d = ImageDraw.Draw(card)
     f = ImageFont.truetype(CHIVO, int(w * 0.150))
-    f.set_variation_by_axes([900])
+    try:
+        f.set_variation_by_axes([900])   # Chivo is variable; static fonts are not
+    except Exception:
+        pass
     text = "recruitR"
     tw = d.textlength(text, font=f)
     d.text(
@@ -107,7 +135,11 @@ def build(scale):
 
 
 if __name__ == "__main__":
+    OUT.mkdir(parents=True, exist_ok=True)
     hexi = build(SS)
-    hexi.save(OUT / "recruitR_hex.png")
-    hexi.resize((518, 600), Image.LANCZOS).save(OUT / "recruitR_hex_518.png")
-    print(f"wrote recruitR_hex.png {hexi.size} ratio={hexi.size[0] / hexi.size[1]:.3f}")
+    hexi.save(OUT / "logo-2x.png")
+    hexi.resize((518, 600), Image.LANCZOS).save(OUT / "logo.png")
+    hexi.save(REPO / "logo.png")
+    print(f"font: {CHIVO}")
+    for f in (OUT / "logo.png", OUT / "logo-2x.png", REPO / "logo.png"):
+        print(f"  wrote {f.relative_to(REPO)}")
