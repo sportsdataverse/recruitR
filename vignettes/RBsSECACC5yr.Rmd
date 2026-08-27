@@ -24,6 +24,7 @@ if (!requireNamespace('pak', quietly = TRUE)){
   install.packages('pak')
 }
 pak::pak("sportsdataverse/recruitR")
+library(recruitR)
 
 pak::pak(c("dplyr", "ggplot2"))
 library(dplyr)
