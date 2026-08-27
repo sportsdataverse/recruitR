@@ -73,50 +73,67 @@ cfbd_recruiting_position(
 ``` r
 # \donttest{
   try(cfbd_recruiting_position(2018, team = "Texas"))
-#> Request failed [400]. Retrying in 1 seconds...
-#> Request failed [400]. Retrying in 3.3 seconds...
-#> 2026-06-13 04:34:22.200116: Invalid arguments or no position group recruiting data available!
-#> data frame with 0 columns and 0 rows
+#> ── Recruiting position group info from CollegeFootballData.com ─────────────────
+#> ℹ Data updated: 2026-08-27 17:53:41 UTC
+#> # A tibble: 16 × 7
+#>    team  conference position_group avg_rating total_rating commits avg_stars
+#>    <chr> <chr>      <chr>               <dbl>        <dbl>   <dbl>     <dbl>
+#>  1 Texas SEC        Defensive Back      0.937         37.5      40      4.05
+#>  2 Texas SEC        Defensive Line      0.916         39.4      43      3.79
+#>  3 Texas SEC        Linebacker          0.898         20.7      23      3.61
+#>  4 Texas SEC        Offensive Line      0.908         31.8      35      3.77
+#>  5 Texas SEC        Quarterback         0.927         11.1      12      4   
+#>  6 Texas SEC        Receiver            0.919         33.1      36      3.72
+#>  7 Texas SEC        Running Back        0.918         12.8      14      3.93
+#>  8 Texas SEC        Special Teams       0.879         21.1      24      3.42
+#>  9 Texas SEC        All Positions       0.937         37.5      41      4.05
+#> 10 Texas SEC        All Positions       0.916         39.4      43      3.79
+#> 11 Texas SEC        All Positions       0.898         20.7      23      3.61
+#> 12 Texas SEC        All Positions       0.908         31.8      35      3.77
+#> 13 Texas SEC        All Positions       0.927         11.1      12      4   
+#> 14 Texas SEC        All Positions       0.919         33.1      36      3.72
+#> 15 Texas SEC        All Positions       0.918         12.8      14      3.93
+#> 16 Texas SEC        All Positions       0.879         21.1      24      3.42
 
   try(cfbd_recruiting_position(2016, 2020, team = "Virginia"))
 #> ── Recruiting position group info from CollegeFootballData.com ─────────────────
-#> ℹ Data updated: 2026-06-13 04:34:22 UTC
+#> ℹ Data updated: 2026-08-27 17:53:41 UTC
 #> # A tibble: 16 × 7
 #>    team     conference position_group avg_rating total_rating commits avg_stars
 #>    <chr>    <chr>      <chr>               <dbl>        <dbl>   <dbl>     <dbl>
-#>  1 Virginia ACC        Defensive Back      0.831         9.15      11      2.82
-#>  2 Virginia ACC        Defensive Line      0.851         7.66       9      3.22
-#>  3 Virginia ACC        Linebacker          0.848         7.63       9      3   
-#>  4 Virginia ACC        Offensive Line      0.827         7.44       9      2.89
-#>  5 Virginia ACC        Quarterback         0.853         1.71       2      3   
-#>  6 Virginia ACC        Receiver            0.835        10.0       12      2.92
-#>  7 Virginia ACC        Running Back        0.836         3.35       4      3   
-#>  8 Virginia ACC        Special Teams       0.839         7.55       9      2.89
-#>  9 Virginia ACC        All Positions       0.831         9.15      11      2.82
-#> 10 Virginia ACC        All Positions       0.851         7.66       9      3.22
-#> 11 Virginia ACC        All Positions       0.848         7.63       9      3   
-#> 12 Virginia ACC        All Positions       0.827         7.44       9      2.89
-#> 13 Virginia ACC        All Positions       0.853         1.71       2      3   
-#> 14 Virginia ACC        All Positions       0.835        10.0       12      2.92
-#> 15 Virginia ACC        All Positions       0.836         3.35       4      3   
-#> 16 Virginia ACC        All Positions       0.839         7.55       9      2.89
+#>  1 Virginia ACC        Defensive Back      0.833        11.7       14      2.86
+#>  2 Virginia ACC        Defensive Line      0.854        13.7       16      3.12
+#>  3 Virginia ACC        Linebacker          0.848        15.3       18      3   
+#>  4 Virginia ACC        Offensive Line      0.837        14.2       17      2.94
+#>  5 Virginia ACC        Quarterback         0.851         4.26       5      3   
+#>  6 Virginia ACC        Receiver            0.841        16.0       19      2.95
+#>  7 Virginia ACC        Running Back        0.848         5.94       7      3   
+#>  8 Virginia ACC        Special Teams       0.837         9.21      11      2.91
+#>  9 Virginia ACC        All Positions       0.833        11.7       16      2.86
+#> 10 Virginia ACC        All Positions       0.854        13.7       16      3.12
+#> 11 Virginia ACC        All Positions       0.848        15.3       18      3   
+#> 12 Virginia ACC        All Positions       0.837        14.2       17      2.94
+#> 13 Virginia ACC        All Positions       0.851         4.26       5      3   
+#> 14 Virginia ACC        All Positions       0.841        16.0       20      2.95
+#> 15 Virginia ACC        All Positions       0.848         5.94       8      3   
+#> 16 Virginia ACC        All Positions       0.837         9.21      11      2.91
 
   try(cfbd_recruiting_position(2015, 2020, conference = "SEC"))
 #> ── Recruiting position group info from CollegeFootballData.com ─────────────────
-#> ℹ Data updated: 2026-06-13 04:34:22 UTC
+#> ℹ Data updated: 2026-08-27 17:53:42 UTC
 #> # A tibble: 224 × 7
 #>    team     conference position_group avg_rating total_rating commits avg_stars
 #>    <chr>    <chr>      <chr>               <dbl>        <dbl>   <dbl>     <dbl>
-#>  1 Alabama  SEC        Defensive Back      0.950        20.9       22      4.05
+#>  1 Alabama  SEC        Defensive Back      0.947        21.8       23      4   
 #>  2 Alabama  SEC        Defensive Line      0.951        27.6       29      4.17
-#>  3 Alabama  SEC        Linebacker          0.941        15.1       16      4   
-#>  4 Alabama  SEC        Offensive Line      0.939        19.7       21      4.05
+#>  3 Alabama  SEC        Linebacker          0.935        15.9       17      3.94
+#>  4 Alabama  SEC        Offensive Line      0.937        20.6       22      4.05
 #>  5 Alabama  SEC        Quarterback         0.894         8.94      10      3.7 
-#>  6 Alabama  SEC        Receiver            0.923        19.4       21      3.86
+#>  6 Alabama  SEC        Receiver            0.920        20.2       22      3.82
 #>  7 Alabama  SEC        Running Back        0.919        13.8       15      3.8 
-#>  8 Alabama  SEC        Special Teams       0.892         7.13       8      3.62
-#>  9 Arkansas SEC        Defensive Back      0.861        13.8       16      3.25
-#> 10 Arkansas SEC        Defensive Line      0.891        14.3       16      3.5 
+#>  8 Alabama  SEC        Special Teams       0.880         9.68      11      3.45
+#>  9 Arkansas SEC        Defensive Back      0.863        17.3       20      3.25
+#> 10 Arkansas SEC        Defensive Line      0.883        21.2       24      3.38
 #> # ℹ 214 more rows
 # }
 ```

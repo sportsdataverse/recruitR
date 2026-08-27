@@ -45,44 +45,44 @@ cfbd_recruiting_team(year = NULL, team = NULL)
 # \donttest{
   try(cfbd_recruiting_team(2018, team = "Texas"))
 #> ── Recruiting team rankings from CollegeFootballData.com ───── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-06-13 04:34:22 UTC
+#> ℹ Data updated: 2026-08-27 17:53:42 UTC
 #> # A tibble: 1 × 4
-#>    year team   rank points
-#>   <int> <chr> <int>  <dbl>
-#> 1  2018 Texas     3   300.
+#>    year  rank team  points
+#>   <int> <int> <chr>  <dbl>
+#> 1  2018     3 Texas   300.
 
   try(cfbd_recruiting_team(2016, team = "Virginia"))
 #> ── Recruiting team rankings from CollegeFootballData.com ───── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-06-13 04:34:22 UTC
+#> ℹ Data updated: 2026-08-27 17:53:42 UTC
 #> # A tibble: 1 × 4
-#>    year team      rank points
-#>   <int> <chr>    <int>  <dbl>
-#> 1  2016 Virginia    63   165.
+#>    year  rank team     points
+#>   <int> <int> <chr>     <dbl>
+#> 1  2016    63 Virginia   165.
 
   try(cfbd_recruiting_team(2016, team = "Texas A&M"))
 #> ── Recruiting team rankings from CollegeFootballData.com ───── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-06-13 04:34:22 UTC
+#> ℹ Data updated: 2026-08-27 17:53:42 UTC
 #> # A tibble: 1 × 4
-#>    year team       rank points
-#>   <int> <chr>     <int>  <dbl>
-#> 1  2016 Texas A&M    18   239.
+#>    year  rank team      points
+#>   <int> <int> <chr>      <dbl>
+#> 1  2016    18 Texas A&M   239.
 
   try(cfbd_recruiting_team(2011))
 #> ── Recruiting team rankings from CollegeFootballData.com ───── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-06-13 04:34:23 UTC
+#> ℹ Data updated: 2026-08-27 17:53:42 UTC
 #> # A tibble: 137 × 4
-#>     year team           rank points
-#>    <int> <chr>         <int>  <dbl>
-#>  1  2011 Alabama           1   298.
-#>  2  2011 Florida State     2   297.
-#>  3  2011 USC               3   287.
-#>  4  2011 Texas             4   284.
-#>  5  2011 Auburn            5   281.
-#>  6  2011 Ohio State        6   278.
-#>  7  2011 Georgia           7   278.
-#>  8  2011 LSU               8   273.
-#>  9  2011 Notre Dame        9   271.
-#> 10  2011 Clemson          10   270.
+#>     year  rank team          points
+#>    <int> <int> <chr>          <dbl>
+#>  1  2011     1 Alabama         298.
+#>  2  2011     2 Florida State   297.
+#>  3  2011     3 USC             287.
+#>  4  2011     4 Texas           284.
+#>  5  2011     5 Auburn          281.
+#>  6  2011     6 Ohio State      278.
+#>  7  2011     7 Georgia         278.
+#>  8  2011     8 LSU             273.
+#>  9  2011     9 Notre Dame      271.
+#> 10  2011    10 Clemson         270.
 #> # ℹ 127 more rows
 # }
 ```

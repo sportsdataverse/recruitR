@@ -17,6 +17,8 @@
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
 <meta property="og:title" content="RBsSECACC5yr">
+<meta name="description" content="Worked example: comparing how SEC and ACC programs fared in running back recruiting from 2015 to 2020 with &lt;code&gt;cfbd_recruiting_position()&lt;/code&gt;.">
+<meta property="og:description" content="Worked example: comparing how SEC and ACC programs fared in running back recruiting from 2015 to 2020 with &lt;code&gt;cfbd_recruiting_position()&lt;/code&gt;.">
 <meta property="og:image" content="https://github.com/saiemgilani/recruitR/blob/main/logo.png?raw=true">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@saiemgilani">
@@ -114,9 +116,11 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>RBsSECACC5yr</h1>
-                        <h4 data-toc-skip class="author">Saiem Gilani
-<br><a href="https://twitter.com/saiemgilani" target="blank" class="external-link"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=twitter&amp;style=for-the-badge" alt="@saiemgilani"></a>
+                        <h4 data-toc-skip class="author">Saiem Gilani,
+Ryan Mann
+<br><a href="https://x.com/saiemgilani" target="blank" class="external-link"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=x&amp;style=for-the-badge" alt="@saiemgilani"></a>
 <a href="https://github.com/saiemgilani" target="blank" class="external-link"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge" alt="@saiemgilani"></a>
+<a href="https://x.com/_ryanmann" target="blank" class="external-link"><img src="https://img.shields.io/twitter/follow/_ryanmann?color=blue&amp;label=%40_ryanmann&amp;logo=x&amp;style=for-the-badge" alt="@_ryanmann"></a>
 </h4>
             
       
@@ -126,18 +130,21 @@
 
     
     
-<div class="section level2">
-<h2 id="running-backs-recruiting-2015-2020-sec-acc">Running Backs Recruiting 2015-2020: SEC &amp; ACC<a class="anchor" aria-label="anchor" href="#running-backs-recruiting-2015-2020-sec-acc"></a>
-</h2>
+<div class="section level3">
+<h3 id="running-backs-recruiting-2015-2020-sec-acc">Running Backs Recruiting 2015-2020: SEC &amp; ACC<a class="anchor" aria-label="anchor" href="#running-backs-recruiting-2015-2020-sec-acc"></a>
+</h3>
 <p>This is a basic example which shows you how to solve a common
 problem:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">'pacman'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'pacman'</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">'pak'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'pak'</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
-<span><span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_load_current_gh.html" class="external-link">p_load_current_gh</a></span><span class="op">(</span><span class="st">"sportsdataverse/recruitR"</span><span class="op">)</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"sportsdataverse/recruitR"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://recruitR.sportsdataverse.org/">recruitR</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_load.html" class="external-link">p_load</a></span><span class="op">(</span><span class="va">dplyr</span>, <span class="va">ggplot2</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dplyr"</span>, <span class="st">"ggplot2"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
 <p>Let’s say that we are interested in seeing how teams in either the
 SEC or ACC fared in running back recruiting from 2015-2020. We could
 gather the information on each conference using the
@@ -161,25 +168,25 @@ gather the information on each conference using the
 <span><span class="va">rbs</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="va">sec_rbs</span>,<span class="va">acc_rbs</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">rbs</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## ── Recruiting position group info from CollegeFootballData.com ─────────────────</span></span></code></pre>
-<pre><code><span><span class="co">## <span style="color: #00BBBB;">ℹ</span> Data updated: <span style="color: #00BB00;">2026-06-13 04:37:21 UTC</span></span></span></code></pre>
-<pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 28 × 7</span></span></span>
+<pre><code><span><span class="co">## <span style="color: #00BBBB;">ℹ</span> Data updated: <span style="color: #00BB00;">2026-08-27 17:56:28 UTC</span></span></span></code></pre>
+<pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 29 × 7</span></span></span>
 <span><span class="co">##    team      conference position_group avg_rating total_rating commits avg_stars</span></span>
 <span><span class="co">##    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
 <span><span class="co">## <span style="color: #BCBCBC;"> 1</span> Georgia   SEC        Running Back        0.943         7.54       8      4.12</span></span>
 <span><span class="co">## <span style="color: #BCBCBC;"> 2</span> Alabama   SEC        Running Back        0.919        13.8       15      3.8 </span></span>
 <span><span class="co">## <span style="color: #BCBCBC;"> 3</span> Mississi… SEC        Running Back        0.903         3.61       4      3.75</span></span>
 <span><span class="co">## <span style="color: #BCBCBC;"> 4</span> Auburn    SEC        Running Back        0.903         9.93      11      3.73</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 5</span> LSU       SEC        Running Back        0.907         9.98      11      3.64</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 6</span> Ole Miss  SEC        Running Back        0.901         7.20       8      3.62</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 7</span> Florida   SEC        Running Back        0.902         6.32       7      3.57</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 8</span> Texas A&amp;M SEC        Running Back        0.891         9.80      11      3.45</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 9</span> Arkansas  SEC        Running Back        0.885         4.42       5      3.4 </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">10</span> Kentucky  SEC        Running Back        0.875         3.50       4      3.25</span></span>
-<span><span class="co">## <span style="color: #949494;"># ℹ 18 more rows</span></span></span></code></pre>
+<span><span class="co">## <span style="color: #BCBCBC;"> 5</span> LSU       SEC        Running Back        0.901        10.8       12      3.58</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 6</span> Ole Miss  SEC        Running Back        0.896         8.06       9      3.56</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 7</span> Florida   SEC        Running Back        0.898         7.19       8      3.5 </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 8</span> Texas A&amp;M SEC        Running Back        0.888        10.7       12      3.42</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 9</span> Arkansas  SEC        Running Back        0.882         5.29       6      3.33</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">10</span> Kentucky  SEC        Running Back        0.874         6.12       7      3.29</span></span>
+<span><span class="co">## <span style="color: #949494;"># ℹ 19 more rows</span></span></span></code></pre>
 </div>
-<div class="section level2">
-<h2 id="plotting-the-running-backs">Plotting the Running Backs<a class="anchor" aria-label="anchor" href="#plotting-the-running-backs"></a>
-</h2>
+<div class="section level3">
+<h3 id="plotting-the-running-backs">Plotting the Running Backs<a class="anchor" aria-label="anchor" href="#plotting-the-running-backs"></a>
+</h3>
 <p>You can also create a plot:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">rbs</span> ,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">team</span>, y <span class="op">=</span> <span class="va">commits</span>, fill <span class="op">=</span> <span class="va">avg_stars</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -222,6 +229,70 @@ gather the information on each conference using the
 <span>        plot.margin<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/grid/unit.html" class="external-link">unit</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>top<span class="op">=</span><span class="fl">0.4</span>,right<span class="op">=</span><span class="fl">0.4</span>,bottom<span class="op">=</span><span class="fl">0.4</span>,left<span class="op">=</span><span class="fl">0.4</span><span class="op">)</span>,<span class="st">"cm"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="RBsSECACC5yr_files/figure-html/plot_rbs-1.png" class="r-plt" alt="" width="700"></p>
 </div>
+<div class="section level2">
+<h2 id="our-authors">
+<strong>Our Authors</strong><a class="anchor" aria-label="anchor" href="#our-authors"></a>
+</h2>
+<ul>
+<li>
+<a href="https://x.com/saiemgilani" class="external-link">Saiem Gilani</a>
+<a href="https://x.com/saiemgilani" target="blank" class="external-link"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=x&amp;style=for-the-badge" alt="@saiemgilani"></a>
+<a href="https://github.com/saiemgilani" target="blank" class="external-link"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge" alt="@saiemgilani"></a>
+</li>
+<li>
+<a href="https://x.com/_ryanmann" class="external-link">Ryan Mann</a>
+<a href="https://x.com/_ryanmann" target="blank" class="external-link"><img src="https://img.shields.io/twitter/follow/_ryanmann?color=blue&amp;label=%40_ryanmann&amp;logo=x&amp;style=for-the-badge" alt="@_ryanmann"></a>
+</li>
+</ul>
+<div class="section level3">
+<h3 id="citation">
+<strong>Citation</strong><a class="anchor" aria-label="anchor" href="#citation"></a>
+</h3>
+<p>To cite the <a href="https://github.com/sportsdataverse/recruitR" class="external-link"><strong><code>recruitR</code></strong></a>
+R package in publications, use:</p>
+<p>BibTeX Citation</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">recruitr</span>,</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="dt">author</span> = {Saiem Gilani and Ryan Mann},</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="dt">title</span> = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data},</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  <span class="dt">url</span> = {https://github.com/sportsdataverse/recruitR},</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  <span class="dt">year</span> = {2026}</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="related-sportsdataverse-packages">
+<strong>Related SportsDataverse packages</strong><a class="anchor" aria-label="anchor" href="#related-sportsdataverse-packages"></a>
+</h3>
+<ul>
+<li>
+<a href="https://cfbfastR.sportsdataverse.org/" class="external-link"><strong>cfbfastR</strong></a>
+- college football</li>
+<li>
+<a href="https://hoopR.sportsdataverse.org/" class="external-link"><strong>hoopR</strong></a> -
+men’s basketball</li>
+<li>
+<a href="https://wehoop.sportsdataverse.org/" class="external-link"><strong>wehoop</strong></a> -
+women’s basketball</li>
+<li>
+<a href="https://baseballr.sportsdataverse.org/" class="external-link"><strong>baseballr</strong></a>
+- baseball</li>
+<li>
+<a href="https://fastRhockey.sportsdataverse.org/" class="external-link"><strong>fastRhockey</strong></a>
+- hockey</li>
+<li>
+<a href="https://oddsapiR.sportsdataverse.org/" class="external-link"><strong>oddsapiR</strong></a>
+- betting odds</li>
+<li>
+<a href="https://sportyR.sportsdataverse.org/" class="external-link"><strong>sportyR</strong></a>
+- playing surfaces</li>
+<li>
+<a href="https://py.sportsdataverse.org/" class="external-link"><strong>sportsdataverse-py</strong></a>
+- the Python package</li>
+<li>
+<a href="https://r.sportsdataverse.org/" class="external-link"><strong>sportsdataverse-R</strong></a>
+- the R meta-package</li>
+</ul>
+</div>
+</div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
@@ -233,7 +304,7 @@ gather the information on each conference using the
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer>

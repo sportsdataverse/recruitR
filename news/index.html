@@ -80,6 +80,19 @@
     </div>
 
     <div class="section level2">
+<h2 class="pkg-version" data-toc-text="development version" id="recruitr-development-version">recruitR (development version)<a class="anchor" aria-label="anchor" href="#recruitr-development-version"></a></h2>
+<ul><li>Restored the documented column schema after CollegeFootballData renamed and reordered several response fields:
+<ul><li>
+<code><a href="../reference/cfbd_team_talent.html">cfbd_team_talent()</a></code> again returns <code>school</code> (the API now sends <code>team</code>).</li>
+<li>
+<code><a href="../reference/cfbd_team_roster.html">cfbd_team_roster()</a></code> again returns snake_case names (<code>first_name</code>, <code>home_state</code>, <code>home_county_fips</code>, …) rather than the API’s camelCase.</li>
+<li>
+<code><a href="../reference/cfbd_recruiting_team.html">cfbd_recruiting_team()</a></code> again returns <code>year</code>, <code>rank</code>, <code>team</code>, <code>points</code> in the documented order.</li>
+</ul></li>
+<li>
+<code><a href="../reference/cfbd_recruiting_position.html">cfbd_recruiting_position()</a></code> no longer sends an empty <code>endYear=</code> when <code>end_year</code> is omitted. CollegeFootballData now rejects that with <code>Validation Failed</code>, so the documented <code>cfbd_recruiting_position(2018, team = "Texas")</code> call returned an empty data frame. The query is built from the supplied arguments only.</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.0.3" id="recruitr-003">recruitR 0.0.3<a class="anchor" aria-label="anchor" href="#recruitr-003"></a></h2>
 <ul><li>Updated to include CFBD API key methods</li>
 </ul></div>
@@ -96,7 +109,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>

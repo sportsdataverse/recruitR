@@ -1,17 +1,20 @@
 # OTs1k
 
-## Offensive Tackle Example
+### Offensive Tackle Example
 
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
 
-if (!requireNamespace('pacman', quietly = TRUE)){
-  install.packages('pacman')
+if (!requireNamespace('pak', quietly = TRUE)){
+  install.packages('pak')
 }
-pacman::p_load_current_gh("sportsdataverse/recruitR")
+pak::pak("sportsdataverse/recruitR")
+library(recruitR)
 
-pacman::p_load(dplyr, ggplot2)
+pak::pak(c("dplyr", "ggplot2"))
+library(dplyr)
+library(ggplot2)
 ```
 
 Let’s say that we are interested in seeing how many offensive tackles in
@@ -39,34 +42,25 @@ SE_OTs_1k %>%
 
     ## ── Player recruiting info from CollegeFootballData.com ─────── recruitR 0.0.3 ──
 
-    ## ℹ Data updated: 2026-06-13 04:37:17 UTC
+    ## ℹ Data updated: 2026-08-27 17:56:15 UTC
 
-    ## # A tibble: 20 × 10
+    ## # A tibble: 22 × 10
     ##    ranking name           committed_to position height weight stars rating city 
     ##      <int> <chr>          <chr>        <chr>     <dbl>  <int> <int>  <dbl> <chr>
-    ##  1      11 Broderick Jon… Georgia      OT         77      298     5  0.995 Lith…
-    ##  2      38 Tate Ratledge  Georgia      OT         78      322     4  0.982 Rome 
-    ##  3      74 Myles Hinton   Stanford     OT         78      308     4  0.966 Norc…
-    ##  4     110 Marcus Dumerv… LSU          OT         77      305     4  0.952 Fort…
-    ##  5     128 Jalen Rivers   Miami        OT         78      331     4  0.942 Oran…
-    ##  6     158 Issiah Walker… Florida      OT         76      309     4  0.931 Miami
-    ##  7     280 Joshua Braun   Florida      OT         78      335     4  0.905 Live…
-    ##  8     304 Connor McLaug… Stanford     OT         79      260     4  0.901 Tampa
-    ##  9     325 Javion Cohen   Alabama      OT         77      295     4  0.899 Phen…
-    ## 10     374 John Williams  NA           OT         77      295     4  0.893 Cant…
-    ## 11     483 Cayden Baker   North Carol… OT         78      260     3  0.883 Fort…
-    ## 12     533 Michael Ranki… Georgia Tech OT         77      295     3  0.879 Rusk…
-    ## 13     533 Austin Blaske  Georgia      OT         77      278     3  0.879 Guyt…
-    ## 14     554 Jordan Willia… NA           OT         78      310     3  0.878 Gain…
-    ## 15     570 Brady Ward     NA           OT         79      310     3  0.877 Mobi…
-    ## 16     605 Trey Zimmerman NA           OT         78      294     3  0.875 Rosw…
-    ## 17     714 Jake Wray      NA           OT         77      300     3  0.868 Mari…
-    ## 18     929 Joshua Jones   NA           OT         76.5    304     3  0.860 Phen…
-    ## 19     949 Wing Green     Georgia Tech OT         79      285     3  0.859 Lees…
-    ## 20     967 Kobe McAllist… NA           OT         78      275     3  0.858 Ring…
+    ##  1      11 Broderick Jon… Georgia      OT           77    298     5  0.995 Lith…
+    ##  2      38 Tate Ratledge  Georgia      OT           78    322     4  0.982 Rome 
+    ##  3      74 Myles Hinton   Stanford     OT           78    308     4  0.966 Norc…
+    ##  4     110 Marcus Dumerv… LSU          OT           77    305     4  0.952 Fort…
+    ##  5     128 Jalen Rivers   Miami        OT           78    331     4  0.942 Oran…
+    ##  6     158 Issiah Walker… Florida      OT           76    309     4  0.931 Miami
+    ##  7     280 Joshua Braun   Florida      OT           78    335     4  0.905 Live…
+    ##  8     304 Connor McLaug… Stanford     OT           79    260     4  0.901 Tampa
+    ##  9     325 Javion Cohen   Alabama      OT           77    295     4  0.899 Phen…
+    ## 10     374 John Williams  Clemson      OT           77    295     4  0.893 Cant…
+    ## # ℹ 12 more rows
     ## # ℹ 1 more variable: state_province <chr>
 
-## Plotting the Offensive Tackles by State
+### Plotting the Offensive Tackles by State
 
 You can also create a plot:
 
@@ -127,3 +121,43 @@ ggplot(SE_OTs_1k_grp ,aes(x = state_province, y = players, fill = factor(stars))
 ```
 
 ![](OTs1k_files/figure-html/plot_OTs1k-1.png)
+
+## **Our Authors**
+
+- [Saiem Gilani](https://x.com/saiemgilani)
+  [![@saiemgilani](https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=x&style=for-the-badge)](https://x.com/saiemgilani)
+  [![@saiemgilani](https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge)](https://github.com/saiemgilani)
+- [Ryan Mann](https://x.com/_ryanmann)
+  [![@\_ryanmann](https://img.shields.io/twitter/follow/_ryanmann?color=blue&label=%40_ryanmann&logo=x&style=for-the-badge)](https://x.com/_ryanmann)
+
+### **Citation**
+
+To cite the
+[**`recruitR`**](https://github.com/sportsdataverse/recruitR) R package
+in publications, use:
+
+BibTeX Citation
+
+``` bibtex
+@misc{recruitr,
+  author = {Saiem Gilani and Ryan Mann},
+  title = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data},
+  url = {https://github.com/sportsdataverse/recruitR},
+  year = {2026}
+}
+```
+
+### **Related SportsDataverse packages**
+
+- [**cfbfastR**](https://cfbfastR.sportsdataverse.org/) - college
+  football
+- [**hoopR**](https://hoopR.sportsdataverse.org/) - men’s basketball
+- [**wehoop**](https://wehoop.sportsdataverse.org/) - women’s basketball
+- [**baseballr**](https://baseballr.sportsdataverse.org/) - baseball
+- [**fastRhockey**](https://fastRhockey.sportsdataverse.org/) - hockey
+- [**oddsapiR**](https://oddsapiR.sportsdataverse.org/) - betting odds
+- [**sportyR**](https://sportyR.sportsdataverse.org/) - playing surfaces
+- [**sportsdataverse-py**](https://py.sportsdataverse.org/) - the Python
+  package
+- [**sportsdataverse-R**](https://r.sportsdataverse.org/) - the R
+  meta-package

@@ -93,23 +93,23 @@ cfbd_team_roster(year, team = NULL)
 # \donttest{
   try(cfbd_team_roster(year = 2013, team = "Florida State"))
 #> ── Team roster data from CollegeFootballData.com ───────────── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-06-13 04:34:24 UTC
+#> ℹ Data updated: 2026-08-27 17:53:43 UTC
 #> # A tibble: 134 × 17
-#>    athlete_id firstName lastName    team     weight height jersey  year position
-#>    <chr>      <chr>     <chr>       <chr>     <int>  <int>  <int> <int> <chr>   
-#>  1 -1011031   Colton    Woodall     Florida…    190     75     49  2013 DB      
-#>  2 -1011030   James     Wilder, Jr. Florida…    229     74     32  2013 RB      
-#>  3 -1011029   Levonte   Whitfield   Florida…    178     67      7  2013 WR      
-#>  4 -1011028   Jermaine  Washington  Florida…    194     68     36  2013 WR      
-#>  5 -1011027   Jonathan  Wallace     Florida…    295     79     74  2013 OL      
-#>  6 -1011026   Donovan   Todd        Florida…    205     71     39  2013 DB      
-#>  7 -1011025   Bryan     Stork       Florida…    300     76     52  2013 OL      
-#>  8 -1011024   Nathan    Slater      Florida…    223     74     45  2013 LB      
-#>  9 -1011023   Garrett   Scott       Florida…    275     75     69  2013 OL      
-#> 10 -1011022   Michael   Scheerhorn  Florida…    240     76     79  2013 OL      
+#>    athlete_id first_name last_name   team    weight height jersey  year position
+#>    <chr>      <chr>      <chr>       <chr>    <int>  <int>  <int> <int> <chr>   
+#>  1 -1011031   Colton     Woodall     Florid…    190     75     49  2013 DB      
+#>  2 -1011030   James      Wilder, Jr. Florid…    229     74     32  2013 RB      
+#>  3 -1011029   Levonte    Whitfield   Florid…    178     67      7  2013 WR      
+#>  4 -1011028   Jermaine   Washington  Florid…    194     68     36  2013 WR      
+#>  5 -1011027   Jonathan   Wallace     Florid…    295     79     74  2013 OL      
+#>  6 -1011026   Donovan    Todd        Florid…    205     71     39  2013 DB      
+#>  7 -1011025   Bryan      Stork       Florid…    300     76     52  2013 OL      
+#>  8 -1011024   Nathan     Slater      Florid…    223     74     45  2013 LB      
+#>  9 -1011023   Garrett    Scott       Florid…    275     75     69  2013 OL      
+#> 10 -1011022   Michael    Scheerhorn  Florid…    240     76     79  2013 OL      
 #> # ℹ 124 more rows
-#> # ℹ 8 more variables: homeCity <chr>, homeState <chr>, homeCountry <chr>,
-#> #   homeLatitude <dbl>, homeLongitude <dbl>, homeCountyFIPS <chr>,
-#> #   recruitIds <list>, headshot_url <chr>
+#> # ℹ 8 more variables: home_city <chr>, home_state <chr>, home_country <chr>,
+#> #   home_latitude <dbl>, home_longitude <dbl>, home_county_fips <chr>,
+#> #   recruit_ids <list>, headshot_url <chr>
 # }
 ```

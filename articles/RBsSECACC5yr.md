@@ -1,17 +1,20 @@
 # RBsSECACC5yr
 
-## Running Backs Recruiting 2015-2020: SEC & ACC
+### Running Backs Recruiting 2015-2020: SEC & ACC
 
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
 
-if (!requireNamespace('pacman', quietly = TRUE)){
-  install.packages('pacman')
+if (!requireNamespace('pak', quietly = TRUE)){
+  install.packages('pak')
 }
-pacman::p_load_current_gh("sportsdataverse/recruitR")
+pak::pak("sportsdataverse/recruitR")
+library(recruitR)
 
-pacman::p_load(dplyr, ggplot2)
+pak::pak(c("dplyr", "ggplot2"))
+library(dplyr)
+library(ggplot2)
 ```
 
 Let’s say that we are interested in seeing how teams in either the SEC
@@ -42,24 +45,24 @@ print(rbs)
 
     ## ── Recruiting position group info from CollegeFootballData.com ─────────────────
 
-    ## ℹ Data updated: 2026-06-13 04:37:21 UTC
+    ## ℹ Data updated: 2026-08-27 17:56:28 UTC
 
-    ## # A tibble: 28 × 7
+    ## # A tibble: 29 × 7
     ##    team      conference position_group avg_rating total_rating commits avg_stars
     ##    <chr>     <chr>      <chr>               <dbl>        <dbl>   <dbl>     <dbl>
     ##  1 Georgia   SEC        Running Back        0.943         7.54       8      4.12
     ##  2 Alabama   SEC        Running Back        0.919        13.8       15      3.8 
     ##  3 Mississi… SEC        Running Back        0.903         3.61       4      3.75
     ##  4 Auburn    SEC        Running Back        0.903         9.93      11      3.73
-    ##  5 LSU       SEC        Running Back        0.907         9.98      11      3.64
-    ##  6 Ole Miss  SEC        Running Back        0.901         7.20       8      3.62
-    ##  7 Florida   SEC        Running Back        0.902         6.32       7      3.57
-    ##  8 Texas A&M SEC        Running Back        0.891         9.80      11      3.45
-    ##  9 Arkansas  SEC        Running Back        0.885         4.42       5      3.4 
-    ## 10 Kentucky  SEC        Running Back        0.875         3.50       4      3.25
-    ## # ℹ 18 more rows
+    ##  5 LSU       SEC        Running Back        0.901        10.8       12      3.58
+    ##  6 Ole Miss  SEC        Running Back        0.896         8.06       9      3.56
+    ##  7 Florida   SEC        Running Back        0.898         7.19       8      3.5 
+    ##  8 Texas A&M SEC        Running Back        0.888        10.7       12      3.42
+    ##  9 Arkansas  SEC        Running Back        0.882         5.29       6      3.33
+    ## 10 Kentucky  SEC        Running Back        0.874         6.12       7      3.29
+    ## # ℹ 19 more rows
 
-## Plotting the Running Backs
+### Plotting the Running Backs
 
 You can also create a plot:
 
@@ -106,3 +109,43 @@ ggplot(rbs ,aes(x = team, y = commits, fill = avg_stars)) +
 ```
 
 ![](RBsSECACC5yr_files/figure-html/plot_rbs-1.png)
+
+## **Our Authors**
+
+- [Saiem Gilani](https://x.com/saiemgilani)
+  [![@saiemgilani](https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=x&style=for-the-badge)](https://x.com/saiemgilani)
+  [![@saiemgilani](https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge)](https://github.com/saiemgilani)
+- [Ryan Mann](https://x.com/_ryanmann)
+  [![@\_ryanmann](https://img.shields.io/twitter/follow/_ryanmann?color=blue&label=%40_ryanmann&logo=x&style=for-the-badge)](https://x.com/_ryanmann)
+
+### **Citation**
+
+To cite the
+[**`recruitR`**](https://github.com/sportsdataverse/recruitR) R package
+in publications, use:
+
+BibTeX Citation
+
+``` bibtex
+@misc{recruitr,
+  author = {Saiem Gilani and Ryan Mann},
+  title = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data},
+  url = {https://github.com/sportsdataverse/recruitR},
+  year = {2026}
+}
+```
+
+### **Related SportsDataverse packages**
+
+- [**cfbfastR**](https://cfbfastR.sportsdataverse.org/) - college
+  football
+- [**hoopR**](https://hoopR.sportsdataverse.org/) - men’s basketball
+- [**wehoop**](https://wehoop.sportsdataverse.org/) - women’s basketball
+- [**baseballr**](https://baseballr.sportsdataverse.org/) - baseball
+- [**fastRhockey**](https://fastRhockey.sportsdataverse.org/) - hockey
+- [**oddsapiR**](https://oddsapiR.sportsdataverse.org/) - betting odds
+- [**sportyR**](https://sportyR.sportsdataverse.org/) - playing surfaces
+- [**sportsdataverse-py**](https://py.sportsdataverse.org/) - the Python
+  package
+- [**sportsdataverse-R**](https://r.sportsdataverse.org/) - the R
+  meta-package
