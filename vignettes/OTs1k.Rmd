@@ -13,6 +13,7 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 
+description: "Worked example: finding every offensive tackle in the 2020 recruiting cycle from Florida and its bordering states, and ranking them by composite rating."
 ---
 
 

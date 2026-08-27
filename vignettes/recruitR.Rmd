@@ -12,6 +12,7 @@ vignette: >
   %\VignetteIndexEntry{recruitR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+description: "Getting started with <code>recruitR</code> - pulling player and team recruiting rankings for college sports."
 ---
 
 ```{r, include = FALSE}

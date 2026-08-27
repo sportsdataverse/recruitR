@@ -12,7 +12,7 @@ vignette: >
   %\VignetteIndexEntry{RBsSECACC5yr}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-description: "Let's say that we are interested in seeing how teams in either the SEC or ACC fared in running back recruiting from 2015-2020."
+description: "Worked example: comparing how SEC and ACC programs fared in running back recruiting from 2015 to 2020 with <code>cfbd_recruiting_position()</code>."
 ---
 
 ## Running Backs Recruiting 2015-2020: SEC & ACC
