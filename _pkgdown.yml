@@ -3,6 +3,14 @@ template:
   bootstrap: 5
   bootswatch: flatly
   ganalytics: G-SE5ZJL93W6
+  includes:
+    in_header: |
+      <!-- Privacy-friendly analytics by Plausible -->
+      <script async src="https://plausible.io/js/pa-d0qxKmyxB93dsFxNaxAJb.js"></script>
+      <script>
+        window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+        plausible.init()
+      </script>
   bslib:
     primary: "#222222"
     secondary: "#B7B9BB"
@@ -53,7 +61,7 @@ home:
 navbar:
   structure:
     left:  [home, reference, articles, news, games, network, data, repo]
-    right: [twitter, github]
+    right: [search, twitter, github]
   icon: https://raw.githubusercontent.com/sportsdataverse/recruitR/main/man/figures/recruitR.ico
   title: "recruitR"
   components:
