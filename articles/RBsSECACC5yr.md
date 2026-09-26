@@ -45,7 +45,7 @@ print(rbs)
 
     ## ── Recruiting position group info from CollegeFootballData.com ─────────────────
 
-    ## ℹ Data updated: 2026-08-27 17:56:28 UTC
+    ## ℹ Data updated: 2026-09-26 06:49:57 UTC
 
     ## # A tibble: 29 × 7
     ##    team      conference position_group avg_rating total_rating commits avg_stars

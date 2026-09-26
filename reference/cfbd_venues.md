@@ -79,7 +79,7 @@ CFB Venue Information
 # \donttest{
   try(cfbd_venues())
 #> ── Venue data from CollegeFootballData.com ─────────────────── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-08-27 17:53:48 UTC
+#> ℹ Data updated: 2026-09-26 06:46:53 UTC
 #> # A tibble: 852 × 14
 #>    venue_id name     capacity grass dome  city  state zip   countryCode timezone
 #>       <int> <chr>       <int> <lgl> <lgl> <chr> <chr> <chr> <chr>       <chr>   
@@ -87,12 +87,12 @@ CFB Venue Information
 #>  2      218 FIU Sta…    20000 FALSE FALSE Miami "FL"  33199 US          America…
 #>  3     4779 Thomas …    15000 TRUE  FALSE Nass… ""    NA    BS          NA      
 #>  4    11591 Lokken …       NA NA    FALSE Vall… "ND"  NA    US          NA      
-#>  5     5220 Garriso…     5000 NA    FALSE Murf… "TN"  NA    US          NA      
-#>  6     3884 RAM Sta…       NA NA    FALSE East… "GA"  NA    US          NA      
-#>  7    11589 Hinchli…       NA NA    TRUE  Pate… "NJ"  NA    US          NA      
-#>  8     6043 Bethpag…     6000 FALSE FALSE Broo… "NY"  11545 US          America…
-#>  9    11539 Charlot…       NA NA    FALSE Jame… "ND"  NA    US          NA      
-#> 10    11712 Bank of…       NA NA    FALSE Sun … "WI"  NA    US          NA      
+#>  5     3884 RAM Sta…       NA NA    FALSE East… "GA"  NA    US          NA      
+#>  6    11589 Hinchli…       NA NA    TRUE  Pate… "NJ"  NA    US          NA      
+#>  7     6043 Bethpag…     6000 FALSE FALSE Broo… "NY"  11545 US          America…
+#>  8    11539 Charlot…       NA NA    FALSE Jame… "ND"  NA    US          NA      
+#>  9    11712 Bank of…       NA NA    FALSE Sun … "WI"  NA    US          NA      
+#> 10    11724 Communi…       NA NA    FALSE Cors… "TX"  NA    US          NA      
 #> # ℹ 842 more rows
 #> # ℹ 4 more variables: latitude <dbl>, longitude <dbl>, elevation <chr>,
 #> #   constructionYear <int>
