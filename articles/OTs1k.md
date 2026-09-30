@@ -42,7 +42,7 @@ SE_OTs_1k %>%
 
     ## ── Player recruiting info from CollegeFootballData.com ─────── recruitR 0.0.3 ──
 
-    ## ℹ Data updated: 2026-09-26 06:49:45 UTC
+    ## ℹ Data updated: 2026-09-30 14:46:28 UTC
 
     ## # A tibble: 22 × 10
     ##    ranking name           committed_to position height weight stars rating city 
