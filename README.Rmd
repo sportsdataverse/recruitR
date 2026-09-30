@@ -26,7 +26,9 @@ A college football recruiting package
 
 `recruitR` is an R package for working with college sports recruiting data. It is an R API wrapper around [collegefootballdata's](https://collegefootballdata.com/) recruiting and roster endpoints. 
 
-__Note:__ For details on the data sources, please go the website linked above. Sometimes there are inconsistencies in the underlying data itself. Please report issues here or to [https://collegefootballdata.com/](https://collegefootballdata.com/). 
+__Note:__ For details on the data sources, please go the website linked above. Sometimes there are inconsistencies in the underlying data itself. Please report issues here or to [https://collegefootballdata.com/](https://collegefootballdata.com/).
+
+Data freshness and pipeline status for every SportsDataverse dataset: [sportsdataverse.org/status](https://sportsdataverse.org/status).
 
 ## Installation
 
