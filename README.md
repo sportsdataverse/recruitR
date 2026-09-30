@@ -26,7 +26,8 @@ above. Sometimes there are inconsistencies in the underlying data
 itself. Please report issues here or to
 <https://collegefootballdata.com/>.
 
-Data freshness and pipeline status for every SportsDataverse dataset: [sportsdataverse.org/status](https://sportsdataverse.org/status).
+Data freshness and pipeline status for every SportsDataverse dataset:
+[sportsdataverse.org/status](https://sportsdataverse.org/status).
 
 ## Installation
 
