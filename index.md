@@ -178,7 +178,7 @@ stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=ee
 To cite the [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/) R
 package in publications, use:
 
-BibTex Citation
+BibTeX Citation
 
 ``` bibtex
 @misc{gilani_2021_recruitr,
