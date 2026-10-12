@@ -44,3 +44,4 @@
 ^md
 ^CRAN-RELEASE$
 ^\.pre-commit-config\.yaml$
+^\.claude$
