@@ -74,7 +74,7 @@ cfbd_recruiting_position(
 # \donttest{
   try(cfbd_recruiting_position(2018, team = "Texas"))
 #> ── Recruiting position group info from CollegeFootballData.com ─────────────────
-#> ℹ Data updated: 2026-10-09 05:30:21 UTC
+#> ℹ Data updated: 2026-10-12 10:01:33 UTC
 #> # A tibble: 16 × 7
 #>    team  conference position_group avg_rating total_rating commits avg_stars
 #>    <chr> <chr>      <chr>               <dbl>        <dbl>   <dbl>     <dbl>
@@ -96,8 +96,9 @@ cfbd_recruiting_position(
 #> 16 Texas SEC        All Positions       0.879         21.1      24      3.42
 
   try(cfbd_recruiting_position(2016, 2020, team = "Virginia"))
+#> Request failed [502]. Retrying in 1 seconds...
 #> ── Recruiting position group info from CollegeFootballData.com ─────────────────
-#> ℹ Data updated: 2026-10-09 05:30:21 UTC
+#> ℹ Data updated: 2026-10-12 10:01:40 UTC
 #> # A tibble: 16 × 7
 #>    team     conference position_group avg_rating total_rating commits avg_stars
 #>    <chr>    <chr>      <chr>               <dbl>        <dbl>   <dbl>     <dbl>
@@ -120,7 +121,7 @@ cfbd_recruiting_position(
 
   try(cfbd_recruiting_position(2015, 2020, conference = "SEC"))
 #> ── Recruiting position group info from CollegeFootballData.com ─────────────────
-#> ℹ Data updated: 2026-10-09 05:30:22 UTC
+#> ℹ Data updated: 2026-10-12 10:02:05 UTC
 #> # A tibble: 224 × 7
 #>    team     conference position_group avg_rating total_rating commits avg_stars
 #>    <chr>    <chr>      <chr>               <dbl>        <dbl>   <dbl>     <dbl>
