@@ -45,7 +45,7 @@ cfbd_recruiting_team(year = NULL, team = NULL)
 # \donttest{
   try(cfbd_recruiting_team(2018, team = "Texas"))
 #> ── Recruiting team rankings from CollegeFootballData.com ───── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-10-12 10:02:20 UTC
+#> ℹ Data updated: 2026-10-12 10:57:16 UTC
 #> # A tibble: 1 × 4
 #>    year  rank team  points
 #>   <int> <int> <chr>  <dbl>
@@ -53,7 +53,7 @@ cfbd_recruiting_team(year = NULL, team = NULL)
 
   try(cfbd_recruiting_team(2016, team = "Virginia"))
 #> ── Recruiting team rankings from CollegeFootballData.com ───── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-10-12 10:02:30 UTC
+#> ℹ Data updated: 2026-10-12 10:57:16 UTC
 #> # A tibble: 1 × 4
 #>    year  rank team     points
 #>   <int> <int> <chr>     <dbl>
@@ -61,7 +61,7 @@ cfbd_recruiting_team(year = NULL, team = NULL)
 
   try(cfbd_recruiting_team(2016, team = "Texas A&M"))
 #> ── Recruiting team rankings from CollegeFootballData.com ───── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-10-12 10:02:43 UTC
+#> ℹ Data updated: 2026-10-12 10:57:16 UTC
 #> # A tibble: 1 × 4
 #>    year  rank team      points
 #>   <int> <int> <chr>      <dbl>
@@ -69,7 +69,7 @@ cfbd_recruiting_team(year = NULL, team = NULL)
 
   try(cfbd_recruiting_team(2011))
 #> ── Recruiting team rankings from CollegeFootballData.com ───── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-10-12 10:02:45 UTC
+#> ℹ Data updated: 2026-10-12 10:57:16 UTC
 #> # A tibble: 137 × 4
 #>     year  rank team          points
 #>    <int> <int> <chr>          <dbl>
