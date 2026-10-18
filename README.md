@@ -168,15 +168,6 @@ website](https://recruitR.sportsdataverse.org).
 [**Full News on
 Releases**](https://recruitR.sportsdataverse.org/news/index.html)
 
-## Star History
-
-<a href="https://github.com/sportsdataverse/recruitR/stargazers">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history-dark.svg">
-    <img alt="Star history of sportsdataverse/recruitR" src="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history.png" width="600">
-  </picture>
-</a>
-
 ## Follow the [SportsDataverse](https://twitter.com/SportsDataverse) on Twitter and star this repo
 
 [![Twitter
@@ -184,6 +175,13 @@ Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%
 
 [![GitHub
 stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&logo=github&style=for-the-badge&label=Star%20recruitR&maxAge=2592000)](https://github.com/sportsdataverse/recruitR/stargazers/)
+
+<a href="https://github.com/sportsdataverse/recruitR/stargazers">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history-dark.svg">
+    <img alt="Star history of sportsdataverse/recruitR" src="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history.png" width="600">
+  </picture>
+</a>
 
 ## **Our Authors**
 
