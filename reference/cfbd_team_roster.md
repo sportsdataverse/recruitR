@@ -93,7 +93,7 @@ cfbd_team_roster(year, team = NULL)
 # \donttest{
   try(cfbd_team_roster(year = 2013, team = "Florida State"))
 #> ── Team roster data from CollegeFootballData.com ───────────── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-10-12 11:53:39 UTC
+#> ℹ Data updated: 2026-10-18 10:54:47 UTC
 #> # A tibble: 134 × 17
 #>    athlete_id first_name last_name   team    weight height jersey  year position
 #>    <chr>      <chr>      <chr>       <chr>    <int>  <int>  <int> <int> <chr>   

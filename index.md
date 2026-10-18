@@ -167,6 +167,9 @@ Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%
 [![GitHub
 stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&logo=github&style=for-the-badge&label=Star%20recruitR&maxAge=2592000)](https://github.com/sportsdataverse/recruitR/stargazers/)
 
+[![Star history of
+sportsdataverse/recruitR](https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history.png)](https://github.com/sportsdataverse/recruitR/stargazers)
+
 ## **Our Authors**
 
 - [Saiem Gilani](https://twitter.com/saiemgilani)  
