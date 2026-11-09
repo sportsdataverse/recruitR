@@ -124,7 +124,8 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="recruitr-">recruitR 
+<img src="logo.png" class="logo" alt=""><h1 id="recruitr-">
+<strong>recruitR</strong> 
 <a class="anchor" aria-label="anchor" href="#recruitr-"></a>
 </h1>
 </div>
@@ -135,27 +136,45 @@
 <p><strong>Note:</strong> For details on the data sources, please go the website linked above. Sometimes there are inconsistencies in the underlying data itself. Please report issues here or to <a href="https://collegefootballdata.com/" class="external-link uri">https://collegefootballdata.com/</a>.</p>
 <p>Data freshness and pipeline status for every SportsDataverse dataset: <a href="https://sportsdataverse.org/status" class="external-link">sportsdataverse.org/status</a>.</p>
 <div class="section level2">
-<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+<h2 id="installation">
+<strong>Installation</strong><a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the released version of <a href="https://github.com/sportsdataverse/recruitR" class="external-link"><strong><code>recruitR</code></strong></a> from <a href="https://github.com/sportsdataverse/recruitR" class="external-link">GitHub</a> with:</p>
+<p>You can install the latest build from <a href="https://sportsdataverse.r-universe.dev/recruitR" class="external-link">R-universe</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># You can install using the pak package using the following code:</span></span>
-<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">'pak'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'pak'</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"sportsdataverse/recruitR"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"recruitR"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://sportsdataverse.r-universe.dev"</span>, <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"repos"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>You can install the development version of <a href="https://github.com/sportsdataverse/recruitR/" class="external-link"><strong><code>recruitR</code></strong></a> from GitHub with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># if you would prefer devtools installation</span></span>
-<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">'devtools'</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'devtools'</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span><span class="co"># Alternatively, using the devtools package:</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span>repo <span class="op">=</span> <span class="st">"sportsdataverse/recruitR"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"pak"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"pak"</span><span class="op">)</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"sportsdataverse/recruitR"</span><span class="op">)</span></span>
+<span><span class="co"># or, with remotes:</span></span>
+<span><span class="co"># if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")</span></span>
+<span><span class="co"># remotes::install_github("sportsdataverse/recruitR")</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="offensive-tackle-example">Offensive Tackle Example<a class="anchor" aria-label="anchor" href="#offensive-tackle-example"></a>
+<h2 id="quick-start">
+<strong>Quick start</strong><a class="anchor" aria-label="anchor" href="#quick-start"></a>
 </h2>
+<p>The <code>cfbd_*()</code> functions call the <a href="https://collegefootballdata.com/" class="external-link">CollegeFootballData API</a>, which needs a free API key (<a href="https://collegefootballdata.com/key" class="external-link">register here</a>). Save it as <code>CFBD_API_KEY</code> in your <code>.Renviron</code>, or set it for the session:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>CFBD_API_KEY <span class="op">=</span> <span class="st">"YOUR-API-KEY-HERE"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://recruitR.sportsdataverse.org/">recruitR</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 2020 high-school offensive tackles from Florida</span></span>
+<span><span class="fu"><a href="reference/cfbd_recruiting_player.html">cfbd_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">"HighSchool"</span>, state <span class="op">=</span> <span class="st">"FL"</span>, position <span class="op">=</span> <span class="st">"OT"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 2020 team recruiting rankings</span></span>
+<span><span class="fu"><a href="reference/cfbd_recruiting_team.html">cfbd_recruiting_team</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2020</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># team talent composite for a season</span></span>
+<span><span class="fu"><a href="reference/cfbd_team_talent.html">cfbd_team_talent</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2020</span><span class="op">)</span></span></code></pre></div>
+<p>A longer worked example follows below.</p>
+</div>
+<div class="section level2">
+<h2 id="offensive-tackle-example">
+<strong>Offensive Tackle Example</strong><a class="anchor" aria-label="anchor" href="#offensive-tackle-example"></a>
+</h2>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://recruitR.sportsdataverse.org/">recruitR</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
@@ -165,7 +184,7 @@
 <li>located in the states bordering Florida</li>
 <li>ranked inside the top 1000</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">FL_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/cfbd_recruiting_player.html">cfbd_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">'HighSchool'</span>, state<span class="op">=</span><span class="st">'FL'</span>, position <span class="op">=</span><span class="st">'OT'</span><span class="op">)</span></span>
 <span><span class="va">GA_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/cfbd_recruiting_player.html">cfbd_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">'HighSchool'</span>, state<span class="op">=</span><span class="st">'GA'</span>, position <span class="op">=</span><span class="st">'OT'</span><span class="op">)</span></span>
 <span><span class="va">AL_OTs</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/cfbd_recruiting_player.html">cfbd_recruiting_player</a></span><span class="op">(</span><span class="fl">2020</span>, recruit_type <span class="op">=</span> <span class="st">'HighSchool'</span>, state<span class="op">=</span><span class="st">'AL'</span>, position <span class="op">=</span><span class="st">'OT'</span><span class="op">)</span></span>
@@ -204,10 +223,11 @@
 <span><span class="co">#&gt; # … with 1 more variable: state_province &lt;chr&gt;</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="plotting-the-offensive-tackles-by-state">Plotting the Offensive Tackles by State<a class="anchor" aria-label="anchor" href="#plotting-the-offensive-tackles-by-state"></a>
+<h2 id="plotting-the-offensive-tackles-by-state">
+<strong>Plotting the Offensive Tackles by State</strong><a class="anchor" aria-label="anchor" href="#plotting-the-offensive-tackles-by-state"></a>
 </h2>
 <p>You can also create a plot:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">SE_OTs_1k</span><span class="op">$</span><span class="va">stars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">SE_OTs_1k</span><span class="op">$</span><span class="va">stars</span>,levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">4</span>,<span class="fl">3</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">SE_OTs_1k_grp</span> <span class="op">&lt;-</span> <span class="va">SE_OTs_1k</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -257,6 +277,21 @@
 <strong>Documentation</strong><a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h2>
 <p>For more information on the package and function reference, please see the <a href="https://recruitR.sportsdataverse.org"><strong><code>recruitR</code></strong> documentation website</a>.</p>
+<ul>
+<li><a href="https://recruitR.sportsdataverse.org/">Package site</a></li>
+<li><a href="https://recruitR.sportsdataverse.org/reference/index.html">Function reference</a></li>
+<li>Vignettes:
+<ul>
+<li>
+<a href="https://recruitR.sportsdataverse.org/articles/recruitR.html">recruitR</a> — getting started: the offensive tackle example</li>
+<li>
+<a href="https://recruitR.sportsdataverse.org/articles/OTs1k.html">OTs1k</a> — top-1000 offensive tackles in FL, GA and AL</li>
+<li>
+<a href="https://recruitR.sportsdataverse.org/articles/RBsSECACC5yr.html">RBsSECACC5yr</a> — SEC and ACC running back recruiting, 2015-2020</li>
+</ul>
+</li>
+<li><a href="https://recruitR.sportsdataverse.org/news/index.html">News and release notes</a></li>
+</ul>
 </div>
 <div class="section level2">
 <h2 id="breaking-changes">
@@ -265,34 +300,131 @@
 <p><a href="https://recruitR.sportsdataverse.org/news/index.html"><strong>Full News on Releases</strong></a></p>
 </div>
 <div class="section level2">
-<h2 id="follow-the-sportsdataverse-on-twitter-and-star-this-repo">Follow the <a href="https://twitter.com/SportsDataverse" class="external-link">SportsDataverse</a> on Twitter and star this repo<a class="anchor" aria-label="anchor" href="#follow-the-sportsdataverse-on-twitter-and-star-this-repo"></a>
+<h2 id="companion-packages">
+<strong>Companion packages</strong><a class="anchor" aria-label="anchor" href="#companion-packages"></a>
 </h2>
-<p><a href="https://twitter.com/SportsDataverse" class="external-link"><img src="https://img.shields.io/twitter/follow/SportsDataverse?color=blue&amp;label=%40SportsDataverse&amp;logo=twitter&amp;style=for-the-badge" alt="Twitter Follow"></a></p>
-<p><a href="https://github.com/sportsdataverse/recruitR/stargazers/" class="external-link"><img src="https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&amp;logo=github&amp;style=for-the-badge&amp;label=Star%20recruitR&amp;maxAge=2592000" alt="GitHub stars"></a></p>
-<p><a href="https://github.com/sportsdataverse/recruitR/stargazers" class="external-link"> <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history-dark.svg"><img alt="Star history of sportsdataverse/recruitR" src="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history.png" width="600"></source></picture></a></p>
+<p>These packages work alongside <code>recruitR</code> data:</p>
+<ul>
+<li>
+<a href="https://cfbfastR.sportsdataverse.org/" class="external-link"><strong><code>cfbfastR</code></strong></a> — college football play-by-play, rosters and stats from the same CollegeFootballData API (same <code>CFBD_API_KEY</code>). CRAN: <code>install.packages("cfbfastR")</code>.</li>
+<li>
+<a href="https://cfbplotR.sportsdataverse.org/" class="external-link"><strong><code>cfbplotR</code></strong></a> — college football logos and colors for <code>ggplot2</code> and <code>gt</code>. r-universe only.</li>
+<li>
+<a href="https://sdvplotR.sportsdataverse.org/" class="external-link"><strong><code>sdvplotR</code></strong></a> — team logos, colors and <code>gt</code> tables for every SportsDataverse league, <code>league = "cfb"</code> included. r-universe only.</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="the-sportsdataverse">
+<strong>The SportsDataverse</strong><a class="anchor" aria-label="anchor" href="#the-sportsdataverse"></a>
+</h2>
+<p><a href="https://recruitR.sportsdataverse.org/"><strong><code>recruitR</code></strong></a> is part of the <a href="https://sportsdataverse.org/" class="external-link">SportsDataverse</a>, a set of open-source packages for sports data.</p>
+<table class="table">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr>
+<th>Package</th>
+<th>Sport / Scope</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><a href="https://cfbfastR.sportsdataverse.org/" class="external-link"><strong>cfbfastR</strong></a></td>
+<td>College football</td>
+</tr>
+<tr>
+<td><a href="https://hoopR.sportsdataverse.org/" class="external-link"><strong>hoopR</strong></a></td>
+<td>Men’s basketball (NBA and NCAA)</td>
+</tr>
+<tr>
+<td><a href="https://wehoop.sportsdataverse.org/" class="external-link"><strong>wehoop</strong></a></td>
+<td>Women’s basketball (WNBA and NCAA)</td>
+</tr>
+<tr>
+<td><a href="https://fastRhockey.sportsdataverse.org/" class="external-link"><strong>fastRhockey</strong></a></td>
+<td>Hockey (NHL and PWHL)</td>
+</tr>
+<tr>
+<td><a href="https://billpetti.github.io/baseballr/" class="external-link"><strong>baseballr</strong></a></td>
+<td>Baseball (MLB, MiLB, NCAA)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sportsdataverse/softballR" class="external-link"><strong>softballR</strong></a></td>
+<td>College softball</td>
+</tr>
+<tr>
+<td><a href="https://oddsapiR.sportsdataverse.org/" class="external-link"><strong>oddsapiR</strong></a></td>
+<td>Sports betting odds</td>
+</tr>
+<tr>
+<td><a href="https://recruitR.sportsdataverse.org/"><strong>recruitR</strong></a></td>
+<td>College football recruiting</td>
+</tr>
+<tr>
+<td><a href="https://usfootballR.sportsdataverse.org/" class="external-link"><strong>usfootballR</strong></a></td>
+<td>US soccer</td>
+</tr>
+<tr>
+<td>
+<a href="https://cfbseedR.sportsdataverse.org/" class="external-link"><strong>cfbseedR</strong></a> · <a href="https://cfb4th.sportsdataverse.org/" class="external-link"><strong>cfb4th</strong></a>
+</td>
+<td>CFB playoff simulation · fourth-down decisions</td>
+</tr>
+<tr>
+<td>
+<a href="https://cfbplotR.sportsdataverse.org/" class="external-link"><strong>cfbplotR</strong></a> · <a href="https://sdvplotR.sportsdataverse.org/" class="external-link"><strong>sdvplotR</strong></a> · <a href="https://sportyR.sportsdataverse.org/" class="external-link"><strong>sportyR</strong></a>
+</td>
+<td>Logos, colors, tables · playing surfaces</td>
+</tr>
+<tr>
+<td><a href="https://r.sportsdataverse.org/" class="external-link"><strong>sportsdataverse-R</strong></a></td>
+<td>Umbrella R metapackage</td>
+</tr>
+<tr>
+<td>
+<a href="https://py.sportsdataverse.org/" class="external-link"><strong>sportsdataverse-py</strong></a> · <a href="https://js.sportsdataverse.org/" class="external-link"><strong>sportsdataverse.js</strong></a>
+</td>
+<td>Python and Node.js</td>
+</tr>
+</tbody>
+</table>
+<p>See the full ecosystem at <a href="https://sportsdataverse.org/" class="external-link">sportsdataverse.org</a>.</p>
+</div>
+<div class="section level2">
+<h2 id="follow-the-sportsdataverse-on-x-and-star-this-repo">
+<strong>Follow the <a href="https://x.com/SportsDataverse" class="external-link">SportsDataverse</a> on X and star this repo</strong><a class="anchor" aria-label="anchor" href="#follow-the-sportsdataverse-on-x-and-star-this-repo"></a>
+</h2>
+<p><a href="https://x.com/SportsDataverse" class="external-link"><img src="https://img.shields.io/twitter/follow/SportsDataverse?color=blue&amp;label=%40SportsDataverse&amp;logo=x&amp;style=for-the-badge" alt="X Follow"></a></p>
+<p><a href="https://github.com/sportsdataverse/recruitR" class="external-link"><img src="https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&amp;logo=github&amp;style=for-the-badge&amp;label=Star%20recruitR&amp;maxAge=2592000" alt="GitHub stars"></a></p>
+<p><a href="https://github.com/sportsdataverse/recruitR" class="external-link"> <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history-dark.svg"><img alt="Star history of sportsdataverse/recruitR" src="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history.png" width="600"></source></picture></a></p>
 </div>
 <div class="section level2">
 <h2 id="our-authors">
 <strong>Our Authors</strong><a class="anchor" aria-label="anchor" href="#our-authors"></a>
 </h2>
 <ul>
-<li>
-<a href="https://twitter.com/saiemgilani" class="external-link">Saiem Gilani</a><br><a href="https://twitter.com/saiemgilani" target="blank" class="external-link"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=twitter&amp;style=for-the-badge" alt="@saiemgilani"></a> <a href="https://github.com/saiemgilani" target="blank" class="external-link"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge" alt="@saiemgilani"></a>
-</li>
+<li><p><a href="https://x.com/saiemgilani" class="external-link">Saiem Gilani</a> <a href="https://x.com/saiemgilani" target="blank" class="external-link"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=x&amp;style=for-the-badge" alt="@saiemgilani"></a> <a href="https://github.com/saiemgilani" target="blank" class="external-link"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&amp;logo=Github&amp;style=for-the-badge" alt="@saiemgilani"></a></p></li>
+<li><p><a href="https://x.com/_ryanmann" class="external-link">Ryan Mann</a> <a href="https://x.com/_ryanmann" target="blank" class="external-link"><img src="https://img.shields.io/twitter/follow/_ryanmann?color=blue&amp;label=%40_ryanmann&amp;logo=x&amp;style=for-the-badge" alt="@_ryanmann"></a></p></li>
 </ul>
 </div>
 <div class="section level2">
 <h2 id="citations">
 <strong>Citations</strong><a class="anchor" aria-label="anchor" href="#citations"></a>
 </h2>
-<p>To cite the <a href="https://cfbfastR.sportsdataverse.org/" class="external-link"><strong><code>cfbfastR</code></strong></a> R package in publications, use:</p>
+<p>To cite the <a href="https://recruitR.sportsdataverse.org/"><strong><code>recruitR</code></strong></a> R package in publications, use:</p>
 <p>BibTeX Citation</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">gilani_2021_recruitr</span>,</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  <span class="dt">author</span> = {Gilani, Saiem},</span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>  <span class="dt">title</span> = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data.},</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>  <span class="dt">url</span> = {https://recruitR.sportsdataverse.org/},</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>  <span class="dt">year</span> = {2021}</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">gilani_mann_2021_recruitr</span>,</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  <span class="dt">author</span> = {Gilani, Saiem and Mann, Ryan},</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  <span class="dt">title</span> = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data.},</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>  <span class="dt">url</span> = {https://recruitR.sportsdataverse.org/},</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>  <span class="dt">year</span> = {2021}</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="license">
+<strong>License</strong><a class="anchor" aria-label="anchor" href="#license"></a>
+</h2>
+<p><a href="https://github.com/sportsdataverse/recruitR/blob/main/LICENSE.md" class="external-link">MIT</a> © recruitR authors. See <a href="https://github.com/sportsdataverse/recruitR/blob/main/LICENSE.md" class="external-link">LICENSE.md</a>.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -333,10 +465,16 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge" alt="Lifecycle: experimental"></a></li>
-<li><a href="https://github.com/sportsdataverse/recruitR" class="external-link"><img src="https://img.shields.io/github/r-package/v/sportsdataverse/recruitR?label=recruitR&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="Version-Number"></a></li>
-<li><a href="https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/workflow/status/sportsdataverse/recruitR/R-CMD-check?label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a></li>
-<li><a href="https://twitter.com/saiemgilani" class="external-link"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&amp;label=%40saiemgilani&amp;logo=twitter&amp;style=for-the-badge" alt="Twitter Follow"></a></li>
+<li><a href="https://sportsdataverse.r-universe.dev/recruitR" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&amp;color=success&amp;label=r-universe&amp;prefix=v&amp;query=%24.Version&amp;url=https%3A%2F%2Fsportsdataverse.r-universe.dev%2Fapi%2Fpackages%2FrecruitR" alt="R-universe"></a></li>
+<li><a href="https://github.com/sportsdataverse/recruitR/" class="external-link"><img src="https://img.shields.io/github/r-package/v/sportsdataverse/recruitR?label=recruitR&amp;logo=R&amp;style=for-the-badge" alt="Version-Number"></a></li>
+<li><a href="https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/sportsdataverse/recruitR/R-CMD-check.yaml?branch=main&amp;label=R-CMD-Check&amp;logo=R&amp;logoColor=white&amp;style=for-the-badge" alt="R-CMD-check"></a></li>
+<li><a href="https://app.codecov.io/gh/sportsdataverse/recruitR/tree/main" class="external-link"><img src="https://img.shields.io/codecov/c/github/sportsdataverse/recruitR/main?logo=codecov&amp;style=for-the-badge" alt="Codecov"></a></li>
+<li><a href="https://github.com/sportsdataverse/recruitR/actions/workflows/pkgdown.yaml" class="external-link"><img src="https://img.shields.io/github/actions/workflow/status/sportsdataverse/recruitR/pkgdown.yaml?branch=main&amp;label=pkgdown&amp;logo=github&amp;style=for-the-badge" alt="pkgdown"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge&amp;logo=github" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://github.com/sportsdataverse/recruitR/blob/main/LICENSE.md" class="external-link"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT"></a></li>
+<li><a href="https://github.com/sportsdataverse/recruitR/graphs/contributors" class="external-link"><img src="https://img.shields.io/github/contributors/sportsdataverse/recruitR?style=for-the-badge" alt="Contributors"></a></li>
+<li><a href="https://github.com/sportsdataverse/recruitR" class="external-link"><img src="https://img.shields.io/github/stars/sportsdataverse/recruitR?style=for-the-badge&amp;logo=github" alt="GitHub stars"></a></li>
+<li><a href="https://x.com/SportsDataverse" class="external-link"><img src="https://img.shields.io/twitter/follow/SportsDataverse?color=blue&amp;label=%40SportsDataverse&amp;logo=x&amp;style=for-the-badge" alt="X Follow"></a></li>
 </ul>
 </div>
 
