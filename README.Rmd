@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# **recruitR** <a href='https://recruitR.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/sportsdataverse/recruitR/main/logo.png'  align="right" width="30%" min-width="100px" /></a>
+# **recruitR** <a href='https://recruitR.sportsdataverse.org/'><img alt="recruitR hex logo" src='https://raw.githubusercontent.com/sportsdataverse/recruitR/main/logo.png'  align="right" width="30%" min-width="100px" /></a>
 
 <!-- badges: start -->
 
@@ -16,7 +16,7 @@ output: github_document
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge&logo=github)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://github.com/sportsdataverse/recruitR/blob/main/LICENSE.md)
 [![Contributors](https://img.shields.io/github/contributors/sportsdataverse/recruitR?style=for-the-badge)](https://github.com/sportsdataverse/recruitR/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/sportsdataverse/recruitR?style=for-the-badge&logo=github)](https://github.com/sportsdataverse/recruitR/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/sportsdataverse/recruitR?style=for-the-badge&logo=github)](https://github.com/sportsdataverse/recruitR)
 [![X Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%40SportsDataverse&logo=x&style=for-the-badge)](https://x.com/SportsDataverse)
 <!-- badges: end -->
 
@@ -50,7 +50,9 @@ You can install the development version of [**`recruitR`**](https://github.com/s
 ```r
 if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak")
 pak::pak("sportsdataverse/recruitR")
-# or: remotes::install_github("sportsdataverse/recruitR")
+# or, with remotes:
+# if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
+# remotes::install_github("sportsdataverse/recruitR")
 ```
 
 ## **Quick start**
@@ -208,9 +210,9 @@ See the full ecosystem at [sportsdataverse.org](https://sportsdataverse.org/).
 [![X Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%40SportsDataverse&logo=x&style=for-the-badge)](https://x.com/SportsDataverse)
 
 [![GitHub
-stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&logo=github&style=for-the-badge&label=Star%20recruitR&maxAge=2592000)](https://github.com/sportsdataverse/recruitR/stargazers/)
+stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&logo=github&style=for-the-badge&label=Star%20recruitR&maxAge=2592000)](https://github.com/sportsdataverse/recruitR)
 
-<a href="https://github.com/sportsdataverse/recruitR/stargazers">
+<a href="https://github.com/sportsdataverse/recruitR">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history-dark.svg">
     <img alt="Star history of sportsdataverse/recruitR" src="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history.png" width="600">
