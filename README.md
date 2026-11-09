@@ -1,17 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# recruitR <a href='https://recruitR.sportsdataverse.org/'><img src='https://raw.githubusercontent.com/sportsdataverse/recruitR/main/logo.png'  align="right" width="30%" min-width="100px" /></a>
+# **recruitR** <a href='https://recruitR.sportsdataverse.org/'><img alt="recruitR hex logo" src='https://raw.githubusercontent.com/sportsdataverse/recruitR/main/logo.png'  align="right" width="30%" min-width="100px" /></a>
 
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/recruitR?label=recruitR&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR)
-[![R-CMD-check](https://img.shields.io/github/workflow/status/sportsdataverse/recruitR/R-CMD-check?label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml)
-![Contributors](https://img.shields.io/github/contributors/sportsdataverse/recruitR?style=for-the-badge)
-[![Twitter
-Follow](https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge)](https://twitter.com/saiemgilani)
+[![R-universe](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=r-universe&prefix=v&query=%24.Version&url=https%3A%2F%2Fsportsdataverse.r-universe.dev%2Fapi%2Fpackages%2FrecruitR)](https://sportsdataverse.r-universe.dev/recruitR)
+[![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/recruitR?label=recruitR&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/)
+[![R-CMD-check](https://img.shields.io/github/actions/workflow/status/sportsdataverse/recruitR/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml)
+[![Codecov](https://img.shields.io/codecov/c/github/sportsdataverse/recruitR?logo=codecov&style=for-the-badge)](https://app.codecov.io/gh/sportsdataverse/recruitR)
+[![pkgdown](https://img.shields.io/github/actions/workflow/status/sportsdataverse/recruitR/pkgdown.yaml?branch=main&label=pkgdown&logo=github&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/pkgdown.yaml)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge&logo=github)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://github.com/sportsdataverse/recruitR/blob/main/LICENSE.md)
+[![Contributors](https://img.shields.io/github/contributors/sportsdataverse/recruitR?style=for-the-badge)](https://github.com/sportsdataverse/recruitR/graphs/contributors)
+[![GitHub stars](https://img.shields.io/github/stars/sportsdataverse/recruitR?style=for-the-badge&logo=github)](https://github.com/sportsdataverse/recruitR)
+[![X Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%40SportsDataverse&logo=x&style=for-the-badge)](https://x.com/SportsDataverse)
 <!-- badges: end -->
 
 A college football recruiting package
@@ -29,30 +32,48 @@ itself. Please report issues here or to
 Data freshness and pipeline status for every SportsDataverse dataset:
 [sportsdataverse.org/status](https://sportsdataverse.org/status).
 
-## Installation
+## **Installation**
 
-You can install the released version of
-[**`recruitR`**](https://github.com/sportsdataverse/recruitR) from
-[GitHub](https://github.com/sportsdataverse/recruitR) with:
+You can install the latest build from [R-universe](https://sportsdataverse.r-universe.dev/recruitR) with:
 
-``` r
-# You can install using the pak package using the following code:
-if (!requireNamespace('pak', quietly = TRUE)){
-  install.packages('pak')
-}
+```r
+install.packages("recruitR", repos = c("https://sportsdataverse.r-universe.dev", getOption("repos")))
+```
+
+You can install the development version of [**`recruitR`**](https://github.com/sportsdataverse/recruitR/) from GitHub with:
+
+```r
+if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak")
 pak::pak("sportsdataverse/recruitR")
+# or, with remotes:
+# if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
+# remotes::install_github("sportsdataverse/recruitR")
 ```
 
-``` r
-# if you would prefer devtools installation
-if (!requireNamespace('devtools', quietly = TRUE)){
-  install.packages('devtools')
-}
-# Alternatively, using the devtools package:
-devtools::install_github(repo = "sportsdataverse/recruitR")
+## **Quick start**
+
+The `cfbd_*()` functions call the [CollegeFootballData API](https://collegefootballdata.com/), which needs a free API key ([register here](https://collegefootballdata.com/key)). Save it as `CFBD_API_KEY` in your `.Renviron`, or set it for the session:
+
+```r
+Sys.setenv(CFBD_API_KEY = "YOUR-API-KEY-HERE")
 ```
 
-## Offensive Tackle Example
+```r
+library(recruitR)
+
+# 2020 high-school offensive tackles from Florida
+cfbd_recruiting_player(2020, recruit_type = "HighSchool", state = "FL", position = "OT")
+
+# 2020 team recruiting rankings
+cfbd_recruiting_team(year = 2020)
+
+# team talent composite for a season
+cfbd_team_talent(year = 2020)
+```
+
+A longer worked example follows below.
+
+## **Offensive Tackle Example**
 
 ``` r
 library(recruitR)
@@ -106,7 +127,7 @@ SE_OTs_1k %>%
 #> # … with 1 more variable: state_province <chr>
 ```
 
-## Plotting the Offensive Tackles by State
+## **Plotting the Offensive Tackles by State**
 
 You can also create a plot:
 
@@ -163,20 +184,59 @@ For more information on the package and function reference, please see
 the [**`recruitR`** documentation
 website](https://recruitR.sportsdataverse.org).
 
+- [Package site](https://recruitR.sportsdataverse.org/)
+- [Function reference](https://recruitR.sportsdataverse.org/reference/index.html)
+- Vignettes:
+  - [recruitR](https://recruitR.sportsdataverse.org/articles/recruitR.html) — getting started: the offensive tackle example
+  - [OTs1k](https://recruitR.sportsdataverse.org/articles/OTs1k.html) — top-1000 offensive tackles in FL, GA and AL
+  - [RBsSECACC5yr](https://recruitR.sportsdataverse.org/articles/RBsSECACC5yr.html) — SEC and ACC running back recruiting, 2015-2020
+- [News and release notes](https://recruitR.sportsdataverse.org/news/index.html)
+
+
 ## **Breaking Changes**
 
 [**Full News on
 Releases**](https://recruitR.sportsdataverse.org/news/index.html)
 
-## Follow the [SportsDataverse](https://twitter.com/SportsDataverse) on Twitter and star this repo
+## **Companion packages**
 
-[![Twitter
-Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%40SportsDataverse&logo=twitter&style=for-the-badge)](https://twitter.com/SportsDataverse)
+These packages work alongside `recruitR` data:
+
+* [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/) — college football play-by-play, rosters and stats from the same CollegeFootballData API (same `CFBD_API_KEY`). CRAN: `install.packages("cfbfastR")`.
+* [**`cfbplotR`**](https://cfbplotR.sportsdataverse.org/) — college football logos and colors for `ggplot2` and `gt`. r-universe only.
+* [**`sdvplotR`**](https://sdvplotR.sportsdataverse.org/) — team logos, colors and `gt` tables for every SportsDataverse league, `league = "cfb"` included. r-universe only.
+
+## **The SportsDataverse**
+
+[**`recruitR`**](https://recruitR.sportsdataverse.org/) is part of the [SportsDataverse](https://sportsdataverse.org/), a set of
+open-source packages for sports data.
+
+| Package | Sport / Scope |
+|---|---|
+| [**cfbfastR**](https://cfbfastR.sportsdataverse.org/) | College football |
+| [**hoopR**](https://hoopR.sportsdataverse.org/) | Men's basketball (NBA and NCAA) |
+| [**wehoop**](https://wehoop.sportsdataverse.org/) | Women's basketball (WNBA and NCAA) |
+| [**fastRhockey**](https://fastRhockey.sportsdataverse.org/) | Hockey (NHL and PWHL) |
+| [**baseballr**](https://billpetti.github.io/baseballr/) | Baseball (MLB, MiLB, NCAA) |
+| [**softballR**](https://github.com/sportsdataverse/softballR) | College softball |
+| [**oddsapiR**](https://oddsapiR.sportsdataverse.org/) | Sports betting odds |
+| [**recruitR**](https://recruitR.sportsdataverse.org/) | College football recruiting |
+| [**usfootballR**](https://usfootballR.sportsdataverse.org/) | US soccer |
+| [**cfbseedR**](https://cfbseedR.sportsdataverse.org/) · [**cfb4th**](https://cfb4th.sportsdataverse.org/) | CFB playoff simulation · fourth-down decisions |
+| [**cfbplotR**](https://cfbplotR.sportsdataverse.org/) · [**sdvplotR**](https://sdvplotR.sportsdataverse.org/) · [**sportyR**](https://sportyR.sportsdataverse.org/) | Logos, colors, tables · playing surfaces |
+| [**sportsdataverse-R**](https://r.sportsdataverse.org/) | Umbrella R metapackage |
+| [**sportsdataverse-py**](https://py.sportsdataverse.org/) · [**sportsdataverse.js**](https://js.sportsdataverse.org/) | Python and Node.js |
+
+See the full ecosystem at [sportsdataverse.org](https://sportsdataverse.org/).
+
+## **Follow the [SportsDataverse](https://x.com/SportsDataverse) on X and star this repo**
+
+[![X Follow](https://img.shields.io/twitter/follow/SportsDataverse?color=blue&label=%40SportsDataverse&logo=x&style=for-the-badge)](https://x.com/SportsDataverse)
 
 [![GitHub
-stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&logo=github&style=for-the-badge&label=Star%20recruitR&maxAge=2592000)](https://github.com/sportsdataverse/recruitR/stargazers/)
+stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=eee&logo=github&style=for-the-badge&label=Star%20recruitR&maxAge=2592000)](https://github.com/sportsdataverse/recruitR)
 
-<a href="https://github.com/sportsdataverse/recruitR/stargazers">
+<a href="https://github.com/sportsdataverse/recruitR">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history-dark.svg">
     <img alt="Star history of sportsdataverse/recruitR" src="https://raw.githubusercontent.com/sportsdataverse/recruitR/star-history/star-history.png" width="600">
@@ -185,22 +245,29 @@ stars](https://img.shields.io/github/stars/sportsdataverse/recruitR.svg?color=ee
 
 ## **Our Authors**
 
--   [Saiem Gilani](https://twitter.com/saiemgilani)  
-    <a href="https://twitter.com/saiemgilani" target="blank"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=twitter&style=for-the-badge" alt="@saiemgilani" /></a>
-    <a href="https://github.com/saiemgilani" target="blank"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge" alt="@saiemgilani" /></a>
+-   [Saiem Gilani](https://x.com/saiemgilani)
+<a href="https://x.com/saiemgilani" target="blank"><img src="https://img.shields.io/twitter/follow/saiemgilani?color=blue&label=%40saiemgilani&logo=x&style=for-the-badge" alt="@saiemgilani" /></a>
+<a href="https://github.com/saiemgilani" target="blank"><img src="https://img.shields.io/github/followers/saiemgilani?color=eee&logo=Github&style=for-the-badge" alt="@saiemgilani" /></a>
+
+-   [Ryan Mann](https://x.com/_ryanmann)
+<a href="https://x.com/_ryanmann" target="blank"><img src="https://img.shields.io/twitter/follow/_ryanmann?color=blue&label=%40_ryanmann&logo=x&style=for-the-badge" alt="@_ryanmann" /></a>
 
 ## **Citations**
 
-To cite the [**`cfbfastR`**](https://cfbfastR.sportsdataverse.org/) R
+To cite the [**`recruitR`**](https://recruitR.sportsdataverse.org/) R
 package in publications, use:
 
 BibTeX Citation
 
-``` bibtex
-@misc{gilani_2021_recruitr,
-  author = {Gilani, Saiem},
+```bibtex
+@misc{gilani_mann_2021_recruitr,
+  author = {Gilani, Saiem and Mann, Ryan},
   title = {recruitR: The SportsDataverse's R Package for College Sports Recruiting Data.},
   url = {https://recruitR.sportsdataverse.org/},
   year = {2021}
 }
 ```
+
+## **License**
+
+[MIT](https://github.com/sportsdataverse/recruitR/blob/main/LICENSE.md) © recruitR authors. See [LICENSE.md](https://github.com/sportsdataverse/recruitR/blob/main/LICENSE.md).
