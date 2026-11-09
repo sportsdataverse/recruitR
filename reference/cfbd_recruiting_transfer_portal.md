@@ -66,7 +66,7 @@ cfbd_recruiting_transfer_portal(year)
 # \donttest{
   try(cfbd_recruiting_transfer_portal(year = 2021))
 #> ── Transfer portal data from CollegeFootballData.com ───────── recruitR 0.0.3 ──
-#> ℹ Data updated: 2026-11-09 20:51:54 UTC
+#> ℹ Data updated: 2026-11-09 21:07:28 UTC
 #> # A tibble: 1,770 × 10
 #>    season first_name last_name   position origin destination transfer_date      
 #>     <int> <chr>      <chr>       <chr>    <chr>  <chr>       <dttm>             

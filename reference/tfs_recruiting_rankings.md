@@ -33,7 +33,7 @@ tfs_recruiting_rankings(year, recruit_type = "HighSchool", pages = 5)
 ``` r
 # \donttest{
    try(tfs_recruiting_rankings(2022))
-#> 2026-11-09 20:52:01.666451: Invalid arguments or no 247 recruiting rankings data available!
+#> 2026-11-09 21:07:36.973798: Invalid arguments or no 247 recruiting rankings data available!
 #> data frame with 0 columns and 0 rows
 # }
 ```

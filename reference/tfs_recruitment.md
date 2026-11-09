@@ -23,7 +23,7 @@ tfs_recruitment(recruitment_id)
 ``` r
 # \donttest{
    tfs_recruitment(recruitment_id = 130361)
-#> 2026-11-09 20:52:01.947921: Invalid arguments or no 247 recruiting rankings data available!
+#> 2026-11-09 21:07:37.337423: Invalid arguments or no 247 recruiting rankings data available!
 #> data frame with 0 columns and 0 rows
 # }
 ```
