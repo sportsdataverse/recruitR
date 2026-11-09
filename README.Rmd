@@ -11,7 +11,7 @@ output: github_document
 [![R-universe](https://img.shields.io/badge/dynamic/json?style=for-the-badge&color=success&label=r-universe&prefix=v&query=%24.Version&url=https%3A%2F%2Fsportsdataverse.r-universe.dev%2Fapi%2Fpackages%2FrecruitR)](https://sportsdataverse.r-universe.dev/recruitR)
 [![Version-Number](https://img.shields.io/github/r-package/v/sportsdataverse/recruitR?label=recruitR&logo=R&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/)
 [![R-CMD-check](https://img.shields.io/github/actions/workflow/status/sportsdataverse/recruitR/R-CMD-check.yaml?branch=main&label=R-CMD-Check&logo=R&logoColor=white&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/R-CMD-check.yaml)
-[![Codecov](https://img.shields.io/codecov/c/github/sportsdataverse/recruitR/main?logo=codecov&style=for-the-badge)](https://app.codecov.io/gh/sportsdataverse/recruitR/tree/main)
+[![Codecov](https://img.shields.io/codecov/c/github/sportsdataverse/recruitR?logo=codecov&style=for-the-badge)](https://app.codecov.io/gh/sportsdataverse/recruitR)
 [![pkgdown](https://img.shields.io/github/actions/workflow/status/sportsdataverse/recruitR/pkgdown.yaml?branch=main&label=pkgdown&logo=github&style=for-the-badge)](https://github.com/sportsdataverse/recruitR/actions/workflows/pkgdown.yaml)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge&logo=github)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://github.com/sportsdataverse/recruitR/blob/main/LICENSE.md)
